@@ -61,4 +61,7 @@ func _on_button_pressed():
 		Global.grey_cat_hunger += 1
 		_display_num_food()
 		_display_hunger_bar()
+		if Global.grey_cat_hunger == 10:
+			Global.player_coins += 2
+
 
