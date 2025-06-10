@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cmtw7crxmbkwt"]
+[gd_scene load_steps=19 format=3 uid="uid://cmtw7crxmbkwt"]
 
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_hy5y7"]
 [ext_resource type="PackedScene" uid="uid://bqk8gdvdeyyl7" path="res://Dark Grey Cat.tscn" id="2_2jlvu"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://c4jkmgj48rict" path="res://Assets/7.png" id="12_ocxp8"]
 [ext_resource type="Texture2D" uid="uid://bdioil002vp62" path="res://Assets/8.png" id="13_p072b"]
 [ext_resource type="Texture2D" uid="uid://sjwsd70ahccu" path="res://Assets/9.png" id="14_i4myr"]
+[ext_resource type="Texture2D" uid="uid://bomnj4jslvhoj" path="res://Assets/Market Icon.png" id="15_m0ugm"]
+[ext_resource type="Script" path="res://Market Icon Room 1.gd" id="16_i1tm5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_prc0x"]
 texture = ExtResource("1_hy5y7")
@@ -178,11 +180,11 @@ position = Vector2(375, 369)
 zoom = Vector2(5, 5)
 
 [node name="Coin" type="Sprite2D" parent="."]
-position = Vector2(267, 314)
+position = Vector2(281, 313)
 texture = ExtResource("4_p37el")
 
 [node name="Zero_1" type="Sprite2D" parent="."]
-position = Vector2(273, 315)
+position = Vector2(287, 314)
 texture = ExtResource("6_c7ici")
 
 [node name="Zero_2" type="Sprite2D" parent="."]
@@ -191,7 +193,7 @@ position = Vector2(277, 315)
 texture = ExtResource("6_c7ici")
 
 [node name="Zero_3" type="Sprite2D" parent="."]
-position = Vector2(281, 315)
+position = Vector2(295, 314)
 texture = ExtResource("6_c7ici")
 
 [node name="One_1" type="Sprite2D" parent="."]
@@ -215,7 +217,7 @@ position = Vector2(273, 315)
 texture = ExtResource("7_svn26")
 
 [node name="Two_2" type="Sprite2D" parent="."]
-position = Vector2(277, 315)
+position = Vector2(291, 314)
 texture = ExtResource("7_svn26")
 
 [node name="Two_3" type="Sprite2D" parent="."]
@@ -308,4 +310,17 @@ visible = false
 position = Vector2(281, 315)
 texture = ExtResource("14_i4myr")
 
+[node name="Market Icon" type="Sprite2D" parent="."]
+position = Vector2(269, 313)
+texture = ExtResource("15_m0ugm")
+script = ExtResource("16_i1tm5")
+
+[node name="Button" type="Button" parent="Market Icon"]
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = 5.0
+flat = true
+
 [connection signal="pressed" from="CharacterBody2D/Button" to="CharacterBody2D" method="_on_button_pressed"]
+[connection signal="pressed" from="Market Icon/Button" to="Market Icon" method="_on_button_pressed"]

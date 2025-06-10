@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dx7k8aso5y80t"]
+[gd_scene load_steps=6 format=3 uid="uid://dx7k8aso5y80t"]
 
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_7y7fx"]
+[ext_resource type="Texture2D" uid="uid://hmoaj1sdw31a" path="res://Assets/Arrow.png" id="2_6pjcv"]
+[ext_resource type="Script" path="res://Exit Arrow Shop.gd" id="3_uty7e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0sqe3"]
 texture = ExtResource("1_7y7fx")
@@ -151,3 +153,18 @@ layer_0/tile_data = PackedInt32Array(1048605, 393216, 10, 1048606, 393216, 10, 1
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(580, 321)
 zoom = Vector2(5, 5)
+
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(473, 265)
+texture = ExtResource("2_6pjcv")
+script = ExtResource("3_uty7e")
+
+[node name="Button" type="Button" parent="Arrow"]
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 4.0
+offset_bottom = 5.0
+action_mode = 0
+flat = true
+
+[connection signal="pressed" from="Arrow/Button" to="Arrow" method="_on_button_pressed"]
