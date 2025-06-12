@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cxhhpcq0mbn"]
+[gd_scene load_steps=14 format=3 uid="uid://cxhhpcq0mbn"]
 
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_fkxn3"]
 [ext_resource type="PackedScene" uid="uid://bqk8gdvdeyyl7" path="res://Dark Grey Cat.tscn" id="1_vs13p"]
@@ -8,16 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c07fgghbxj15a" path="res://Assets/Frame.png" id="6_r37y6"]
 [ext_resource type="Texture2D" uid="uid://vefil8wnm0en" path="res://Assets/Fish.png" id="7_dhsf0"]
 [ext_resource type="Script" path="res://Food.gd" id="8_2a7ki"]
-[ext_resource type="Texture2D" uid="uid://b1uq36ttk8hia" path="res://Assets/5.png" id="8_tywyt"]
-[ext_resource type="Texture2D" uid="uid://sjwsd70ahccu" path="res://Assets/9.png" id="9_qlgfk"]
-[ext_resource type="Texture2D" uid="uid://bdioil002vp62" path="res://Assets/8.png" id="10_lhfo3"]
-[ext_resource type="Texture2D" uid="uid://c4jkmgj48rict" path="res://Assets/7.png" id="11_c1a2y"]
-[ext_resource type="Texture2D" uid="uid://d3pl8e2bxh4k7" path="res://Assets/6.png" id="12_24ebq"]
-[ext_resource type="Texture2D" uid="uid://oig6s2ei5kga" path="res://Assets/4.png" id="14_52q57"]
-[ext_resource type="Texture2D" uid="uid://cy101yuav72go" path="res://Assets/3.png" id="15_idsv5"]
-[ext_resource type="Texture2D" uid="uid://cmjkxekke7agm" path="res://Assets/2.png" id="16_m0q5k"]
-[ext_resource type="Texture2D" uid="uid://butrjd0e4lcj5" path="res://Assets/1.png" id="17_65dcs"]
-[ext_resource type="Texture2D" uid="uid://cegau3w2vmvah" path="res://Assets/0.png" id="18_1noxh"]
+[ext_resource type="FontFile" uid="uid://bu0ktuo2p2jt" path="res://Assets/Silkscreen-Regular.ttf" id="11_cnk1s"]
 [ext_resource type="Texture2D" uid="uid://idq8ws6fvo75" path="res://Assets/9 hunger.png" id="19_xlyjr"]
 [ext_resource type="Texture2D" uid="uid://cdppc5vgqia40" path="res://Assets/10 hunger.png" id="20_cwa6r"]
 
@@ -196,6 +187,17 @@ position = Vector2(255, 111)
 texture = ExtResource("7_dhsf0")
 script = ExtResource("8_2a7ki")
 
+[node name="Number" type="Label" parent="Fish"]
+offset_left = -8.0
+offset_top = -12.0
+offset_right = -2.0
+offset_bottom = -1.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("11_cnk1s")
+theme_override_font_sizes/font_size = 8
+text = "x"
+metadata/_edit_use_anchors_ = true
+
 [node name="Button" type="Button" parent="Fish"]
 offset_left = -3.0
 offset_top = -4.0
@@ -203,61 +205,6 @@ offset_right = 5.0
 offset_bottom = 4.0
 action_mode = 0
 flat = true
-
-[node name="Nine" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(250, 106)
-texture = ExtResource("9_qlgfk")
-
-[node name="Eight" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(250, 106)
-texture = ExtResource("10_lhfo3")
-
-[node name="Seven" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(250, 106)
-texture = ExtResource("11_c1a2y")
-
-[node name="Six" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(250, 106)
-texture = ExtResource("12_24ebq")
-
-[node name="Five" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(250, 106)
-texture = ExtResource("8_tywyt")
-
-[node name="Four" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(250, 106)
-texture = ExtResource("14_52q57")
-
-[node name="Three" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(250, 106)
-texture = ExtResource("15_idsv5")
-
-[node name="Two" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(250, 106)
-texture = ExtResource("16_m0q5k")
-
-[node name="One" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(250, 106)
-texture = ExtResource("17_65dcs")
-
-[node name="Zero_10" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(254, 106)
-texture = ExtResource("18_1noxh")
-
-[node name="Zero" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(250, 106)
-texture = ExtResource("18_1noxh")
 
 [node name="Hunger 8" type="Sprite2D" parent="."]
 visible = false

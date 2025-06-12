@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dx7k8aso5y80t"]
+[gd_scene load_steps=9 format=3 uid="uid://dx7k8aso5y80t"]
 
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_7y7fx"]
+[ext_resource type="Script" path="res://Shop.gd" id="1_l4h6c"]
 [ext_resource type="Texture2D" uid="uid://hmoaj1sdw31a" path="res://Assets/Arrow.png" id="2_6pjcv"]
 [ext_resource type="Script" path="res://Exit Arrow Shop.gd" id="3_uty7e"]
+[ext_resource type="FontFile" uid="uid://bu0ktuo2p2jt" path="res://Assets/Silkscreen-Regular.ttf" id="4_k7iln"]
+[ext_resource type="Texture2D" uid="uid://di4u0urldhs15" path="res://Assets/Coin.png" id="5_1thhx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0sqe3"]
 texture = ExtResource("1_7y7fx")
@@ -144,6 +147,7 @@ separation = Vector2i(1, 1)
 sources/0 = SubResource("TileSetAtlasSource_0sqe3")
 
 [node name="Shop" type="Node2D"]
+script = ExtResource("1_l4h6c")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_7mffh")
@@ -167,5 +171,18 @@ offset_bottom = 5.0
 action_mode = 0
 flat = true
 metadata/_edit_use_anchors_ = true
+
+[node name="Coin" type="Sprite2D" parent="."]
+position = Vector2(557, 307)
+texture = ExtResource("5_1thhx")
+
+[node name="Money" type="Label" parent="."]
+offset_left = 561.0
+offset_top = 301.0
+offset_right = 579.0
+offset_bottom = 312.0
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "50"
 
 [connection signal="pressed" from="Arrow/Button" to="Arrow" method="_on_button_pressed"]

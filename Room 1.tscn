@@ -1,19 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://cmtw7crxmbkwt"]
+[gd_scene load_steps=11 format=3 uid="uid://cmtw7crxmbkwt"]
 
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_hy5y7"]
+[ext_resource type="Script" path="res://Room 1.gd" id="1_idt2n"]
 [ext_resource type="PackedScene" uid="uid://bqk8gdvdeyyl7" path="res://Dark Grey Cat.tscn" id="2_2jlvu"]
 [ext_resource type="Script" path="res://Dark Grey Cat.gd" id="3_i33cb"]
 [ext_resource type="Texture2D" uid="uid://di4u0urldhs15" path="res://Assets/Coin.png" id="4_p37el"]
-[ext_resource type="Texture2D" uid="uid://b1uq36ttk8hia" path="res://Assets/5.png" id="5_cko0e"]
-[ext_resource type="Texture2D" uid="uid://butrjd0e4lcj5" path="res://Assets/1.png" id="6_1kb1r"]
-[ext_resource type="Texture2D" uid="uid://cegau3w2vmvah" path="res://Assets/0.png" id="6_c7ici"]
-[ext_resource type="Texture2D" uid="uid://cmjkxekke7agm" path="res://Assets/2.png" id="7_svn26"]
-[ext_resource type="Texture2D" uid="uid://cy101yuav72go" path="res://Assets/3.png" id="8_tjq21"]
-[ext_resource type="Texture2D" uid="uid://oig6s2ei5kga" path="res://Assets/4.png" id="9_3s2ej"]
-[ext_resource type="Texture2D" uid="uid://d3pl8e2bxh4k7" path="res://Assets/6.png" id="11_ehsfw"]
-[ext_resource type="Texture2D" uid="uid://c4jkmgj48rict" path="res://Assets/7.png" id="12_ocxp8"]
-[ext_resource type="Texture2D" uid="uid://bdioil002vp62" path="res://Assets/8.png" id="13_p072b"]
-[ext_resource type="Texture2D" uid="uid://sjwsd70ahccu" path="res://Assets/9.png" id="14_i4myr"]
+[ext_resource type="FontFile" uid="uid://bu0ktuo2p2jt" path="res://Assets/Silkscreen-Regular.ttf" id="7_yx2b3"]
 [ext_resource type="Texture2D" uid="uid://bomnj4jslvhoj" path="res://Assets/Market Icon.png" id="15_m0ugm"]
 [ext_resource type="Script" path="res://Market Icon Room 1.gd" id="16_i1tm5"]
 
@@ -157,6 +149,7 @@ separation = Vector2i(1, 1)
 sources/1 = SubResource("TileSetAtlasSource_prc0x")
 
 [node name="Room 1" type="Node2D"]
+script = ExtResource("1_idt2n")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_1vowy")
@@ -183,133 +176,6 @@ zoom = Vector2(5, 5)
 position = Vector2(281, 313)
 texture = ExtResource("4_p37el")
 
-[node name="Zero_1" type="Sprite2D" parent="."]
-position = Vector2(287, 314)
-texture = ExtResource("6_c7ici")
-
-[node name="Zero_2" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(277, 315)
-texture = ExtResource("6_c7ici")
-
-[node name="Zero_3" type="Sprite2D" parent="."]
-position = Vector2(295, 314)
-texture = ExtResource("6_c7ici")
-
-[node name="One_1" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(273, 315)
-texture = ExtResource("6_1kb1r")
-
-[node name="One_2" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(277, 315)
-texture = ExtResource("6_1kb1r")
-
-[node name="One_3" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(281, 315)
-texture = ExtResource("6_1kb1r")
-
-[node name="Two_1" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(273, 315)
-texture = ExtResource("7_svn26")
-
-[node name="Two_2" type="Sprite2D" parent="."]
-position = Vector2(291, 314)
-texture = ExtResource("7_svn26")
-
-[node name="Two_3" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(281, 315)
-texture = ExtResource("7_svn26")
-
-[node name="Three_1" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(273, 315)
-texture = ExtResource("8_tjq21")
-
-[node name="Three_2" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(277, 315)
-texture = ExtResource("8_tjq21")
-
-[node name="Three_3" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(281, 315)
-texture = ExtResource("8_tjq21")
-
-[node name="Four_1" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(273, 315)
-texture = ExtResource("9_3s2ej")
-
-[node name="Four_2" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(277, 315)
-texture = ExtResource("9_3s2ej")
-
-[node name="Four_3" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(281, 315)
-texture = ExtResource("9_3s2ej")
-
-[node name="Five_1" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(273, 315)
-texture = ExtResource("5_cko0e")
-
-[node name="Five_2" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(277, 315)
-texture = ExtResource("5_cko0e")
-
-[node name="Five_3" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(281, 315)
-texture = ExtResource("5_cko0e")
-
-[node name="Six_2" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(277, 315)
-texture = ExtResource("11_ehsfw")
-
-[node name="Six_3" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(281, 315)
-texture = ExtResource("11_ehsfw")
-
-[node name="Seven_2" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(277, 315)
-texture = ExtResource("12_ocxp8")
-
-[node name="Seven_3" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(281, 315)
-texture = ExtResource("12_ocxp8")
-
-[node name="Eight_2" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(281, 315)
-texture = ExtResource("13_p072b")
-
-[node name="Eight_3" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(277, 315)
-texture = ExtResource("13_p072b")
-
-[node name="Nine_2" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(277, 315)
-texture = ExtResource("14_i4myr")
-
-[node name="Nine_3" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(281, 315)
-texture = ExtResource("14_i4myr")
-
 [node name="Market Icon" type="Sprite2D" parent="."]
 position = Vector2(269, 313)
 texture = ExtResource("15_m0ugm")
@@ -322,6 +188,16 @@ offset_right = 4.0
 offset_bottom = 5.0
 action_mode = 0
 flat = true
+
+[node name="Money" type="Label" parent="."]
+offset_left = 285.0
+offset_top = 307.0
+offset_right = 303.0
+offset_bottom = 318.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_yx2b3")
+theme_override_font_sizes/font_size = 8
+text = "020"
 
 [connection signal="pressed" from="CharacterBody2D/Button" to="CharacterBody2D" method="_on_button_pressed"]
 [connection signal="pressed" from="Market Icon/Button" to="Market Icon" method="_on_button_pressed"]
