@@ -152,10 +152,10 @@ layer_0/tile_data = PackedInt32Array(1048605, 393216, 10, 1048606, 393216, 10, 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(580, 321)
-zoom = Vector2(5, 5)
+zoom = Vector2(15, 15)
 
 [node name="Arrow" type="Sprite2D" parent="."]
-position = Vector2(473, 265)
+position = Vector2(549, 307)
 texture = ExtResource("2_6pjcv")
 script = ExtResource("3_uty7e")
 
@@ -166,5 +166,6 @@ offset_right = 4.0
 offset_bottom = 5.0
 action_mode = 0
 flat = true
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Arrow/Button" to="Arrow" method="_on_button_pressed"]
