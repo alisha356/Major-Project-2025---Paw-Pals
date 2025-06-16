@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cxhhpcq0mbn"]
+[gd_scene load_steps=22 format=3 uid="uid://cxhhpcq0mbn"]
 
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_fkxn3"]
 [ext_resource type="PackedScene" uid="uid://bqk8gdvdeyyl7" path="res://Dark Grey Cat.tscn" id="1_vs13p"]
@@ -8,7 +8,15 @@
 [ext_resource type="Texture2D" uid="uid://c07fgghbxj15a" path="res://Assets/Frame.png" id="6_r37y6"]
 [ext_resource type="Texture2D" uid="uid://vefil8wnm0en" path="res://Assets/Fish.png" id="7_dhsf0"]
 [ext_resource type="Script" path="res://Food.gd" id="8_2a7ki"]
+[ext_resource type="Texture2D" uid="uid://dpcw5wmryynte" path="res://Assets/0 hunger.png" id="9_vimvt"]
+[ext_resource type="Texture2D" uid="uid://l2q06of5yexx" path="res://Assets/1 hunger.png" id="10_24xms"]
 [ext_resource type="FontFile" uid="uid://bu0ktuo2p2jt" path="res://Assets/Silkscreen-Regular.ttf" id="11_cnk1s"]
+[ext_resource type="Texture2D" uid="uid://ctmogxwogsi57" path="res://Assets/2 hunger.png" id="11_jj1f6"]
+[ext_resource type="Texture2D" uid="uid://7v77yj61fhcs" path="res://Assets/3 hunger.png" id="12_vacfa"]
+[ext_resource type="Texture2D" uid="uid://cag2xl36lq3x2" path="res://Assets/4 hunger.png" id="13_ifdpx"]
+[ext_resource type="Texture2D" uid="uid://cugfgojim1pmy" path="res://Assets/5 hunger.png" id="14_875h0"]
+[ext_resource type="Texture2D" uid="uid://cx04doksljbqc" path="res://Assets/6 hunger.png" id="15_c1gm2"]
+[ext_resource type="Texture2D" uid="uid://ddu1lfu7udpw4" path="res://Assets/7 hunger.png" id="16_q2xhd"]
 [ext_resource type="Texture2D" uid="uid://idq8ws6fvo75" path="res://Assets/9 hunger.png" id="19_xlyjr"]
 [ext_resource type="Texture2D" uid="uid://cdppc5vgqia40" path="res://Assets/10 hunger.png" id="20_cwa6r"]
 
@@ -205,6 +213,46 @@ offset_right = 5.0
 offset_bottom = 4.0
 action_mode = 0
 flat = true
+
+[node name="Hunger 0" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(232, 124)
+texture = ExtResource("9_vimvt")
+
+[node name="Hunger 1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(232, 124)
+texture = ExtResource("10_24xms")
+
+[node name="Hunger 2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(232, 124)
+texture = ExtResource("11_jj1f6")
+
+[node name="Hunger 3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(232, 124)
+texture = ExtResource("12_vacfa")
+
+[node name="Hunger 4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(232, 124)
+texture = ExtResource("13_ifdpx")
+
+[node name="Hunger 5" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(232, 124)
+texture = ExtResource("14_875h0")
+
+[node name="Hunger 6" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(232, 124)
+texture = ExtResource("15_c1gm2")
+
+[node name="Hunger 7" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(232, 124)
+texture = ExtResource("16_q2xhd")
 
 [node name="Hunger 8" type="Sprite2D" parent="."]
 visible = false
