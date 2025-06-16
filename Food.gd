@@ -23,10 +23,9 @@ func _on_button_pressed():
 	else:
 		Global.player_food -=1
 		Global.grey_cat_hunger += 1
-		
 		$Number.text = str(Global.player_food)
 		_display_hunger_bar()
 		if Global.grey_cat_hunger == 10:
 			Global.player_coins += 2
-			#print(Global.player_coins)
+
 

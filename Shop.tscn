@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dx7k8aso5y80t"]
+[gd_scene load_steps=11 format=3 uid="uid://dx7k8aso5y80t"]
 
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_7y7fx"]
 [ext_resource type="Script" path="res://Shop.gd" id="1_l4h6c"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" path="res://Exit Arrow Shop.gd" id="3_uty7e"]
 [ext_resource type="FontFile" uid="uid://bu0ktuo2p2jt" path="res://Assets/Silkscreen-Regular.ttf" id="4_k7iln"]
 [ext_resource type="Texture2D" uid="uid://di4u0urldhs15" path="res://Assets/Coin.png" id="5_1thhx"]
+[ext_resource type="Texture2D" uid="uid://c07fgghbxj15a" path="res://Assets/Frame.png" id="7_7edfl"]
+[ext_resource type="Texture2D" uid="uid://vefil8wnm0en" path="res://Assets/Fish.png" id="8_5i1eq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0sqe3"]
 texture = ExtResource("1_7y7fx")
@@ -183,6 +185,38 @@ offset_right = 579.0
 offset_bottom = 312.0
 theme_override_fonts/font = ExtResource("4_k7iln")
 theme_override_font_sizes/font_size = 8
-text = "50"
+text = "20"
+
+[node name="Frame" type="Sprite2D" parent="."]
+position = Vector2(554, 324)
+texture = ExtResource("7_7edfl")
+
+[node name="Fish" type="Sprite2D" parent="."]
+position = Vector2(554, 324)
+texture = ExtResource("8_5i1eq")
+
+[node name="Buy" type="Sprite2D" parent="."]
+position = Vector2(554.5, 336.5)
+scale = Vector2(1.4375, 0.4375)
+texture = ExtResource("7_7edfl")
+
+[node name="Buy Label" type="Label" parent="."]
+offset_left = 545.0
+offset_top = 330.0
+offset_right = 585.0
+offset_bottom = 353.0
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+
+[node name="Buy Button" type="Button" parent="Buy Label"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+action_mode = 0
+flat = true
 
 [connection signal="pressed" from="Arrow/Button" to="Arrow" method="_on_button_pressed"]
+[connection signal="pressed" from="Buy Label/Buy Button" to="." method="_on_buy_button_pressed"]

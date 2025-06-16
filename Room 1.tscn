@@ -197,7 +197,7 @@ offset_bottom = 318.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("7_yx2b3")
 theme_override_font_sizes/font_size = 8
-text = "020"
+text = "20"
 
 [connection signal="pressed" from="CharacterBody2D/Button" to="CharacterBody2D" method="_on_button_pressed"]
 [connection signal="pressed" from="Market Icon/Button" to="Market Icon" method="_on_button_pressed"]
