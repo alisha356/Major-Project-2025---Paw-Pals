@@ -1,5 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://cxhhpcq0mbn"]
 
+[ext_resource type="Script" path="res://Cat Screen.gd" id="1_eeghg"]
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_fkxn3"]
 [ext_resource type="PackedScene" uid="uid://bqk8gdvdeyyl7" path="res://Dark Grey Cat.tscn" id="1_vs13p"]
 [ext_resource type="Texture2D" uid="uid://c7cmcnc4ds0rv" path="res://Assets/8 hunger.png" id="3_n6hgm"]
@@ -7,7 +8,6 @@
 [ext_resource type="Script" path="res://Exit Arrow.gd" id="5_l0dc3"]
 [ext_resource type="Texture2D" uid="uid://c07fgghbxj15a" path="res://Assets/Frame.png" id="6_r37y6"]
 [ext_resource type="Texture2D" uid="uid://vefil8wnm0en" path="res://Assets/Fish.png" id="7_dhsf0"]
-[ext_resource type="Script" path="res://Food.gd" id="8_2a7ki"]
 [ext_resource type="Texture2D" uid="uid://dpcw5wmryynte" path="res://Assets/0 hunger.png" id="9_vimvt"]
 [ext_resource type="Texture2D" uid="uid://l2q06of5yexx" path="res://Assets/1 hunger.png" id="10_24xms"]
 [ext_resource type="FontFile" uid="uid://bu0ktuo2p2jt" path="res://Assets/Silkscreen-Regular.ttf" id="11_cnk1s"]
@@ -160,6 +160,7 @@ separation = Vector2i(1, 1)
 sources/0 = SubResource("TileSetAtlasSource_wwqo1")
 
 [node name="Cat screen" type="Node2D"]
+script = ExtResource("1_eeghg")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_uw6hf")
@@ -193,7 +194,6 @@ texture = ExtResource("6_r37y6")
 [node name="Fish" type="Sprite2D" parent="."]
 position = Vector2(255, 111)
 texture = ExtResource("7_dhsf0")
-script = ExtResource("8_2a7ki")
 
 [node name="Number" type="Label" parent="Fish"]
 offset_left = -8.0
@@ -270,4 +270,4 @@ position = Vector2(232, 125)
 texture = ExtResource("20_cwa6r")
 
 [connection signal="pressed" from="Exit Arrow/Button" to="Exit Arrow" method="_on_button_pressed"]
-[connection signal="pressed" from="Fish/Button" to="Fish" method="_on_button_pressed"]
+[connection signal="pressed" from="Fish/Button" to="." method="_on_button_pressed"]
