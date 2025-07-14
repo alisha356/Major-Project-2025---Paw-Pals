@@ -41,6 +41,7 @@ func _ready():
 
 func _process(_delta: float):
 	_display_hunger_bar()
+	$Money.text = str(Global.player_coins)
 
 func _on_button_pressed():
 	if Global.player_food == 0:
@@ -54,5 +55,4 @@ func _on_button_pressed():
 		_display_hunger_bar()
 		if Global.grey_cat_hunger == 10:
 			Global.player_coins += 2
-			$Money.text = str(Global.player_coins)
 

@@ -216,58 +216,47 @@ action_mode = 0
 flat = true
 
 [node name="Hunger 0" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(232, 124)
+position = Vector2(232, 123)
 texture = ExtResource("9_vimvt")
 
 [node name="Hunger 1" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(232, 124)
 texture = ExtResource("10_24xms")
 
 [node name="Hunger 2" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(232, 124)
 texture = ExtResource("11_jj1f6")
 
 [node name="Hunger 3" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(232, 124)
 texture = ExtResource("12_vacfa")
 
 [node name="Hunger 4" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(232, 124)
 texture = ExtResource("13_ifdpx")
 
 [node name="Hunger 5" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(232, 124)
 texture = ExtResource("14_875h0")
 
 [node name="Hunger 6" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(232, 124)
 texture = ExtResource("15_c1gm2")
 
 [node name="Hunger 7" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(232, 124)
 texture = ExtResource("16_q2xhd")
 
 [node name="Hunger 8" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(232, 125)
+position = Vector2(232, 124)
 texture = ExtResource("3_n6hgm")
 
 [node name="Hunger 9" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(232, 125)
+position = Vector2(232, 124)
 texture = ExtResource("19_xlyjr")
 
 [node name="Hunger 10" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(232, 125)
+position = Vector2(232, 124)
 texture = ExtResource("20_cwa6r")
 
 [node name="Coin" type="Sprite2D" parent="."]
