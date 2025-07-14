@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dx7k8aso5y80t"]
+[gd_scene load_steps=12 format=3 uid="uid://dx7k8aso5y80t"]
 
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_7y7fx"]
 [ext_resource type="Script" path="res://Shop.gd" id="1_l4h6c"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://di4u0urldhs15" path="res://Assets/Coin.png" id="5_1thhx"]
 [ext_resource type="Texture2D" uid="uid://c07fgghbxj15a" path="res://Assets/Frame.png" id="7_7edfl"]
 [ext_resource type="Texture2D" uid="uid://vefil8wnm0en" path="res://Assets/Fish.png" id="8_5i1eq"]
+[ext_resource type="Texture2D" uid="uid://cv7s76h21j0p1" path="res://Assets/Chest.png" id="9_enoq8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0sqe3"]
 texture = ExtResource("1_7y7fx")
@@ -157,11 +158,11 @@ format = 2
 layer_0/tile_data = PackedInt32Array(1048605, 393216, 10, 1048606, 393216, 10, 1048607, 393216, 10, 1048608, 393216, 10, 1048609, 393216, 10, 1048610, 393216, 10, 1048611, 393216, 10, 1048612, 393216, 10, 1048613, 393216, 10, 1048614, 393216, 10, 1048615, 393216, 10, 1048616, 393216, 10, 1048617, 393216, 10, 1048618, 393216, 10, 1048619, 393216, 10, 1114155, 393216, 10, 1114154, 393216, 10, 1114153, 393216, 10, 1114152, 393216, 10, 1114151, 393216, 10, 1114150, 393216, 10, 1114149, 393216, 10, 1114148, 393216, 10, 1114147, 393216, 10, 1114146, 393216, 10, 1114145, 393216, 10, 1114144, 393216, 10, 1114143, 393216, 10, 1114142, 393216, 10, 1114141, 393216, 10, 1179677, 393216, 10, 1245213, 393216, 10, 1310749, 393216, 10, 1376285, 393216, 10, 1441821, 393216, 10, 1507357, 393216, 10, 1507358, 393216, 10, 1507359, 393216, 10, 1507360, 393216, 10, 1507361, 393216, 10, 1507362, 393216, 10, 1507363, 393216, 10, 1507364, 393216, 10, 1507365, 393216, 10, 1507366, 393216, 10, 1507367, 393216, 10, 1507368, 393216, 10, 1507369, 393216, 10, 1507370, 393216, 10, 1441834, 393216, 10, 1441835, 393216, 10, 1507371, 393216, 10, 1376299, 393216, 10, 1310763, 393216, 10, 1245227, 393216, 10, 1179691, 393216, 10, 1179690, 393216, 10, 1179689, 393216, 10, 1179688, 393216, 10, 1179687, 393216, 10, 1179686, 393216, 10, 1179685, 393216, 10, 1179684, 393216, 10, 1179683, 393216, 10, 1179682, 393216, 10, 1179681, 393216, 10, 1179680, 393216, 10, 1179679, 393216, 10, 1179678, 393216, 10, 1245214, 393216, 10, 1245215, 393216, 10, 1245216, 393216, 10, 1245217, 393216, 10, 1245218, 393216, 10, 1245219, 393216, 10, 1245220, 393216, 10, 1245221, 393216, 10, 1245222, 393216, 10, 1245223, 393216, 10, 1245224, 393216, 10, 1245225, 393216, 10, 1245226, 393216, 10, 1310762, 393216, 10, 1310761, 393216, 10, 1310760, 393216, 10, 1310759, 393216, 10, 1310758, 393216, 10, 1310757, 393216, 10, 1310756, 393216, 10, 1310755, 393216, 10, 1310754, 393216, 10, 1310753, 393216, 10, 1310752, 393216, 10, 1310751, 393216, 10, 1310750, 393216, 10, 1376286, 393216, 10, 1376287, 393216, 10, 1376288, 393216, 10, 1376289, 393216, 10, 1376290, 393216, 10, 1376291, 393216, 10, 1376292, 393216, 10, 1376293, 393216, 10, 1376294, 393216, 10, 1376295, 393216, 10, 1376296, 393216, 10, 1376297, 393216, 10, 1376298, 393216, 10, 1441833, 393216, 10, 1441832, 393216, 10, 1441831, 393216, 10, 1441830, 393216, 10, 1441829, 393216, 10, 1441828, 393216, 10, 1441827, 393216, 10, 1441826, 393216, 10, 1441825, 393216, 10, 1441824, 393216, 10, 1441823, 393216, 10, 1441822, 393216, 10, 983083, 393216, 10, 983082, 393216, 10, 983081, 393216, 10, 983080, 393216, 10, 983079, 393216, 10, 983078, 393216, 10, 983077, 393216, 10, 983076, 393216, 10, 983075, 393216, 10, 983074, 393216, 10, 983073, 393216, 10, 983072, 393216, 10, 983071, 393216, 10, 983070, 393216, 10, 983069, 393216, 10, 1572907, 393216, 10, 1572906, 393216, 10, 1572905, 393216, 10, 1572904, 393216, 10, 1572903, 393216, 10, 1572902, 393216, 10, 1572901, 393216, 10, 1572900, 393216, 10, 1572899, 393216, 10, 1572898, 393216, 10, 1572897, 393216, 10, 1572896, 393216, 10, 1572895, 393216, 10, 1572894, 393216, 10, 1572893, 393216, 10, 1572892, 393216, 10, 1507356, 393216, 10, 1441820, 393216, 10, 1376284, 393216, 10, 1310748, 393216, 10, 1245212, 393216, 10, 1179676, 393216, 10, 1114140, 393216, 10, 1048604, 393216, 10, 983068, 393216, 10)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(580, 321)
-zoom = Vector2(15, 15)
+position = Vector2(507, 274)
+zoom = Vector2(10, 10)
 
 [node name="Arrow" type="Sprite2D" parent="."]
-position = Vector2(549, 307)
+position = Vector2(456, 248)
 texture = ExtResource("2_6pjcv")
 script = ExtResource("3_uty7e")
 
@@ -175,41 +176,40 @@ flat = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Coin" type="Sprite2D" parent="."]
-position = Vector2(557, 307)
+position = Vector2(464, 248)
 texture = ExtResource("5_1thhx")
 
 [node name="Money" type="Label" parent="."]
-offset_left = 561.0
-offset_top = 301.0
-offset_right = 579.0
-offset_bottom = 312.0
+offset_left = 468.0
+offset_top = 242.0
+offset_right = 486.0
+offset_bottom = 253.0
 theme_override_fonts/font = ExtResource("4_k7iln")
 theme_override_font_sizes/font_size = 8
 text = "20"
 
-[node name="Frame" type="Sprite2D" parent="."]
-position = Vector2(554, 324)
+[node name="Frame1" type="Sprite2D" parent="."]
+position = Vector2(468, 263)
 texture = ExtResource("7_7edfl")
 
-[node name="Fish" type="Sprite2D" parent="."]
-position = Vector2(554, 324)
+[node name="Fish" type="Sprite2D" parent="Frame1"]
 texture = ExtResource("8_5i1eq")
 
-[node name="Buy" type="Sprite2D" parent="."]
-position = Vector2(554.5, 336.5)
+[node name="Buy" type="Sprite2D" parent="Frame1"]
+position = Vector2(0.5, 12.5)
 scale = Vector2(1.4375, 0.4375)
 texture = ExtResource("7_7edfl")
 
-[node name="Buy Label" type="Label" parent="."]
-offset_left = 545.0
-offset_top = 330.0
-offset_right = 585.0
-offset_bottom = 353.0
+[node name="Buy Label" type="Label" parent="Frame1"]
+offset_left = -9.0
+offset_top = 6.0
+offset_right = 31.0
+offset_bottom = 29.0
 theme_override_fonts/font = ExtResource("4_k7iln")
 theme_override_font_sizes/font_size = 8
 text = "Buy"
 
-[node name="Buy Button" type="Button" parent="Buy Label"]
+[node name="Buy Button" type="Button" parent="Frame1/Buy Label"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 3.0
@@ -218,5 +218,174 @@ offset_bottom = 11.0
 action_mode = 0
 flat = true
 
+[node name="Frame2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(494, 263)
+texture = ExtResource("7_7edfl")
+
+[node name="Fish" type="Sprite2D" parent="Frame2"]
+texture = ExtResource("8_5i1eq")
+
+[node name="Buy" type="Sprite2D" parent="Frame2"]
+position = Vector2(0.5, 12.5)
+scale = Vector2(1.4375, 0.4375)
+texture = ExtResource("7_7edfl")
+
+[node name="Buy Label" type="Label" parent="Frame2"]
+offset_left = -9.0
+offset_top = 6.0
+offset_right = 31.0
+offset_bottom = 29.0
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+
+[node name="Buy Button" type="Button" parent="Frame2/Buy Label"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+action_mode = 0
+flat = true
+
+[node name="Frame3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(520, 263)
+texture = ExtResource("7_7edfl")
+
+[node name="Fish" type="Sprite2D" parent="Frame3"]
+texture = ExtResource("8_5i1eq")
+
+[node name="Buy" type="Sprite2D" parent="Frame3"]
+position = Vector2(0.5, 12.5)
+scale = Vector2(1.4375, 0.4375)
+texture = ExtResource("7_7edfl")
+
+[node name="Buy Label" type="Label" parent="Frame3"]
+offset_left = -9.0
+offset_top = 6.0
+offset_right = 31.0
+offset_bottom = 29.0
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+
+[node name="Buy Button" type="Button" parent="Frame3/Buy Label"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+action_mode = 0
+flat = true
+
+[node name="Frame4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(546, 263)
+texture = ExtResource("7_7edfl")
+
+[node name="Fish" type="Sprite2D" parent="Frame4"]
+texture = ExtResource("8_5i1eq")
+
+[node name="Buy" type="Sprite2D" parent="Frame4"]
+position = Vector2(0.5, 12.5)
+scale = Vector2(1.4375, 0.4375)
+texture = ExtResource("7_7edfl")
+
+[node name="Buy Label" type="Label" parent="Frame4"]
+offset_left = -9.0
+offset_top = 6.0
+offset_right = 31.0
+offset_bottom = 29.0
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+
+[node name="Buy Button" type="Button" parent="Frame4/Buy Label"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+action_mode = 0
+flat = true
+
+[node name="Frame5" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(494, 289)
+texture = ExtResource("7_7edfl")
+
+[node name="Fish" type="Sprite2D" parent="Frame5"]
+texture = ExtResource("8_5i1eq")
+
+[node name="Buy" type="Sprite2D" parent="Frame5"]
+position = Vector2(0.5, 12.5)
+scale = Vector2(1.4375, 0.4375)
+texture = ExtResource("7_7edfl")
+
+[node name="Buy Label" type="Label" parent="Frame5"]
+offset_left = -9.0
+offset_top = 6.0
+offset_right = 31.0
+offset_bottom = 29.0
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+
+[node name="Buy Button" type="Button" parent="Frame5/Buy Label"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+action_mode = 0
+flat = true
+
+[node name="Frame6" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(520, 289)
+texture = ExtResource("7_7edfl")
+
+[node name="Fish" type="Sprite2D" parent="Frame6"]
+texture = ExtResource("8_5i1eq")
+
+[node name="Buy" type="Sprite2D" parent="Frame6"]
+position = Vector2(0.5, 12.5)
+scale = Vector2(1.4375, 0.4375)
+texture = ExtResource("7_7edfl")
+
+[node name="Buy Label" type="Label" parent="Frame6"]
+offset_left = -9.0
+offset_top = 6.0
+offset_right = 31.0
+offset_bottom = 29.0
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+
+[node name="Buy Button" type="Button" parent="Frame6/Buy Label"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+action_mode = 0
+flat = true
+
+[node name="Chest" type="Sprite2D" parent="."]
+position = Vector2(557, 247)
+texture = ExtResource("9_enoq8")
+
+[node name="Button" type="Button" parent="Chest"]
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 5.0
+offset_bottom = 4.0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
 [connection signal="pressed" from="Arrow/Button" to="Arrow" method="_on_button_pressed"]
-[connection signal="pressed" from="Buy Label/Buy Button" to="." method="_on_buy_button_pressed"]
+[connection signal="pressed" from="Frame1/Buy Label/Buy Button" to="." method="_on_buy_button_pressed"]
+[connection signal="pressed" from="Chest/Button" to="." method="_on_chest_button_pressed"]

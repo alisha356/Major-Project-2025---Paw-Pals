@@ -1,0 +1,262 @@
+[gd_scene load_steps=9 format=3 uid="uid://vgbjvay14jj3"]
+
+[ext_resource type="Script" path="res://Inventory.gd" id="1_h7b5d"]
+[ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_pcivr"]
+[ext_resource type="Texture2D" uid="uid://hmoaj1sdw31a" path="res://Assets/Arrow.png" id="2_7srdv"]
+[ext_resource type="Texture2D" uid="uid://c07fgghbxj15a" path="res://Assets/Frame.png" id="3_m1sqx"]
+[ext_resource type="Texture2D" uid="uid://vefil8wnm0en" path="res://Assets/Fish.png" id="4_isas1"]
+[ext_resource type="FontFile" uid="uid://bu0ktuo2p2jt" path="res://Assets/Silkscreen-Regular.ttf" id="5_envp6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sf082"]
+texture = ExtResource("1_pcivr")
+separation = Vector2i(1, 1)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+9:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_d7tto"]
+sources/0 = SubResource("TileSetAtlasSource_sf082")
+
+[node name="Inventory" type="Node2D"]
+script = ExtResource("1_h7b5d")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_d7tto")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 393216, 10, 1, 393216, 10, 2, 393216, 10, 3, 393216, 10, 4, 393216, 10, 5, 393216, 10, 65541, 393216, 10, 65540, 393216, 10, 65539, 393216, 10, 65538, 393216, 10, 65537, 393216, 10, 65536, 393216, 10, 131077, 393216, 10, 131076, 393216, 10, 131075, 393216, 10, 131074, 393216, 10, 131073, 393216, 10, 131072, 393216, 10, 6, 393216, 10, 65542, 393216, 10, 131078, 393216, 10, 196614, 393216, 10, 196613, 393216, 10, 196612, 393216, 10, 196611, 393216, 10, 196610, 393216, 10, 196609, 393216, 10, 196608, 393216, 10, 65543, 393216, 10, 262150, 393216, 10, 262149, 393216, 10, 262148, 393216, 10, 262147, 393216, 10, 262146, 393216, 10, 262145, 393216, 10, 262144, 393216, 10, 131079, 393216, 10, 196615, 393216, 10, 262151, 393216, 10, 7, 393216, 10)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(34, 20)
+zoom = Vector2(17, 17)
+
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(6, 8)
+texture = ExtResource("2_7srdv")
+
+[node name="Button" type="Button" parent="Arrow"]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 3.0
+offset_bottom = 5.0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Frame1" type="Sprite2D" parent="."]
+position = Vector2(20, 11)
+texture = ExtResource("3_m1sqx")
+
+[node name="Fish" type="Sprite2D" parent="Frame1"]
+position = Vector2(1, 2)
+texture = ExtResource("4_isas1")
+
+[node name="Num Fish" type="Label" parent="Frame1"]
+offset_left = -7.0
+offset_top = -10.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("5_envp6")
+theme_override_font_sizes/font_size = 8
+text = "x"
+metadata/_edit_use_anchors_ = true
+
+[node name="Frame2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(59, 23)
+texture = ExtResource("3_m1sqx")
+
+[node name="Label" type="Label" parent="Frame2"]
+offset_left = -7.0
+offset_top = -10.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("5_envp6")
+theme_override_font_sizes/font_size = 8
+text = "x"
+
+[node name="Frame3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(77, 23)
+texture = ExtResource("3_m1sqx")
+
+[node name="Label" type="Label" parent="Frame3"]
+offset_left = -7.0
+offset_top = -10.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("5_envp6")
+theme_override_font_sizes/font_size = 8
+text = "x"
+
+[node name="Frame4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(41, 41)
+texture = ExtResource("3_m1sqx")
+
+[node name="Label" type="Label" parent="Frame4"]
+offset_left = -7.0
+offset_top = -10.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("5_envp6")
+theme_override_font_sizes/font_size = 8
+text = "x"
+
+[node name="Frame5" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(59, 41)
+texture = ExtResource("3_m1sqx")
+
+[node name="Label" type="Label" parent="Frame5"]
+offset_left = -7.0
+offset_top = -10.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("5_envp6")
+theme_override_font_sizes/font_size = 8
+text = "x"
+
+[node name="Frame6" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(77, 41)
+texture = ExtResource("3_m1sqx")
+
+[node name="Label" type="Label" parent="Frame6"]
+offset_left = -7.0
+offset_top = -10.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("5_envp6")
+theme_override_font_sizes/font_size = 8
+text = "x"
+
+[connection signal="pressed" from="Arrow/Button" to="." method="_on_button_pressed"]

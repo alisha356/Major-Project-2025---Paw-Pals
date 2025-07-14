@@ -15,3 +15,6 @@ func _on_buy_button_pressed():
 	else:
 		Global.player_food += 1
 		Global.player_coins -= 1
+
+func _on_chest_button_pressed():
+	get_tree().change_scene_to_file("res://Inventory.tscn")
