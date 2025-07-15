@@ -56,3 +56,11 @@ func _on_button_pressed():
 		if Global.grey_cat_hunger == 10:
 			Global.player_coins += 2
 
+
+
+func _on_area_2d_mouse_entered() -> void:
+	print("enter")
+	Global._animate()
+	#_animate()
+	
+	

@@ -6,6 +6,7 @@ var grey_cat_hunger = 8
 var hunger_cooldown = 30
 var num_cats = 1
 var idle_cooldown = 120
+var animation: AnimatedSprite2D = null
 
 func _process(delta: float):
 	hunger_cooldown -= delta
@@ -17,6 +18,6 @@ func _process(delta: float):
 		player_coins += 1
 		idle_cooldown = 120
 
-	
-	
-
+func _animate():
+	if animation:
+		animation.play("default")

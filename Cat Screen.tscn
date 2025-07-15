@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cxhhpcq0mbn"]
+[gd_scene load_steps=25 format=3 uid="uid://cxhhpcq0mbn"]
 
 [ext_resource type="Script" path="res://Cat Screen.gd" id="1_eeghg"]
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_fkxn3"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://idq8ws6fvo75" path="res://Assets/9 hunger.png" id="19_xlyjr"]
 [ext_resource type="Texture2D" uid="uid://cdppc5vgqia40" path="res://Assets/10 hunger.png" id="20_cwa6r"]
 [ext_resource type="Texture2D" uid="uid://di4u0urldhs15" path="res://Assets/Coin.png" id="20_igglk"]
+[ext_resource type="PackedScene" uid="uid://cihtrh85vf2q1" path="res://Heart Animation.tscn" id="21_g62n0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwqo1"]
 texture = ExtResource("1_fkxn3")
@@ -160,6 +161,10 @@ separation = Vector2i(1, 1)
 [sub_resource type="TileSet" id="TileSet_uw6hf"]
 sources/0 = SubResource("TileSetAtlasSource_wwqo1")
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r3ile"]
+radius = 6.0
+height = 18.0
+
 [node name="Cat screen" type="Node2D"]
 script = ExtResource("1_eeghg")
 
@@ -168,8 +173,14 @@ tile_set = SubResource("TileSet_uw6hf")
 format = 2
 layer_0/tile_data = PackedInt32Array(458766, 65536, 0, 458767, 0, 0, 393231, 0, 0, 393230, 0, 0, 393229, 0, 0, 458765, 0, 0, 524303, 65536, 0, 327693, 65536, 0, 393228, 0, 0, 327692, 458752, 3, 458764, 65536, 0, 524302, 458752, 3, 524301, 0, 0, 524300, 0, 0, 393232, 65536, 0, 458768, 0, 0, 524304, 0, 0, 327696, 0, 0, 327695, 0, 0, 327694, 0, 0)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_vs13p")]
+[node name="Dark Grey Cat" parent="." instance=ExtResource("1_vs13p")]
 position = Vector2(233, 105)
+
+[node name="Area2D" type="Area2D" parent="Dark Grey Cat"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dark Grey Cat/Area2D"]
+position = Vector2(-1, 6)
+shape = SubResource("CapsuleShape2D_r3ile")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(232, 112)
@@ -272,5 +283,9 @@ theme_override_fonts/font = ExtResource("11_cnk1s")
 theme_override_font_sizes/font_size = 8
 text = "20"
 
+[node name="Heart" parent="." instance=ExtResource("21_g62n0")]
+position = Vector2(241, 100)
+
+[connection signal="mouse_entered" from="Dark Grey Cat/Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="pressed" from="Exit Arrow/Button" to="Exit Arrow" method="_on_button_pressed"]
 [connection signal="pressed" from="Fish/Button" to="." method="_on_button_pressed"]
