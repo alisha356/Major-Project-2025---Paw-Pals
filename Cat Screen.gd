@@ -59,8 +59,4 @@ func _on_button_pressed():
 
 
 func _on_area_2d_mouse_entered() -> void:
-	print("enter")
 	Global._animate()
-	#_animate()
-	
-	

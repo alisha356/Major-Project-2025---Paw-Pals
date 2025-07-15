@@ -21,3 +21,4 @@ func _process(delta: float):
 func _animate():
 	if animation:
 		animation.play("default")
+

@@ -287,5 +287,6 @@ text = "20"
 position = Vector2(241, 100)
 
 [connection signal="mouse_entered" from="Dark Grey Cat/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Dark Grey Cat/Area2D" to="." method="_on_area_2d_mouse_exited"]
 [connection signal="pressed" from="Exit Arrow/Button" to="Exit Arrow" method="_on_button_pressed"]
 [connection signal="pressed" from="Fish/Button" to="." method="_on_button_pressed"]
