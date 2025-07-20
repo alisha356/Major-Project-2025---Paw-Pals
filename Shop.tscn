@@ -188,19 +188,19 @@ theme_override_fonts/font = ExtResource("4_k7iln")
 theme_override_font_sizes/font_size = 8
 text = "20"
 
-[node name="Frame1" type="Sprite2D" parent="."]
+[node name="Food" type="Sprite2D" parent="."]
 position = Vector2(468, 263)
 texture = ExtResource("7_7edfl")
 
-[node name="Fish" type="Sprite2D" parent="Frame1"]
+[node name="Fish" type="Sprite2D" parent="Food"]
 texture = ExtResource("8_5i1eq")
 
-[node name="Buy" type="Sprite2D" parent="Frame1"]
+[node name="Buy" type="Sprite2D" parent="Food"]
 position = Vector2(0.5, 12.5)
 scale = Vector2(1.4375, 0.4375)
 texture = ExtResource("7_7edfl")
 
-[node name="Buy Label" type="Label" parent="Frame1"]
+[node name="Buy Label" type="Label" parent="Food"]
 offset_left = -9.0
 offset_top = 6.0
 offset_right = 31.0
@@ -209,7 +209,7 @@ theme_override_fonts/font = ExtResource("4_k7iln")
 theme_override_font_sizes/font_size = 8
 text = "Buy"
 
-[node name="Buy Button" type="Button" parent="Frame1/Buy Label"]
+[node name="Buy Button" type="Button" parent="Food/Buy Label"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 3.0
@@ -218,20 +218,20 @@ offset_bottom = 11.0
 action_mode = 0
 flat = true
 
-[node name="Frame2" type="Sprite2D" parent="."]
+[node name="Frame2" type="Sprite2D" parent="Food"]
 visible = false
-position = Vector2(494, 263)
+position = Vector2(26, 0)
 texture = ExtResource("7_7edfl")
 
-[node name="Fish" type="Sprite2D" parent="Frame2"]
+[node name="Fish" type="Sprite2D" parent="Food/Frame2"]
 texture = ExtResource("8_5i1eq")
 
-[node name="Buy" type="Sprite2D" parent="Frame2"]
+[node name="Buy" type="Sprite2D" parent="Food/Frame2"]
 position = Vector2(0.5, 12.5)
 scale = Vector2(1.4375, 0.4375)
 texture = ExtResource("7_7edfl")
 
-[node name="Buy Label" type="Label" parent="Frame2"]
+[node name="Buy Label" type="Label" parent="Food/Frame2"]
 offset_left = -9.0
 offset_top = 6.0
 offset_right = 31.0
@@ -240,7 +240,7 @@ theme_override_fonts/font = ExtResource("4_k7iln")
 theme_override_font_sizes/font_size = 8
 text = "Buy"
 
-[node name="Buy Button" type="Button" parent="Frame2/Buy Label"]
+[node name="Buy Button" type="Button" parent="Food/Frame2/Buy Label"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 3.0
@@ -249,20 +249,20 @@ offset_bottom = 11.0
 action_mode = 0
 flat = true
 
-[node name="Frame3" type="Sprite2D" parent="."]
+[node name="Frame3" type="Sprite2D" parent="Food"]
 visible = false
-position = Vector2(520, 263)
+position = Vector2(52, 0)
 texture = ExtResource("7_7edfl")
 
-[node name="Fish" type="Sprite2D" parent="Frame3"]
+[node name="Fish" type="Sprite2D" parent="Food/Frame3"]
 texture = ExtResource("8_5i1eq")
 
-[node name="Buy" type="Sprite2D" parent="Frame3"]
+[node name="Buy" type="Sprite2D" parent="Food/Frame3"]
 position = Vector2(0.5, 12.5)
 scale = Vector2(1.4375, 0.4375)
 texture = ExtResource("7_7edfl")
 
-[node name="Buy Label" type="Label" parent="Frame3"]
+[node name="Buy Label" type="Label" parent="Food/Frame3"]
 offset_left = -9.0
 offset_top = 6.0
 offset_right = 31.0
@@ -271,7 +271,7 @@ theme_override_fonts/font = ExtResource("4_k7iln")
 theme_override_font_sizes/font_size = 8
 text = "Buy"
 
-[node name="Buy Button" type="Button" parent="Frame3/Buy Label"]
+[node name="Buy Button" type="Button" parent="Food/Frame3/Buy Label"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 3.0
@@ -280,20 +280,20 @@ offset_bottom = 11.0
 action_mode = 0
 flat = true
 
-[node name="Frame4" type="Sprite2D" parent="."]
+[node name="Frame4" type="Sprite2D" parent="Food"]
 visible = false
-position = Vector2(546, 263)
+position = Vector2(78, 0)
 texture = ExtResource("7_7edfl")
 
-[node name="Fish" type="Sprite2D" parent="Frame4"]
+[node name="Fish" type="Sprite2D" parent="Food/Frame4"]
 texture = ExtResource("8_5i1eq")
 
-[node name="Buy" type="Sprite2D" parent="Frame4"]
+[node name="Buy" type="Sprite2D" parent="Food/Frame4"]
 position = Vector2(0.5, 12.5)
 scale = Vector2(1.4375, 0.4375)
 texture = ExtResource("7_7edfl")
 
-[node name="Buy Label" type="Label" parent="Frame4"]
+[node name="Buy Label" type="Label" parent="Food/Frame4"]
 offset_left = -9.0
 offset_top = 6.0
 offset_right = 31.0
@@ -302,7 +302,7 @@ theme_override_fonts/font = ExtResource("4_k7iln")
 theme_override_font_sizes/font_size = 8
 text = "Buy"
 
-[node name="Buy Button" type="Button" parent="Frame4/Buy Label"]
+[node name="Buy Button" type="Button" parent="Food/Frame4/Buy Label"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 3.0
@@ -311,20 +311,20 @@ offset_bottom = 11.0
 action_mode = 0
 flat = true
 
-[node name="Frame5" type="Sprite2D" parent="."]
+[node name="Frame5" type="Sprite2D" parent="Food"]
 visible = false
-position = Vector2(494, 289)
+position = Vector2(26, 26)
 texture = ExtResource("7_7edfl")
 
-[node name="Fish" type="Sprite2D" parent="Frame5"]
+[node name="Fish" type="Sprite2D" parent="Food/Frame5"]
 texture = ExtResource("8_5i1eq")
 
-[node name="Buy" type="Sprite2D" parent="Frame5"]
+[node name="Buy" type="Sprite2D" parent="Food/Frame5"]
 position = Vector2(0.5, 12.5)
 scale = Vector2(1.4375, 0.4375)
 texture = ExtResource("7_7edfl")
 
-[node name="Buy Label" type="Label" parent="Frame5"]
+[node name="Buy Label" type="Label" parent="Food/Frame5"]
 offset_left = -9.0
 offset_top = 6.0
 offset_right = 31.0
@@ -333,7 +333,7 @@ theme_override_fonts/font = ExtResource("4_k7iln")
 theme_override_font_sizes/font_size = 8
 text = "Buy"
 
-[node name="Buy Button" type="Button" parent="Frame5/Buy Label"]
+[node name="Buy Button" type="Button" parent="Food/Frame5/Buy Label"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 3.0
@@ -342,20 +342,20 @@ offset_bottom = 11.0
 action_mode = 0
 flat = true
 
-[node name="Frame6" type="Sprite2D" parent="."]
+[node name="Frame6" type="Sprite2D" parent="Food"]
 visible = false
-position = Vector2(520, 289)
+position = Vector2(52, 26)
 texture = ExtResource("7_7edfl")
 
-[node name="Fish" type="Sprite2D" parent="Frame6"]
+[node name="Fish" type="Sprite2D" parent="Food/Frame6"]
 texture = ExtResource("8_5i1eq")
 
-[node name="Buy" type="Sprite2D" parent="Frame6"]
+[node name="Buy" type="Sprite2D" parent="Food/Frame6"]
 position = Vector2(0.5, 12.5)
 scale = Vector2(1.4375, 0.4375)
 texture = ExtResource("7_7edfl")
 
-[node name="Buy Label" type="Label" parent="Frame6"]
+[node name="Buy Label" type="Label" parent="Food/Frame6"]
 offset_left = -9.0
 offset_top = 6.0
 offset_right = 31.0
@@ -364,7 +364,7 @@ theme_override_fonts/font = ExtResource("4_k7iln")
 theme_override_font_sizes/font_size = 8
 text = "Buy"
 
-[node name="Buy Button" type="Button" parent="Frame6/Buy Label"]
+[node name="Buy Button" type="Button" parent="Food/Frame6/Buy Label"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 3.0
@@ -387,5 +387,5 @@ flat = true
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Arrow/Button" to="Arrow" method="_on_button_pressed"]
-[connection signal="pressed" from="Frame1/Buy Label/Buy Button" to="." method="_on_buy_button_pressed"]
+[connection signal="pressed" from="Food/Buy Label/Buy Button" to="." method="_on_buy_button_pressed"]
 [connection signal="pressed" from="Chest/Button" to="." method="_on_chest_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cxhhpcq0mbn"]
+[gd_scene load_steps=28 format=3 uid="uid://cxhhpcq0mbn"]
 
 [ext_resource type="Script" path="res://Cat Screen.gd" id="1_eeghg"]
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_fkxn3"]
@@ -21,6 +21,9 @@
 [ext_resource type="Texture2D" uid="uid://cdppc5vgqia40" path="res://Assets/10 hunger.png" id="20_cwa6r"]
 [ext_resource type="Texture2D" uid="uid://di4u0urldhs15" path="res://Assets/Coin.png" id="20_igglk"]
 [ext_resource type="PackedScene" uid="uid://cihtrh85vf2q1" path="res://Heart Animation.tscn" id="21_g62n0"]
+[ext_resource type="Texture2D" uid="uid://by1fwoti367ae" path="res://Assets/Sprite - dead grey cat.png" id="22_6tufg"]
+[ext_resource type="Texture2D" uid="uid://cqtl1lbis0sm2" path="res://Assets/Skull emoji.png" id="23_ykd6c"]
+[ext_resource type="Texture2D" uid="uid://dn341ninqyfn7" path="res://Assets/Halo emoji.png" id="24_etax5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwqo1"]
 texture = ExtResource("1_fkxn3")
@@ -286,7 +289,30 @@ text = "20"
 [node name="Heart" parent="." instance=ExtResource("21_g62n0")]
 position = Vector2(241, 100)
 
+[node name="Sprite-DeadGreyCat" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(232, 115)
+texture = ExtResource("22_6tufg")
+
+[node name="SkullEmoji" type="Sprite2D" parent="Sprite-DeadGreyCat"]
+visible = false
+position = Vector2(1, -9)
+texture = ExtResource("23_ykd6c")
+
+[node name="HaloEmoji" type="Sprite2D" parent="Sprite-DeadGreyCat"]
+position = Vector2(5, -6)
+texture = ExtResource("24_etax5")
+
+[node name="SkullEmoji" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(232, 97)
+texture = ExtResource("23_ykd6c")
+
+[node name="HaloEmoji" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(232, 100)
+texture = ExtResource("24_etax5")
+
 [connection signal="mouse_entered" from="Dark Grey Cat/Area2D" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Dark Grey Cat/Area2D" to="." method="_on_area_2d_mouse_exited"]
 [connection signal="pressed" from="Exit Arrow/Button" to="Exit Arrow" method="_on_button_pressed"]
 [connection signal="pressed" from="Fish/Button" to="." method="_on_button_pressed"]

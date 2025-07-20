@@ -11,8 +11,9 @@ var animation: AnimatedSprite2D = null
 func _process(delta: float):
 	hunger_cooldown -= delta
 	if round(hunger_cooldown) == 0:
-		grey_cat_hunger -= 1
-		hunger_cooldown = 30
+		if grey_cat_hunger > 0:
+			grey_cat_hunger -= 1
+			hunger_cooldown = 30
 	idle_cooldown -= delta
 	if round(idle_cooldown) == 0:
 		player_coins += 1
