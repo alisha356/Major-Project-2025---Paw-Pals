@@ -1,32 +1,32 @@
-[gd_scene load_steps=28 format=3 uid="uid://bd4hnjtc15tia"]
+[gd_scene load_steps=28 format=3 uid="uid://d0mdb802tsfet"]
 
-[ext_resource type="Script" path="res://Cat Screen.gd" id="1_eeghg"]
-[ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_fkxn3"]
-[ext_resource type="PackedScene" uid="uid://bqk8gdvdeyyl7" path="res://Dark Grey Cat.tscn" id="3_b2fc4"]
-[ext_resource type="Texture2D" uid="uid://c7cmcnc4ds0rv" path="res://Assets/8 hunger.png" id="3_n6hgm"]
-[ext_resource type="Texture2D" uid="uid://hmoaj1sdw31a" path="res://Assets/Arrow.png" id="4_pyehd"]
-[ext_resource type="Script" path="res://Exit Arrow.gd" id="5_l0dc3"]
-[ext_resource type="Texture2D" uid="uid://c07fgghbxj15a" path="res://Assets/Frame.png" id="6_r37y6"]
-[ext_resource type="Texture2D" uid="uid://vefil8wnm0en" path="res://Assets/Fish.png" id="7_dhsf0"]
-[ext_resource type="Texture2D" uid="uid://dpcw5wmryynte" path="res://Assets/0 hunger.png" id="9_vimvt"]
-[ext_resource type="Texture2D" uid="uid://l2q06of5yexx" path="res://Assets/1 hunger.png" id="10_24xms"]
-[ext_resource type="FontFile" uid="uid://bu0ktuo2p2jt" path="res://Assets/Silkscreen-Regular.ttf" id="11_cnk1s"]
-[ext_resource type="Texture2D" uid="uid://ctmogxwogsi57" path="res://Assets/2 hunger.png" id="11_jj1f6"]
-[ext_resource type="Texture2D" uid="uid://7v77yj61fhcs" path="res://Assets/3 hunger.png" id="12_vacfa"]
-[ext_resource type="Texture2D" uid="uid://cag2xl36lq3x2" path="res://Assets/4 hunger.png" id="13_ifdpx"]
-[ext_resource type="Texture2D" uid="uid://cugfgojim1pmy" path="res://Assets/5 hunger.png" id="14_875h0"]
-[ext_resource type="Texture2D" uid="uid://cx04doksljbqc" path="res://Assets/6 hunger.png" id="15_c1gm2"]
-[ext_resource type="Texture2D" uid="uid://ddu1lfu7udpw4" path="res://Assets/7 hunger.png" id="16_q2xhd"]
-[ext_resource type="Texture2D" uid="uid://idq8ws6fvo75" path="res://Assets/9 hunger.png" id="19_xlyjr"]
-[ext_resource type="Texture2D" uid="uid://cdppc5vgqia40" path="res://Assets/10 hunger.png" id="20_cwa6r"]
-[ext_resource type="Texture2D" uid="uid://di4u0urldhs15" path="res://Assets/Coin.png" id="20_igglk"]
-[ext_resource type="PackedScene" uid="uid://cihtrh85vf2q1" path="res://Heart Animation.tscn" id="21_g62n0"]
-[ext_resource type="Texture2D" uid="uid://by1fwoti367ae" path="res://Assets/Sprite - dead grey cat.png" id="22_6tufg"]
-[ext_resource type="Texture2D" uid="uid://cqtl1lbis0sm2" path="res://Assets/Skull emoji.png" id="23_ykd6c"]
-[ext_resource type="Texture2D" uid="uid://dn341ninqyfn7" path="res://Assets/Halo emoji.png" id="24_etax5"]
+[ext_resource type="Script" path="res://Caramel Cat Screen.gd" id="1_hs7gx"]
+[ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="2_fjqdw"]
+[ext_resource type="PackedScene" uid="uid://dayxe5i8uqgtp" path="res://Caramel Cat.tscn" id="3_425h1"]
+[ext_resource type="Texture2D" uid="uid://hmoaj1sdw31a" path="res://Assets/Arrow.png" id="4_clfp7"]
+[ext_resource type="Script" path="res://Exit Arrow.gd" id="5_o0q3q"]
+[ext_resource type="Texture2D" uid="uid://c07fgghbxj15a" path="res://Assets/Frame.png" id="6_k31r1"]
+[ext_resource type="Texture2D" uid="uid://ji1v7t5c1axu" path="res://Assets/Watermelon.png" id="7_uyo8n"]
+[ext_resource type="FontFile" uid="uid://bu0ktuo2p2jt" path="res://Assets/Silkscreen-Regular.ttf" id="8_jb4qp"]
+[ext_resource type="Texture2D" uid="uid://dpcw5wmryynte" path="res://Assets/0 hunger.png" id="9_v15y7"]
+[ext_resource type="Texture2D" uid="uid://l2q06of5yexx" path="res://Assets/1 hunger.png" id="10_s3kie"]
+[ext_resource type="Texture2D" uid="uid://ctmogxwogsi57" path="res://Assets/2 hunger.png" id="11_ved1m"]
+[ext_resource type="Texture2D" uid="uid://7v77yj61fhcs" path="res://Assets/3 hunger.png" id="12_cs6m3"]
+[ext_resource type="Texture2D" uid="uid://cag2xl36lq3x2" path="res://Assets/4 hunger.png" id="13_lr7ke"]
+[ext_resource type="Texture2D" uid="uid://cugfgojim1pmy" path="res://Assets/5 hunger.png" id="14_tkin1"]
+[ext_resource type="Texture2D" uid="uid://cx04doksljbqc" path="res://Assets/6 hunger.png" id="15_g56an"]
+[ext_resource type="Texture2D" uid="uid://ddu1lfu7udpw4" path="res://Assets/7 hunger.png" id="16_4thws"]
+[ext_resource type="Texture2D" uid="uid://c7cmcnc4ds0rv" path="res://Assets/8 hunger.png" id="17_fjeq0"]
+[ext_resource type="Texture2D" uid="uid://idq8ws6fvo75" path="res://Assets/9 hunger.png" id="18_h5jgj"]
+[ext_resource type="Texture2D" uid="uid://cdppc5vgqia40" path="res://Assets/10 hunger.png" id="19_dyi1b"]
+[ext_resource type="Texture2D" uid="uid://di4u0urldhs15" path="res://Assets/Coin.png" id="20_dscy4"]
+[ext_resource type="PackedScene" uid="uid://cihtrh85vf2q1" path="res://Heart Animation.tscn" id="21_3c4pb"]
+[ext_resource type="Texture2D" uid="uid://by1fwoti367ae" path="res://Assets/Sprite - dead grey cat.png" id="22_mk1oj"]
+[ext_resource type="Texture2D" uid="uid://cqtl1lbis0sm2" path="res://Assets/Skull emoji.png" id="23_ff1xe"]
+[ext_resource type="Texture2D" uid="uid://dn341ninqyfn7" path="res://Assets/Halo emoji.png" id="24_ctpkl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwqo1"]
-texture = ExtResource("1_fkxn3")
+texture = ExtResource("2_fjqdw")
 separation = Vector2i(1, 1)
 0:0/0 = 0
 1:0/0 = 0
@@ -168,20 +168,20 @@ sources/0 = SubResource("TileSetAtlasSource_wwqo1")
 radius = 6.0
 height = 18.0
 
-[node name="Cat screen" type="Node2D"]
-script = ExtResource("1_eeghg")
+[node name="Caramel Cat Screen" type="Node2D"]
+script = ExtResource("1_hs7gx")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_uw6hf")
 format = 2
 layer_0/tile_data = PackedInt32Array(458766, 65536, 0, 458767, 0, 0, 393231, 0, 0, 393230, 0, 0, 393229, 0, 0, 458765, 0, 0, 524303, 65536, 0, 327693, 65536, 0, 393228, 0, 0, 327692, 458752, 3, 458764, 65536, 0, 524302, 458752, 3, 524301, 0, 0, 524300, 0, 0, 393232, 65536, 0, 458768, 0, 0, 524304, 0, 0, 327696, 0, 0, 327695, 0, 0, 327694, 0, 0)
 
-[node name="Dark Grey Cat" parent="." instance=ExtResource("3_b2fc4")]
+[node name="Caramel Cat" parent="." instance=ExtResource("3_425h1")]
 position = Vector2(233, 105)
 
-[node name="Area2D" type="Area2D" parent="Dark Grey Cat"]
+[node name="Area2D" type="Area2D" parent="Caramel Cat"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dark Grey Cat/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Caramel Cat/Area2D"]
 position = Vector2(-1, 6)
 shape = SubResource("CapsuleShape2D_r3ile")
 
@@ -191,8 +191,8 @@ zoom = Vector2(15, 15)
 
 [node name="Exit Arrow" type="Sprite2D" parent="."]
 position = Vector2(200, 97)
-texture = ExtResource("4_pyehd")
-script = ExtResource("5_l0dc3")
+texture = ExtResource("4_clfp7")
+script = ExtResource("5_o0q3q")
 
 [node name="Button" type="Button" parent="Exit Arrow"]
 offset_left = -4.0
@@ -204,115 +204,115 @@ flat = true
 
 [node name="Frame" type="Sprite2D" parent="."]
 position = Vector2(254, 109)
-texture = ExtResource("6_r37y6")
+texture = ExtResource("6_k31r1")
 
-[node name="Fish" type="Sprite2D" parent="."]
-position = Vector2(255, 111)
-texture = ExtResource("7_dhsf0")
+[node name="Watermelon" type="Sprite2D" parent="."]
+position = Vector2(256, 112)
+texture = ExtResource("7_uyo8n")
 
-[node name="Number" type="Label" parent="Fish"]
-offset_left = -8.0
-offset_top = -12.0
+[node name="Number" type="Label" parent="Watermelon"]
+offset_left = -9.0
+offset_top = -13.0
 offset_right = -2.0
-offset_bottom = -1.0
+offset_bottom = -2.0
 theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
-theme_override_fonts/font = ExtResource("11_cnk1s")
+theme_override_fonts/font = ExtResource("8_jb4qp")
 theme_override_font_sizes/font_size = 8
 text = "x"
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="Fish"]
-offset_left = -3.0
-offset_top = -4.0
-offset_right = 5.0
-offset_bottom = 4.0
+[node name="Button" type="Button" parent="Watermelon"]
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 4.0
+offset_bottom = 3.0
 action_mode = 0
 flat = true
 
 [node name="Hunger 0" type="Sprite2D" parent="."]
 position = Vector2(232, 123)
-texture = ExtResource("9_vimvt")
+texture = ExtResource("9_v15y7")
 
 [node name="Hunger 1" type="Sprite2D" parent="."]
 position = Vector2(232, 124)
-texture = ExtResource("10_24xms")
+texture = ExtResource("10_s3kie")
 
 [node name="Hunger 2" type="Sprite2D" parent="."]
 position = Vector2(232, 124)
-texture = ExtResource("11_jj1f6")
+texture = ExtResource("11_ved1m")
 
 [node name="Hunger 3" type="Sprite2D" parent="."]
 position = Vector2(232, 124)
-texture = ExtResource("12_vacfa")
+texture = ExtResource("12_cs6m3")
 
 [node name="Hunger 4" type="Sprite2D" parent="."]
 position = Vector2(232, 124)
-texture = ExtResource("13_ifdpx")
+texture = ExtResource("13_lr7ke")
 
 [node name="Hunger 5" type="Sprite2D" parent="."]
 position = Vector2(232, 124)
-texture = ExtResource("14_875h0")
+texture = ExtResource("14_tkin1")
 
 [node name="Hunger 6" type="Sprite2D" parent="."]
 position = Vector2(232, 124)
-texture = ExtResource("15_c1gm2")
+texture = ExtResource("15_g56an")
 
 [node name="Hunger 7" type="Sprite2D" parent="."]
 position = Vector2(232, 124)
-texture = ExtResource("16_q2xhd")
+texture = ExtResource("16_4thws")
 
 [node name="Hunger 8" type="Sprite2D" parent="."]
 position = Vector2(232, 124)
-texture = ExtResource("3_n6hgm")
+texture = ExtResource("17_fjeq0")
 
 [node name="Hunger 9" type="Sprite2D" parent="."]
 position = Vector2(232, 124)
-texture = ExtResource("19_xlyjr")
+texture = ExtResource("18_h5jgj")
 
 [node name="Hunger 10" type="Sprite2D" parent="."]
 position = Vector2(232, 124)
-texture = ExtResource("20_cwa6r")
+texture = ExtResource("19_dyi1b")
 
 [node name="Coin" type="Sprite2D" parent="."]
 position = Vector2(208, 97)
-texture = ExtResource("20_igglk")
+texture = ExtResource("20_dscy4")
 
 [node name="Money" type="Label" parent="."]
 offset_left = 212.0
 offset_top = 91.0
 offset_right = 224.0
 offset_bottom = 102.0
-theme_override_fonts/font = ExtResource("11_cnk1s")
+theme_override_fonts/font = ExtResource("8_jb4qp")
 theme_override_font_sizes/font_size = 8
 text = "20"
 
-[node name="Heart" parent="." instance=ExtResource("21_g62n0")]
+[node name="Heart" parent="." instance=ExtResource("21_3c4pb")]
 position = Vector2(241, 100)
 
 [node name="Sprite-DeadGreyCat" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(232, 115)
-texture = ExtResource("22_6tufg")
+texture = ExtResource("22_mk1oj")
 
 [node name="SkullEmoji" type="Sprite2D" parent="Sprite-DeadGreyCat"]
 visible = false
 position = Vector2(1, -9)
-texture = ExtResource("23_ykd6c")
+texture = ExtResource("23_ff1xe")
 
 [node name="HaloEmoji" type="Sprite2D" parent="Sprite-DeadGreyCat"]
 position = Vector2(5, -6)
-texture = ExtResource("24_etax5")
+texture = ExtResource("24_ctpkl")
 
 [node name="SkullEmoji" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(232, 97)
-texture = ExtResource("23_ykd6c")
+texture = ExtResource("23_ff1xe")
 
 [node name="HaloEmoji" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(232, 100)
-texture = ExtResource("24_etax5")
+texture = ExtResource("24_ctpkl")
 
-[connection signal="mouse_entered" from="Dark Grey Cat/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_entered" from="Caramel Cat/Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="pressed" from="Exit Arrow/Button" to="Exit Arrow" method="_on_button_pressed"]
-[connection signal="pressed" from="Fish/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Watermelon/Button" to="." method="_on_button_pressed"]

@@ -12,27 +12,27 @@ func _display_hunger_bar():
 	$"Hunger 8".visible = false
 	$"Hunger 9".visible = false
 	$"Hunger 10".visible = false
-	if Global.grey_cat_hunger == 0:
+	if Global.orange_cat_hunger == 0:
 		$"Hunger 0".visible = true
-	elif Global.grey_cat_hunger == 1:
+	elif Global.orange_cat_hunger == 1:
 		$"Hunger 1".visible = true
-	elif Global.grey_cat_hunger == 2:
+	elif Global.orange_cat_hunger == 2:
 		$"Hunger 2".visible = true
-	elif Global.grey_cat_hunger == 3:
+	elif Global.orange_cat_hunger == 3:
 		$"Hunger 3".visible = true
-	elif Global.grey_cat_hunger == 4:
+	elif Global.orange_cat_hunger == 4:
 		$"Hunger 4".visible = true
-	elif Global.grey_cat_hunger == 5:
+	elif Global.orange_cat_hunger == 5:
 		$"Hunger 5".visible = true
-	elif Global.grey_cat_hunger == 6:
+	elif Global.orange_cat_hunger == 6:
 		$"Hunger 6".visible = true
-	elif Global.grey_cat_hunger == 7:
+	elif Global.orange_cat_hunger == 7:
 		$"Hunger 7".visible = true
-	elif Global.grey_cat_hunger == 8:
+	elif Global.orange_cat_hunger == 8:
 		$"Hunger 8".visible = true
-	elif Global.grey_cat_hunger == 9:
+	elif Global.orange_cat_hunger == 9:
 		$"Hunger 9".visible = true
-	elif Global.grey_cat_hunger == 10:
+	elif Global.orange_cat_hunger == 10:
 		$"Hunger 10".visible = true
 
 func _ready():
@@ -46,14 +46,14 @@ func _process(_delta: float):
 func _on_button_pressed():
 	if Global.player_fish == 0:
 		pass
-	elif Global.grey_cat_hunger == 10:
+	elif Global.orange_cat_hunger == 10:
 		pass
 	else:
 		Global.player_fish -=1
-		Global.grey_cat_hunger += 1
+		Global.orange_cat_hunger += 1
 		$Fish/Number.text = str(Global.player_fish)
 		_display_hunger_bar()
-		if Global.grey_cat_hunger == 10:
+		if Global.orange_cat_hunger == 10:
 			Global.player_coins += 2
 
 func _on_area_2d_mouse_entered() -> void:

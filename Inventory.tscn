@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://vgbjvay14jj3"]
+[gd_scene load_steps=12 format=3 uid="uid://vgbjvay14jj3"]
 
 [ext_resource type="Script" path="res://Inventory.gd" id="1_h7b5d"]
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_pcivr"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://c07fgghbxj15a" path="res://Assets/Frame.png" id="3_m1sqx"]
 [ext_resource type="Texture2D" uid="uid://vefil8wnm0en" path="res://Assets/Fish.png" id="4_isas1"]
 [ext_resource type="FontFile" uid="uid://bu0ktuo2p2jt" path="res://Assets/Silkscreen-Regular.ttf" id="5_envp6"]
+[ext_resource type="Texture2D" uid="uid://ji1v7t5c1axu" path="res://Assets/Watermelon.png" id="7_t44pm"]
+[ext_resource type="Texture2D" uid="uid://mjjlji861snl" path="res://Assets/Cherries.png" id="8_plf3k"]
+[ext_resource type="Texture2D" uid="uid://cbni5qq0sk6xy" path="res://Assets/Cheese.png" id="9_cdhqm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sf082"]
 texture = ExtResource("1_pcivr")
@@ -190,11 +193,14 @@ text = "x"
 metadata/_edit_use_anchors_ = true
 
 [node name="Frame2" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(59, 23)
+position = Vector2(39, 11)
 texture = ExtResource("3_m1sqx")
 
-[node name="Label" type="Label" parent="Frame2"]
+[node name="Cherries" type="Sprite2D" parent="Frame2"]
+position = Vector2(2, 2)
+texture = ExtResource("8_plf3k")
+
+[node name="Num Cherries" type="Label" parent="Frame2"]
 offset_left = -7.0
 offset_top = -10.0
 offset_bottom = 1.0
@@ -204,11 +210,14 @@ theme_override_font_sizes/font_size = 8
 text = "x"
 
 [node name="Frame3" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(77, 23)
+position = Vector2(30, 30)
 texture = ExtResource("3_m1sqx")
 
-[node name="Label" type="Label" parent="Frame3"]
+[node name="Cheese" type="Sprite2D" parent="Frame3"]
+position = Vector2(3, 2)
+texture = ExtResource("9_cdhqm")
+
+[node name="Num Cheese" type="Label" parent="Frame3"]
 offset_left = -7.0
 offset_top = -10.0
 offset_bottom = 1.0
@@ -218,39 +227,14 @@ theme_override_font_sizes/font_size = 8
 text = "x"
 
 [node name="Frame4" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(41, 41)
+position = Vector2(49, 30)
 texture = ExtResource("3_m1sqx")
 
-[node name="Label" type="Label" parent="Frame4"]
-offset_left = -7.0
-offset_top = -10.0
-offset_bottom = 1.0
-theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
-theme_override_fonts/font = ExtResource("5_envp6")
-theme_override_font_sizes/font_size = 8
-text = "x"
+[node name="Watermelon" type="Sprite2D" parent="Frame4"]
+position = Vector2(2, 3)
+texture = ExtResource("7_t44pm")
 
-[node name="Frame5" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(59, 41)
-texture = ExtResource("3_m1sqx")
-
-[node name="Label" type="Label" parent="Frame5"]
-offset_left = -7.0
-offset_top = -10.0
-offset_bottom = 1.0
-theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
-theme_override_fonts/font = ExtResource("5_envp6")
-theme_override_font_sizes/font_size = 8
-text = "x"
-
-[node name="Frame6" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(77, 41)
-texture = ExtResource("3_m1sqx")
-
-[node name="Label" type="Label" parent="Frame6"]
+[node name="Num Melon" type="Label" parent="Frame4"]
 offset_left = -7.0
 offset_top = -10.0
 offset_bottom = 1.0

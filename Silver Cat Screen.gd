@@ -12,31 +12,31 @@ func _display_hunger_bar():
 	$"Hunger 8".visible = false
 	$"Hunger 9".visible = false
 	$"Hunger 10".visible = false
-	if Global.grey_cat_hunger == 0:
+	if Global.silver_cat_hunger == 0:
 		$"Hunger 0".visible = true
-	elif Global.grey_cat_hunger == 1:
+	elif Global.silver_cat_hunger == 1:
 		$"Hunger 1".visible = true
-	elif Global.grey_cat_hunger == 2:
+	elif Global.silver_cat_hunger == 2:
 		$"Hunger 2".visible = true
-	elif Global.grey_cat_hunger == 3:
+	elif Global.silver_cat_hunger == 3:
 		$"Hunger 3".visible = true
-	elif Global.grey_cat_hunger == 4:
+	elif Global.silver_cat_hunger == 4:
 		$"Hunger 4".visible = true
-	elif Global.grey_cat_hunger == 5:
+	elif Global.silver_cat_hunger == 5:
 		$"Hunger 5".visible = true
-	elif Global.grey_cat_hunger == 6:
+	elif Global.silver_cat_hunger == 6:
 		$"Hunger 6".visible = true
-	elif Global.grey_cat_hunger == 7:
+	elif Global.silver_cat_hunger == 7:
 		$"Hunger 7".visible = true
-	elif Global.grey_cat_hunger == 8:
+	elif Global.silver_cat_hunger == 8:
 		$"Hunger 8".visible = true
-	elif Global.grey_cat_hunger == 9:
+	elif Global.silver_cat_hunger == 9:
 		$"Hunger 9".visible = true
-	elif Global.grey_cat_hunger == 10:
+	elif Global.silver_cat_hunger == 10:
 		$"Hunger 10".visible = true
 
 func _ready():
-	$Fish/Number.text = str(Global.player_fish)
+	$Cherries/Number.text = str(Global.player_cherries)
 	$Money.text = str(Global.player_coins)
 
 func _process(_delta: float):
@@ -44,17 +44,17 @@ func _process(_delta: float):
 	$Money.text = str(Global.player_coins)
 
 func _on_button_pressed():
-	if Global.player_fish == 0:
+	if Global.player_cherries == 0:
 		pass
-	elif Global.grey_cat_hunger == 10:
+	elif Global.silver_cat_hunger == 10:
 		pass
 	else:
-		Global.player_fish -=1
-		Global.grey_cat_hunger += 1
-		$Fish/Number.text = str(Global.player_fish)
+		Global.player_cherries -=1
+		Global.silver_cat_hunger += 1
+		$Cherries/Number.text = str(Global.player_cherries)
 		_display_hunger_bar()
-		if Global.grey_cat_hunger == 10:
-			Global.player_coins += 2
+		if Global.silver_cat_hunger == 10:
+			Global.player_coins += 4
 
 func _on_area_2d_mouse_entered() -> void:
 	Global._animate()

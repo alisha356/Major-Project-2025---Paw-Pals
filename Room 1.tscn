@@ -1,11 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://cmtw7crxmbkwt"]
+[gd_scene load_steps=14 format=3 uid="uid://cmtw7crxmbkwt"]
 
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_hy5y7"]
 [ext_resource type="Script" path="res://Room 1.gd" id="1_idt2n"]
 [ext_resource type="PackedScene" uid="uid://bqk8gdvdeyyl7" path="res://Dark Grey Cat.tscn" id="2_2jlvu"]
-[ext_resource type="Script" path="res://Dark Grey Cat.gd" id="3_i33cb"]
 [ext_resource type="Texture2D" uid="uid://di4u0urldhs15" path="res://Assets/Coin.png" id="4_p37el"]
+[ext_resource type="PackedScene" uid="uid://blgejgtm5iwe2" path="res://Brown Cat.tscn" id="5_sqj34"]
+[ext_resource type="PackedScene" uid="uid://bfochfmvm7ulb" path="res://Orange Cat.tscn" id="6_s5i6i"]
+[ext_resource type="PackedScene" uid="uid://dayxe5i8uqgtp" path="res://Caramel Cat.tscn" id="7_mqoel"]
 [ext_resource type="FontFile" uid="uid://bu0ktuo2p2jt" path="res://Assets/Silkscreen-Regular.ttf" id="7_yx2b3"]
+[ext_resource type="PackedScene" uid="uid://qqw62cmw1cx6" path="res://Silver Cat.tscn" id="8_ddqd1"]
 [ext_resource type="Texture2D" uid="uid://bomnj4jslvhoj" path="res://Assets/Market Icon.png" id="15_m0ugm"]
 [ext_resource type="Script" path="res://Market Icon Room 1.gd" id="16_i1tm5"]
 
@@ -156,11 +159,58 @@ tile_set = SubResource("TileSet_1vowy")
 format = 2
 layer_0/tile_data = PackedInt32Array(1572888, 65537, 0, 1507351, 65537, 0, 1441817, 65537, 0, 1376278, 65537, 0, 1310742, 65537, 0, 1310743, 65537, 0, 1245205, 65537, 0, 1245203, 65537, 0, 1310740, 65537, 0, 1441816, 1, 0, 1441815, 1, 0, 1441814, 1, 0, 1507350, 1, 0, 1507352, 1, 0, 1572887, 458753, 3, 1572886, 1, 0, 1572885, 1, 0, 1507349, 65537, 0, 1441813, 1, 0, 1376277, 458753, 3, 1310741, 1, 0, 1245204, 1, 0, 1245206, 1, 0, 1245207, 131073, 0, 1245208, 1, 0, 1245209, 1, 0, 1310745, 131073, 0, 1310744, 1, 0, 1376280, 1, 0, 1376281, 1, 0, 1376279, 1, 0, 1376282, 1, 0, 1310746, 1, 0, 1245210, 65537, 0, 1245211, 1, 0, 1245212, 458753, 3, 1245213, 1, 0, 1245214, 65537, 0, 1310750, 131073, 0, 1376286, 1, 0, 1441822, 1, 0, 1507358, 458753, 3, 1572894, 65537, 0, 1638430, 1, 0, 1703966, 1, 0, 1769502, 1, 0, 1769501, 1, 0, 1703965, 1, 0, 1638428, 1, 0, 1572892, 1, 0, 1572893, 1, 0, 1507357, 1, 0, 1441821, 1, 0, 1376285, 65537, 0, 1310749, 1, 0, 1310748, 65537, 0, 1310747, 65537, 0, 1376284, 65537, 0, 1376283, 1, 0, 1441819, 1, 0, 1441818, 1, 0, 1441820, 1, 0, 1507356, 1, 0, 1638429, 131073, 0, 1703964, 65537, 0, 1769500, 1, 0, 1769499, 1, 0, 1769498, 1, 0, 1769497, 458753, 3, 1769496, 1, 0, 1769495, 65537, 0, 1769494, 65537, 0, 1769493, 1, 0, 1769492, 1, 0, 1769491, 1, 0, 1769490, 1, 0, 1769489, 131073, 0, 1769488, 1, 0, 1703952, 65537, 0, 1638416, 458753, 3, 1572880, 65537, 0, 1507344, 1, 0, 1441808, 1, 0, 1376272, 65537, 0, 1310736, 65537, 0, 1245200, 131073, 0, 1245201, 1, 0, 1245202, 1, 0, 1310738, 65537, 0, 1310739, 1, 0, 1310737, 65537, 0, 1376273, 1, 0, 1441809, 65537, 0, 1507345, 65537, 0, 1572881, 1, 0, 1638417, 1, 0, 1703953, 65537, 0, 1703955, 1, 0, 1703956, 1, 0, 1703957, 65537, 0, 1703958, 65537, 0, 1703959, 1, 0, 1703960, 131073, 0, 1703961, 1, 0, 1703962, 1, 0, 1703963, 1, 0, 1638425, 65537, 0, 1638424, 1, 0, 1638423, 1, 0, 1638422, 65537, 0, 1638426, 65537, 0, 1638427, 1, 0, 1572891, 1, 0, 1507355, 65537, 0, 1507354, 1, 0, 1507353, 1, 0, 1572889, 1, 0, 1572890, 65537, 0, 1638421, 131073, 0, 1638420, 1, 0, 1572883, 131073, 0, 1507347, 1, 0, 1441811, 65537, 0, 1376275, 1, 0, 1376274, 1, 0, 1376276, 1, 0, 1441812, 65537, 0, 1507348, 1, 0, 1572884, 131073, 0, 1572882, 1, 0, 1638418, 65537, 0, 1638419, 1, 0, 1703954, 1, 0, 1507346, 1, 0, 1441810, 1, 0)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_2jlvu")]
+[node name="Dark Grey Cat" parent="." instance=ExtResource("2_2jlvu")]
 position = Vector2(377, 362)
-script = ExtResource("3_i33cb")
 
-[node name="Button" type="Button" parent="CharacterBody2D"]
+[node name="DGC Button" type="Button" parent="Dark Grey Cat"]
+offset_left = -7.0
+offset_top = -3.0
+offset_right = 5.0
+offset_bottom = 15.0
+action_mode = 0
+flat = true
+
+[node name="Brown Cat" parent="." instance=ExtResource("5_sqj34")]
+visible = false
+position = Vector2(328, 397)
+
+[node name="BC Button" type="Button" parent="Brown Cat"]
+offset_left = -7.0
+offset_top = -3.0
+offset_right = 5.0
+offset_bottom = 15.0
+action_mode = 0
+flat = true
+
+[node name="Orange Cat" parent="." instance=ExtResource("6_s5i6i")]
+visible = false
+position = Vector2(452, 352)
+
+[node name="OC Button" type="Button" parent="Orange Cat"]
+offset_left = -7.0
+offset_top = -3.0
+offset_right = 5.0
+offset_bottom = 15.0
+action_mode = 0
+flat = true
+
+[node name="Silver Cat" parent="." instance=ExtResource("8_ddqd1")]
+visible = false
+position = Vector2(417, 390)
+
+[node name="SC Button" type="Button" parent="Silver Cat"]
+offset_left = -7.0
+offset_top = -3.0
+offset_right = 5.0
+offset_bottom = 15.0
+action_mode = 0
+flat = true
+
+[node name="Caramel Cat" parent="." instance=ExtResource("7_mqoel")]
+visible = false
+position = Vector2(309, 329)
+
+[node name="CC Button" type="Button" parent="Caramel Cat"]
 offset_left = -7.0
 offset_top = -3.0
 offset_right = 5.0
@@ -199,5 +249,9 @@ theme_override_fonts/font = ExtResource("7_yx2b3")
 theme_override_font_sizes/font_size = 8
 text = "20"
 
-[connection signal="pressed" from="CharacterBody2D/Button" to="CharacterBody2D" method="_on_button_pressed"]
+[connection signal="pressed" from="Dark Grey Cat/DGC Button" to="." method="_on_dgc_button_pressed"]
+[connection signal="pressed" from="Brown Cat/BC Button" to="." method="_on_bc_button_pressed"]
+[connection signal="pressed" from="Orange Cat/OC Button" to="." method="_on_oc_button_pressed"]
+[connection signal="pressed" from="Silver Cat/SC Button" to="." method="_on_sc_button_pressed"]
+[connection signal="pressed" from="Caramel Cat/CC Button" to="." method="_on_cc_button_pressed"]
 [connection signal="pressed" from="Market Icon/Button" to="Market Icon" method="_on_button_pressed"]
