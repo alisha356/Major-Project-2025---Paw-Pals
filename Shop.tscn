@@ -393,7 +393,6 @@ texture = ExtResource("13_p3ung")
 
 [node name="Plain Brown" type="Sprite2D" parent="Cat Frame"]
 position = Vector2(1.00003, 3)
-scale = Vector2(1, 1)
 texture = ExtResource("10_0laak")
 
 [node name="Buy Frame" type="Sprite2D" parent="Cat Frame/Plain Brown"]
@@ -447,7 +446,6 @@ texture = ExtResource("13_p3ung")
 
 [node name="Plain Orange" type="Sprite2D" parent="Cat Frame/CatFrame2"]
 position = Vector2(-3.05176e-05, 3)
-scale = Vector2(1, 1)
 texture = ExtResource("11_7gp2e")
 
 [node name="Buy Frame 2" type="Sprite2D" parent="Cat Frame/CatFrame2/Plain Orange"]
@@ -500,7 +498,6 @@ texture = ExtResource("13_p3ung")
 
 [node name="Plain Silver" type="Sprite2D" parent="Cat Frame/CatFrame3"]
 position = Vector2(1.00006, 3)
-scale = Vector2(1, 1)
 texture = ExtResource("12_oc7g0")
 
 [node name="Buy Frame 3" type="Sprite2D" parent="Cat Frame/CatFrame3/Plain Silver"]
@@ -553,7 +550,6 @@ texture = ExtResource("13_p3ung")
 
 [node name="Plain Caramel" type="Sprite2D" parent="Cat Frame/CatFrame4"]
 position = Vector2(1.00012, 3)
-scale = Vector2(1, 1)
 texture = ExtResource("13_4v82t")
 
 [node name="Buy Frame 4" type="Sprite2D" parent="Cat Frame/CatFrame4/Plain Caramel"]
@@ -602,7 +598,6 @@ text = "10"
 
 [node name="Fish Icon" type="Sprite2D" parent="Cat Frame"]
 position = Vector2(74.9438, -24.472)
-scale = Vector2(1, 1)
 texture = ExtResource("15_nppmf")
 
 [node name="Fish Button" type="Button" parent="Cat Frame/Fish Icon"]
