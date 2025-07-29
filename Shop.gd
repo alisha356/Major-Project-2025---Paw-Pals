@@ -32,7 +32,7 @@ func _on_cat_button_pressed():
 
 func _on_fish_button_pressed():
 	$Food.visible = true
-	$Cats.visible = false
+	$"Cat Frame".visible = false
 
 
 func _on_plain_brown_button_pressed():
