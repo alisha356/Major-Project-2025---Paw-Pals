@@ -25,18 +25,22 @@ func _process(delta: float):
 		if grey_cat_hunger > 0:
 			grey_cat_hunger -= 1
 			hunger_cooldown = 30
-		if brown_cat_hunger > 0:
-			brown_cat_hunger -= 1
-			hunger_cooldown = 30
-		if orange_cat_hunger > 0:
-			orange_cat_hunger -= 1
-			hunger_cooldown = 30
-		if silver_cat_hunger > 0:
-			silver_cat_hunger -= 1
-			hunger_cooldown = 30
-		if caramel_cat_hunger > 0:
-			caramel_cat_hunger -= 1
-			hunger_cooldown = 30
+		if own_plain_brown == true:
+			if brown_cat_hunger > 0:
+				brown_cat_hunger -= 1
+				hunger_cooldown = 30
+		if own_plain_orange == true:
+			if orange_cat_hunger > 0:
+				orange_cat_hunger -= 1
+				hunger_cooldown = 30
+		if own_plain_silver == true:
+			if silver_cat_hunger > 0:
+				silver_cat_hunger -= 1
+				hunger_cooldown = 30
+		if own_plain_caramel == true:
+			if caramel_cat_hunger > 0:
+				caramel_cat_hunger -= 1
+				hunger_cooldown = 30
 	idle_cooldown -= delta
 	if round(idle_cooldown) == 0:
 		player_coins += (1 * num_cats)
