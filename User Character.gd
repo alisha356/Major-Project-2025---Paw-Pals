@@ -2,19 +2,11 @@ extends CharacterBody2D
 
 const SPEED = 100.0
 
-
-# Get the gravity from the project settings to be synced with RigidBody nodes
-
-#var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-
-
 func _physics_process(_delta):
 # Get the input direction and handle the movement/deceleration.
 	var horizontal_direction = Input.get_axis("move left", "move right")
 	var vertical_direction = Input.get_axis("move up", "move down")
 
-
-# Play aminations
 	if vertical_direction == 0 and horizontal_direction == 0:
 		$AnimatedSprite2D.play("default")
 	else:
@@ -26,9 +18,7 @@ func _physics_process(_delta):
 			$AnimatedSprite2D.play("default")
 		elif vertical_direction < 0:
 			$AnimatedSprite2D.play("walk up")
-		
 
-# Move player
 	if horizontal_direction:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 		velocity.x = horizontal_direction * SPEED

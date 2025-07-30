@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Paw Pals"
-run/main_scene="res://Room 1.tscn"
+run/main_scene="res://Map.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
