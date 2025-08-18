@@ -232,6 +232,7 @@ offset_left = -2.0
 offset_top = 3.0
 offset_right = 21.0
 offset_bottom = 11.0
+focus_mode = 0
 theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
 action_mode = 0
 flat = true
@@ -276,6 +277,7 @@ offset_left = -2.0
 offset_top = 3.0
 offset_right = 21.0
 offset_bottom = 11.0
+focus_mode = 0
 action_mode = 0
 flat = true
 
@@ -318,6 +320,7 @@ offset_left = -2.0
 offset_top = 3.0
 offset_right = 21.0
 offset_bottom = 11.0
+focus_mode = 0
 action_mode = 0
 flat = true
 
@@ -360,6 +363,7 @@ offset_left = -2.0
 offset_top = 3.0
 offset_right = 21.0
 offset_bottom = 11.0
+focus_mode = 0
 action_mode = 0
 flat = true
 
@@ -427,6 +431,7 @@ offset_left = -2.56122
 offset_top = 2.98209
 offset_right = 21.4388
 offset_bottom = 10.9821
+focus_mode = 0
 action_mode = 0
 flat = true
 
@@ -479,6 +484,7 @@ offset_left = -2.56128
 offset_top = 2.85968
 offset_right = 21.4387
 offset_bottom = 10.8597
+focus_mode = 0
 action_mode = 0
 flat = true
 
@@ -531,6 +537,7 @@ offset_left = -2.47809
 offset_top = 2.86816
 offset_right = 21.5219
 offset_bottom = 10.8682
+focus_mode = 0
 action_mode = 0
 flat = true
 
@@ -583,6 +590,7 @@ offset_left = -2.57983
 offset_top = 2.78088
 offset_right = 21.4202
 offset_bottom = 10.7809
+focus_mode = 0
 action_mode = 0
 flat = true
 
