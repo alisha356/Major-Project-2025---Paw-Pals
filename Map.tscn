@@ -1,10 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://bc4qel2c5d7tb"]
+[gd_scene load_steps=10 format=3 uid="uid://bc4qel2c5d7tb"]
 
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_f1opm"]
 [ext_resource type="Script" path="res://Map.gd" id="1_s6e7p"]
-[ext_resource type="Script" path="res://User Character.gd" id="2_72pkd"]
-[ext_resource type="Texture2D" uid="uid://cinkf5tbi8ov1" path="res://Assets/Character Sprites V1.png" id="2_xmgvk"]
 [ext_resource type="Texture2D" uid="uid://20ivggto2ypg" path="res://Assets/Bush Arch.png" id="3_qgp3s"]
+[ext_resource type="PackedScene" uid="uid://bp301n3ht2hvy" path="res://User Character.tscn" id="4_xlnws"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ftbvt"]
 texture = ExtResource("1_f1opm")
@@ -560,61 +559,6 @@ sources/0 = SubResource("TileSetAtlasSource_hoquf")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_40w6u"]
 size = Vector2(24, 13)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8unoc"]
-atlas = ExtResource("2_xmgvk")
-region = Rect2(0, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p82xf"]
-atlas = ExtResource("2_xmgvk")
-region = Rect2(16, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1iabg"]
-atlas = ExtResource("2_xmgvk")
-region = Rect2(32, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dr0bw"]
-atlas = ExtResource("2_xmgvk")
-region = Rect2(48, 0, 16, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_rxjgy"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8unoc")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p82xf")
-}],
-"loop": true,
-"name": &"walk left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1iabg")
-}],
-"loop": true,
-"name": &"walk right",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dr0bw")
-}],
-"loop": true,
-"name": &"walk up",
-"speed": 5.0
-}]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lqas7"]
-radius = 6.0
-height = 27.0
-
 [node name="Map" type="Node2D"]
 script = ExtResource("1_s6e7p")
 
@@ -638,19 +582,10 @@ texture = ExtResource("3_qgp3s")
 position = Vector2(0, 3.998)
 shape = SubResource("RectangleShape2D_40w6u")
 
-[node name="User Character" type="CharacterBody2D" parent="."]
-position = Vector2(301, 135)
-script = ExtResource("2_72pkd")
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_xlnws")]
+position = Vector2(237, 147)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="User Character"]
-sprite_frames = SubResource("SpriteFrames_rxjgy")
-animation = &"walk up"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="User Character"]
-position = Vector2(0, 3.5)
-shape = SubResource("CapsuleShape2D_lqas7")
-
-[node name="Camera2D" type="Camera2D" parent="User Character"]
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(5, 5)
 
 [connection signal="body_entered" from="BushArch/Area2D" to="." method="_on_area_2d_body_entered"]

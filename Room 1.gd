@@ -1,18 +1,22 @@
 extends Node2D
 
 func _ready():
-	$Money.text = str(Global.player_coins)
+	$Camera2D/Money.text = str(Global.player_coins)
 	if Global.own_plain_brown == true:
 		$"Brown Cat".visible = true
+		$"Brown Cat".position = Vector2(329, 393)
 	if Global.own_plain_orange == true:
 		$"Orange Cat".visible = true
+		$"Orange Cat".position = Vector2(457, 346)
 	if Global.own_plain_silver == true:
 		$"Silver Cat".visible = true
+		$"Silver Cat".position = Vector2(425, 393)
 	if Global.own_plain_caramel == true:
 		$"Caramel Cat".visible = true
+		$"Caramel Cat".position = Vector2(313, 329)
 	
 func _process(_delta: float):
-	$Money.text = str(Global.player_coins)
+	$Camera2D/Money.text = str(Global.player_coins)
 
 
 func _on_dgc_button_pressed():
