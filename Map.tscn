@@ -581,6 +581,7 @@ texture = ExtResource("3_qgp3s")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BushArch/Area2D"]
 position = Vector2(0, 3.998)
 shape = SubResource("RectangleShape2D_40w6u")
+debug_color = Color(0.854902, 0, 0.890196, 0.34902)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_xlnws")]
 position = Vector2(237, 147)

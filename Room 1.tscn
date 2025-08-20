@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cmtw7crxmbkwt"]
+[gd_scene load_steps=24 format=3 uid="uid://cmtw7crxmbkwt"]
 
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_hy5y7"]
 [ext_resource type="Script" path="res://Room 1.gd" id="1_idt2n"]
@@ -567,6 +567,9 @@ separation = Vector2i(1, 1)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_yd8yw")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pks1c"]
+size = Vector2(23, 10)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e2r4l"]
 radius = 9.0
 height = 20.0
@@ -603,6 +606,13 @@ layer_0/tile_data = PackedInt32Array(1703952, 524288, 0, 1638416, 524288, 2, 157
 [node name="BushArch" type="Sprite2D" parent="."]
 position = Vector2(367.906, 290.468)
 texture = ExtResource("3_33f03")
+
+[node name="Bush Area2D" type="Area2D" parent="BushArch"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BushArch/Bush Area2D"]
+position = Vector2(0.0936584, 5.5318)
+shape = SubResource("RectangleShape2D_pks1c")
+debug_color = Color(0.854902, 0, 0.890196, 0.34902)
 
 [node name="Dark Grey Cat" parent="." instance=ExtResource("2_2jlvu")]
 position = Vector2(377, 362)
@@ -691,8 +701,9 @@ action_mode = 0
 flat = true
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("13_5wnwj")]
-position = Vector2(368, 303)
+position = Vector2(368, 312)
 
+[connection signal="body_entered" from="BushArch/Bush Area2D" to="." method="_on_bush_area_2d_body_entered"]
 [connection signal="body_entered" from="Dark Grey Cat/DGC Area2D" to="." method="_on_dgc_area_2d_body_entered"]
 [connection signal="body_entered" from="Brown Cat/BC Area2D" to="." method="_on_bc_area_2d_body_entered"]
 [connection signal="body_entered" from="Orange Cat/OC Area2D" to="." method="_on_oc_area_2d_body_entered"]

@@ -1,5 +1,7 @@
 extends Node2D
 
+var wait_2_secs = 2
+
 func _ready():
 	$Camera2D/Money.text = str(Global.player_coins)
 	if Global.own_plain_brown == true:
@@ -15,8 +17,10 @@ func _ready():
 		$"Caramel Cat".visible = true
 		$"Caramel Cat".position = Vector2(313, 329)
 	
-func _process(_delta: float):
+	
+func _process(delta: float):
 	$Camera2D/Money.text = str(Global.player_coins)
+	wait_2_secs -= delta
 	
 
 func _on_dgc_area_2d_body_entered(body: CharacterBody2D) -> void:
@@ -38,3 +42,11 @@ func _on_sc_area_2d_body_entered(body: CharacterBody2D) -> void:
 func _on_cc_area_2d_body_entered(body: CharacterBody2D) -> void:
 	if body == $CharacterBody2D:
 		get_tree().change_scene_to_file("res://Caramel Cat Screen.tscn")
+
+
+func _on_bush_area_2d_body_entered(body: CharacterBody2D) -> void:
+	if body == $CharacterBody2D:
+		if round(wait_2_secs) <= 0:
+			get_tree().change_scene_to_file("res://map.tscn")
+		else:
+			pass
