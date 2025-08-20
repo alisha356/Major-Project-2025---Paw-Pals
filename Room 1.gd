@@ -17,19 +17,24 @@ func _ready():
 	
 func _process(_delta: float):
 	$Camera2D/Money.text = str(Global.player_coins)
+	
 
+func _on_dgc_area_2d_body_entered(body: CharacterBody2D) -> void:
+	if body == $CharacterBody2D:
+		get_tree().change_scene_to_file("res://Cat Screen.tscn")
 
-func _on_dgc_button_pressed():
-	get_tree().change_scene_to_file("res://Cat Screen.tscn")
+func _on_bc_area_2d_body_entered(body: CharacterBody2D) -> void:
+	if body == $CharacterBody2D:
+		get_tree().change_scene_to_file("res://Brown Cat Screen.tscn")
 
-func _on_bc_button_pressed():
-	get_tree().change_scene_to_file("res://Brown Cat Screen.tscn")
+func _on_oc_area_2d_body_entered(body: CharacterBody2D) -> void:
+	if body == $CharacterBody2D:
+		get_tree().change_scene_to_file("res://Orange Cat Screen.tscn")
 
-func _on_oc_button_pressed():
-	get_tree().change_scene_to_file("res://Orange Cat Screen.tscn")
+func _on_sc_area_2d_body_entered(body: CharacterBody2D) -> void:
+	if body == $CharacterBody2D:
+		get_tree().change_scene_to_file("res://Silver Cat Screen.tscn")
 
-func _on_sc_button_pressed():
-	get_tree().change_scene_to_file("res://Silver Cat Screen.tscn")
-
-func _on_cc_button_pressed():
-	get_tree().change_scene_to_file("res://Caramel Cat Screen.tscn")
+func _on_cc_area_2d_body_entered(body: CharacterBody2D) -> void:
+	if body == $CharacterBody2D:
+		get_tree().change_scene_to_file("res://Caramel Cat Screen.tscn")

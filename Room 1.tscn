@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cmtw7crxmbkwt"]
+[gd_scene load_steps=23 format=3 uid="uid://cmtw7crxmbkwt"]
 
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_hy5y7"]
 [ext_resource type="Script" path="res://Room 1.gd" id="1_idt2n"]
@@ -567,6 +567,26 @@ separation = Vector2i(1, 1)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_yd8yw")
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e2r4l"]
+radius = 9.0
+height = 20.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_safvt"]
+radius = 8.0
+height = 20.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q0cah"]
+radius = 8.0
+height = 20.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4wxyg"]
+radius = 8.0
+height = 20.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hyv6l"]
+radius = 8.0
+height = 20.0
+
 [node name="Room 1" type="Node2D"]
 script = ExtResource("1_idt2n")
 
@@ -578,7 +598,7 @@ layer_0/tile_data = PackedInt32Array(1572888, 65537, 0, 1507351, 65537, 0, 14418
 [node name="Trees" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_6ty0v")
 format = 2
-layer_0/tile_data = PackedInt32Array(1703952, 524288, 0, 1638416, 524288, 2, 1572880, 458752, 1, 1507344, 458752, 1, 1441808, 524288, 0, 1245200, 524288, 2, 1245204, 458752, 2, 1245205, 458752, 2, 1245208, 393216, 2, 1245209, 458752, 1, 1245210, 524288, 2, 1245213, 393216, 2, 1245214, 458752, 1, 1310750, 393216, 2, 1376286, 393216, 1, 1572894, 393216, 1, 1769488, 458752, 1, 1703956, 458752, 0, 1703957, 393216, 0, 1703958, 458752, 1, 1703960, 524288, 0, 1703961, 458752, 0, 1703962, 458752, 0, 1769499, 524288, 0, 1769498, 458752, 1, 1769497, 458752, 1, 1769496, 458752, 1, 1769494, 458752, 1, 1769493, 458752, 1, 1769492, 458752, 1, 1769489, 524288, 0, 1703959, 458752, 1, 1769495, 458752, 1, 1245215, 458752, 1, 1310751, 458752, 1, 1376287, 458752, 1, 1441823, 393216, 2, 1507359, 393216, 0, 1572895, 458752, 1, 1703967, 393216, 1, 1769503, 393216, 0, 1835039, 458752, 1, 1835038, 393216, 0, 1835036, 524288, 0, 1835035, 458752, 1, 1835034, 458752, 1, 1835033, 458752, 1, 1835032, 458752, 1, 1835031, 458752, 1, 1835030, 458752, 1, 1835029, 458752, 1, 1835028, 458752, 1, 1835024, 458752, 1, 1835025, 458752, 1, 1835026, 458752, 1, 1835027, 458752, 1, 1835023, 458752, 1, 1835022, 458752, 1, 1769486, 458752, 1, 1769487, 458752, 1, 1703951, 458752, 1, 1703950, 458752, 1, 1638414, 458752, 1, 1638415, 458752, 1, 1572879, 458752, 1, 1572878, 458752, 1, 1507342, 458752, 1, 1507343, 458752, 1, 1441807, 458752, 1, 1441806, 458752, 1, 1376270, 458752, 1, 1376271, 458752, 1, 1310735, 458752, 1, 1310734, 458752, 1, 1245198, 458752, 1, 1179662, 458752, 1, 1114126, 458752, 1, 1114127, 458752, 1, 1179663, 458752, 1, 1245199, 458752, 1, 1114128, 458752, 1, 1179664, 458752, 1, 1114129, 458752, 1, 1179665, 524288, 2, 1114130, 458752, 1, 1114131, 458752, 1, 1179668, 458752, 1, 1179669, 458752, 1, 1114133, 458752, 1, 1114132, 458752, 1, 1114136, 458752, 1, 1179672, 458752, 1, 1179673, 458752, 1, 1114137, 458752, 1, 1114138, 458752, 1, 1114139, 458752, 1, 1114140, 458752, 1, 1114141, 458752, 1, 1114142, 458752, 1, 1114143, 458752, 1, 1114144, 458752, 1, 1179680, 458752, 1, 1179679, 458752, 1, 1179678, 458752, 1, 1179677, 458752, 1, 1179675, 524288, 2, 1179674, 458752, 1, 1245216, 458752, 1, 1310752, 458752, 1, 1376288, 458752, 1, 1441824, 458752, 1, 1507360, 458752, 1, 1572896, 458752, 1, 1638432, 458752, 1, 1703968, 458752, 1, 1769504, 458752, 1, 1835040, 458752, 1, 1114135, 393216, 2, 1114134, 524288, 2, 1179667, 393216, 2, 1179666, 458752, 2, 1507345, 524288, 1, 1572881, 524288, 1, 1376272, 524288, 1, 1310736, 524288, 1, 1769490, 458752, 0, 1769491, 393216, 0, 1638422, 458752, 0, 1638423, 458752, 0, 1638431, 393216, 2, 1179676, 393216, 2, 1310745, 458752, 2)
+layer_0/tile_data = PackedInt32Array(1703952, 524288, 0, 1638416, 524288, 2, 1572880, 458752, 1, 1507344, 458752, 1, 1441808, 524288, 0, 1245200, 524288, 2, 1245204, 458752, 2, 1245205, 458752, 2, 1245208, 393216, 2, 1245209, 458752, 1, 1245210, 524288, 2, 1245213, 393216, 2, 1245214, 458752, 1, 1310750, 393216, 2, 1376286, 393216, 1, 1572894, 393216, 1, 1769488, 458752, 1, 1703956, 458752, 0, 1703957, 393216, 0, 1703958, 458752, 1, 1703960, 524288, 0, 1703961, 458752, 0, 1703962, 458752, 0, 1769499, 524288, 0, 1769498, 458752, 1, 1769497, 458752, 1, 1769496, 458752, 1, 1769494, 458752, 1, 1769493, 458752, 1, 1769492, 458752, 1, 1769489, 524288, 0, 1703959, 458752, 1, 1769495, 458752, 1, 1245215, 458752, 1, 1310751, 458752, 1, 1376287, 458752, 1, 1441823, 393216, 2, 1507359, 393216, 0, 1572895, 458752, 1, 1703967, 393216, 1, 1769503, 393216, 0, 1835039, 458752, 1, 1835038, 393216, 0, 1835036, 458752, 1, 1835035, 458752, 1, 1835034, 458752, 1, 1835033, 458752, 1, 1835032, 458752, 1, 1835031, 458752, 1, 1835030, 458752, 1, 1835029, 458752, 1, 1835028, 458752, 1, 1835024, 458752, 1, 1835025, 458752, 1, 1835026, 458752, 1, 1835027, 458752, 1, 1835023, 458752, 1, 1835022, 458752, 1, 1769486, 458752, 1, 1769487, 458752, 1, 1703951, 458752, 1, 1703950, 458752, 1, 1638414, 458752, 1, 1638415, 458752, 1, 1572879, 458752, 1, 1572878, 458752, 1, 1507342, 458752, 1, 1507343, 458752, 1, 1441807, 458752, 1, 1441806, 458752, 1, 1376270, 458752, 1, 1376271, 458752, 1, 1310735, 458752, 1, 1310734, 458752, 1, 1245198, 458752, 1, 1179662, 458752, 1, 1114126, 458752, 1, 1114127, 458752, 1, 1179663, 458752, 1, 1245199, 458752, 1, 1114128, 458752, 1, 1179664, 458752, 1, 1114129, 458752, 1, 1179665, 524288, 2, 1114130, 458752, 1, 1114131, 458752, 1, 1179668, 458752, 1, 1179669, 458752, 1, 1114133, 458752, 1, 1114132, 458752, 1, 1114136, 458752, 1, 1179672, 458752, 1, 1179673, 458752, 1, 1114137, 458752, 1, 1114138, 458752, 1, 1114139, 458752, 1, 1114140, 458752, 1, 1114141, 458752, 1, 1114142, 458752, 1, 1114143, 458752, 1, 1114144, 458752, 1, 1179680, 458752, 1, 1179679, 458752, 1, 1179678, 458752, 1, 1179677, 458752, 1, 1179675, 524288, 2, 1179674, 458752, 1, 1245216, 458752, 1, 1310752, 458752, 1, 1376288, 458752, 1, 1441824, 458752, 1, 1507360, 458752, 1, 1572896, 458752, 1, 1638432, 458752, 1, 1703968, 458752, 1, 1769504, 458752, 1, 1835040, 458752, 1, 1114135, 393216, 2, 1114134, 524288, 2, 1179667, 393216, 2, 1179666, 458752, 2, 1507345, 524288, 1, 1572881, 524288, 1, 1376272, 524288, 1, 1310736, 524288, 1, 1769490, 458752, 0, 1769491, 393216, 0, 1638422, 458752, 0, 1638423, 458752, 0, 1638431, 393216, 2, 1179676, 393216, 2, 1310745, 458752, 2, 1835037, 524288, 0, 1769500, 458752, 0)
 
 [node name="BushArch" type="Sprite2D" parent="."]
 position = Vector2(367.906, 290.468)
@@ -587,65 +607,57 @@ texture = ExtResource("3_33f03")
 [node name="Dark Grey Cat" parent="." instance=ExtResource("2_2jlvu")]
 position = Vector2(377, 362)
 
-[node name="DGC Button" type="Button" parent="Dark Grey Cat"]
-offset_left = -7.0
-offset_top = -3.0
-offset_right = 5.0
-offset_bottom = 15.0
-action_mode = 0
-flat = true
+[node name="DGC Area2D" type="Area2D" parent="Dark Grey Cat"]
+position = Vector2(-7, 66)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dark Grey Cat/DGC Area2D"]
+position = Vector2(6, -60)
+shape = SubResource("CapsuleShape2D_e2r4l")
+debug_color = Color(0.854902, 0, 0.890196, 0.34902)
 
 [node name="Brown Cat" parent="." instance=ExtResource("5_sqj34")]
 visible = false
 position = Vector2(370, 428)
 
-[node name="BC Button" type="Button" parent="Brown Cat"]
-offset_left = -7.0
-offset_top = -3.0
-offset_right = 5.0
-offset_bottom = 15.0
-action_mode = 0
-flat = true
-metadata/_edit_use_anchors_ = true
+[node name="BC Area2D" type="Area2D" parent="Brown Cat"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Brown Cat/BC Area2D"]
+position = Vector2(-1, 6)
+shape = SubResource("CapsuleShape2D_safvt")
+debug_color = Color(0.854902, 0, 0.890196, 0.34902)
 
 [node name="Orange Cat" parent="." instance=ExtResource("6_s5i6i")]
 visible = false
 position = Vector2(370, 428)
 
-[node name="OC Button" type="Button" parent="Orange Cat"]
-offset_left = -7.0
-offset_top = -3.0
-offset_right = 5.0
-offset_bottom = 15.0
-action_mode = 0
-flat = true
-metadata/_edit_use_anchors_ = true
+[node name="OC Area2D" type="Area2D" parent="Orange Cat"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Orange Cat/OC Area2D"]
+position = Vector2(-1, 6)
+shape = SubResource("CapsuleShape2D_q0cah")
+debug_color = Color(0.854902, 0, 0.890196, 0.34902)
 
 [node name="Silver Cat" parent="." instance=ExtResource("8_ddqd1")]
 visible = false
 position = Vector2(370, 428)
 
-[node name="SC Button" type="Button" parent="Silver Cat"]
-offset_left = -7.0
-offset_top = -3.0
-offset_right = 5.0
-offset_bottom = 15.0
-action_mode = 0
-flat = true
-metadata/_edit_use_anchors_ = true
+[node name="SC Area2D" type="Area2D" parent="Silver Cat"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Silver Cat/SC Area2D"]
+position = Vector2(-1, 6)
+shape = SubResource("CapsuleShape2D_4wxyg")
+debug_color = Color(0.854902, 0, 0.890196, 0.34902)
 
 [node name="Caramel Cat" parent="." instance=ExtResource("7_mqoel")]
 visible = false
 position = Vector2(370, 428)
 
-[node name="CC Button" type="Button" parent="Caramel Cat"]
-offset_left = -7.0
-offset_top = -3.0
-offset_right = 5.0
-offset_bottom = 15.0
-action_mode = 0
-flat = true
-metadata/_edit_use_anchors_ = true
+[node name="CC Area2D" type="Area2D" parent="Caramel Cat"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Caramel Cat/CC Area2D"]
+position = Vector2(-1, 6)
+shape = SubResource("CapsuleShape2D_hyv6l")
+debug_color = Color(0.854902, 0, 0.890196, 0.34902)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(375, 369)
@@ -681,9 +693,9 @@ flat = true
 [node name="CharacterBody2D" parent="." instance=ExtResource("13_5wnwj")]
 position = Vector2(368, 303)
 
-[connection signal="pressed" from="Dark Grey Cat/DGC Button" to="." method="_on_dgc_button_pressed"]
-[connection signal="pressed" from="Brown Cat/BC Button" to="." method="_on_bc_button_pressed"]
-[connection signal="pressed" from="Orange Cat/OC Button" to="." method="_on_oc_button_pressed"]
-[connection signal="pressed" from="Silver Cat/SC Button" to="." method="_on_sc_button_pressed"]
-[connection signal="pressed" from="Caramel Cat/CC Button" to="." method="_on_cc_button_pressed"]
+[connection signal="body_entered" from="Dark Grey Cat/DGC Area2D" to="." method="_on_dgc_area_2d_body_entered"]
+[connection signal="body_entered" from="Brown Cat/BC Area2D" to="." method="_on_bc_area_2d_body_entered"]
+[connection signal="body_entered" from="Orange Cat/OC Area2D" to="." method="_on_oc_area_2d_body_entered"]
+[connection signal="body_entered" from="Silver Cat/SC Area2D" to="." method="_on_sc_area_2d_body_entered"]
+[connection signal="body_entered" from="Caramel Cat/CC Area2D" to="." method="_on_cc_area_2d_body_entered"]
 [connection signal="pressed" from="Camera2D/Market Icon/Button" to="Camera2D/Market Icon" method="_on_button_pressed"]
