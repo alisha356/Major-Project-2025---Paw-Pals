@@ -67,7 +67,6 @@ func _on_plain_caramel_button_pressed():
 	else:
 		pass
 
-
 func _on_buy_fish_button_pressed():
 	if Global.player_fish == 99:
 		pass

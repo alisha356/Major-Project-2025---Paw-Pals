@@ -1,5 +1,7 @@
 extends Node2D
 
+var animation_played = false
+
 func _display_hunger_bar():
 	$"Hunger 0".visible = false
 	$"Hunger 1".visible = false
@@ -12,10 +14,12 @@ func _display_hunger_bar():
 	$"Hunger 8".visible = false
 	$"Hunger 9".visible = false
 	$"Hunger 10".visible = false
+
 	if Global.silver_cat_hunger == 0:
 		$"Hunger 0".visible = true
 	elif Global.silver_cat_hunger == 1:
 		$"Hunger 1".visible = true
+		animation_played = false
 	elif Global.silver_cat_hunger == 2:
 		$"Hunger 2".visible = true
 	elif Global.silver_cat_hunger == 3:
@@ -38,11 +42,17 @@ func _display_hunger_bar():
 func _ready():
 	$Cherries/Number.text = str(Global.player_cherries)
 	$Money.text = str(Global.player_coins)
+	if Global.silver_cat_hunger <= 0:
+		animation_played = true
+		Global._dead_sc()
 
 func _process(_delta: float):
 	_display_hunger_bar()
 	$Money.text = str(Global.player_coins)
-
+	if Global.silver_cat_hunger <= 0 and animation_played == false:
+		Global._animate_sc_death()
+		animation_played = true
+		
 func _on_button_pressed():
 	if Global.player_cherries == 0:
 		pass
@@ -53,8 +63,8 @@ func _on_button_pressed():
 		Global.silver_cat_hunger += 1
 		$Cherries/Number.text = str(Global.player_cherries)
 		_display_hunger_bar()
+		if Global.silver_cat_hunger == 1:
+			Global._revive_sc()
 		if Global.silver_cat_hunger == 10:
+			Global._animate_heart()
 			Global.player_coins += 4
-
-func _on_area_2d_mouse_entered() -> void:
-	Global._animate()

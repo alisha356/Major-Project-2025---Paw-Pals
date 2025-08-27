@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bsh1pnammaspg"]
+[gd_scene load_steps=29 format=3 uid="uid://bsh1pnammaspg"]
 
 [ext_resource type="Script" path="res://Silver Cat Screen.gd" id="1_fu823"]
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="2_33gmq"]
@@ -303,10 +303,6 @@ separation = Vector2i(1, 1)
 [sub_resource type="TileSet" id="TileSet_u5s6d"]
 sources/0 = SubResource("TileSetAtlasSource_vf5cw")
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r3ile"]
-radius = 6.0
-height = 18.0
-
 [node name="Silver Cat Screen" type="Node2D"]
 script = ExtResource("1_fu823")
 
@@ -322,12 +318,6 @@ layer_0/tile_data = PackedInt32Array(524302, 458752, 0, 524301, 458752, 0, 52430
 
 [node name="Silver Cat" parent="." instance=ExtResource("6_yusqi")]
 position = Vector2(233, 105)
-
-[node name="Area2D" type="Area2D" parent="Silver Cat"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Silver Cat/Area2D"]
-position = Vector2(-1, 6)
-shape = SubResource("CapsuleShape2D_r3ile")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(232, 112)
@@ -369,6 +359,7 @@ offset_left = -4.0
 offset_top = -3.0
 offset_right = 4.0
 offset_bottom = 5.0
+focus_mode = 0
 action_mode = 0
 flat = true
 
@@ -456,6 +447,5 @@ visible = false
 position = Vector2(232, 100)
 texture = ExtResource("28_g1p8s")
 
-[connection signal="mouse_entered" from="Silver Cat/Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="pressed" from="Exit Arrow/Button" to="Exit Arrow" method="_on_button_pressed"]
 [connection signal="pressed" from="Cherries/Button" to="." method="_on_button_pressed"]

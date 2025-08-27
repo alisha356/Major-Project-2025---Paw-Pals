@@ -1,4 +1,4 @@
 extends CharacterBody2D
 
 func _ready():
-	Global.animation = $AnimatedSprite2D
+	Global.heart_animation = $AnimatedSprite2D

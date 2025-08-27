@@ -3,7 +3,6 @@ extends CharacterBody2D
 const SPEED = 100.0
 
 func _physics_process(_delta):
-# Get the input direction and handle the movement/deceleration.
 	var horizontal_direction = Input.get_axis("move left", "move right")
 	var vertical_direction = Input.get_axis("move up", "move down")
 
