@@ -7,14 +7,14 @@ func _physics_process(_delta):
 	var vertical_direction = Input.get_axis("move up", "move down")
 
 	if vertical_direction == 0 and horizontal_direction == 0:
-		$AnimatedSprite2D.play("default")
+		$AnimatedSprite2D.play("idle")
 	else:
 		if horizontal_direction > 0:
 			$AnimatedSprite2D.play("walk right")
 		elif horizontal_direction < 0:
 			$AnimatedSprite2D.play("walk left")
 		elif vertical_direction > 0:
-			$AnimatedSprite2D.play("default")
+			$AnimatedSprite2D.play("walk down")
 		elif vertical_direction < 0:
 			$AnimatedSprite2D.play("walk up")
 
