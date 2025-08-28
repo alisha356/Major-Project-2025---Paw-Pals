@@ -79,6 +79,12 @@ func _revive_dgc():
 func _dead_dgc():
 	if dgc_animation:
 		dgc_animation.play("dead")
+func _idle_dgc():
+	if dgc_animation:
+		dgc_animation.play("idle")
+func _stop_idle_dgc():
+	if dgc_animation:
+		dgc_animation.stop()
 
 func _animate_bc_death():
 	if bc_animation:
@@ -89,6 +95,12 @@ func _revive_bc():
 func _dead_bc():
 	if bc_animation:
 		bc_animation.play("dead")
+func _idle_bc():
+	if bc_animation:
+		bc_animation.play("idle")
+func _stop_idle_bc():
+	if bc_animation:
+		bc_animation.stop()
 
 func _animate_oc_death():
 	if oc_animation:
@@ -99,6 +111,12 @@ func _revive_oc():
 func _dead_oc():
 	if oc_animation:
 		oc_animation.play("dead")
+func _idle_oc():
+	if oc_animation:
+		oc_animation.play("idle")
+func _stop_idle_oc():
+	if oc_animation:
+		oc_animation.stop()
 
 func _animate_sc_death():
 	if sc_animation:
@@ -109,6 +127,12 @@ func _revive_sc():
 func _dead_sc():
 	if sc_animation:
 		sc_animation.play("dead")
+func _idle_sc():
+	if sc_animation:
+		sc_animation.play("idle")
+func _stop_idle_sc():
+	if sc_animation:
+		sc_animation.stop()
 
 func _animate_cc_death():
 	if cc_animation:
@@ -119,3 +143,9 @@ func _revive_cc():
 func _dead_cc():
 	if cc_animation:
 		cc_animation.play("dead")
+func _idle_cc():
+	if cc_animation:
+		cc_animation.play("idle")
+func _stop_idle_cc():
+	if cc_animation:
+		cc_animation.stop()

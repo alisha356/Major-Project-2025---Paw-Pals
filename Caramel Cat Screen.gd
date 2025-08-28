@@ -44,12 +44,16 @@ func _ready():
 	$Money.text = str(Global.player_coins)
 	if Global.caramel_cat_hunger <= 0:
 		animation_played = true
+		Global._stop_idle_cc()
 		Global._dead_cc()
+	else:
+		Global._idle_cc()
 
 func _process(_delta: float):
 	_display_hunger_bar()
 	$Money.text = str(Global.player_coins)
 	if Global.caramel_cat_hunger <= 0 and animation_played == false:
+		Global._stop_idle_cc()
 		Global._animate_cc_death()
 		animation_played = true
 

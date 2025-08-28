@@ -6,26 +6,36 @@ func _ready():
 	$Camera2D/Money.text = str(Global.player_coins)
 	if Global.grey_cat_hunger <= 0:
 		Global._dead_dgc()
+	else:
+		Global._idle_dgc()
 	if Global.own_plain_brown == true:
 		$"Brown Cat".visible = true
 		$"Brown Cat".position = Vector2(329, 393)
 		if Global.brown_cat_hunger <= 0:
 			Global._dead_bc()
+		else:
+			Global._idle_bc()
 	if Global.own_plain_orange == true:
 		$"Orange Cat".visible = true
 		$"Orange Cat".position = Vector2(457, 346)
 		if Global.orange_cat_hunger <= 0:
 			Global._dead_oc()
+		else:
+			Global._idle_oc()
 	if Global.own_plain_silver == true:
 		$"Silver Cat".visible = true
 		$"Silver Cat".position = Vector2(425, 393)
 		if Global.silver_cat_hunger <= 0:
 			Global._dead_sc()
+		else:
+			Global._idle_sc()
 	if Global.own_plain_caramel == true:
 		$"Caramel Cat".visible = true
 		$"Caramel Cat".position = Vector2(313, 329)
 		if Global.caramel_cat_hunger <= 0:
 			Global._dead_cc()
+		else:
+			Global._idle_cc()
 	
 	
 func _process(delta: float):
