@@ -116,6 +116,6 @@ func _on_cc_area_2d_body_entered(body: CharacterBody2D) -> void:
 func _on_bush_area_2d_body_entered(body: CharacterBody2D) -> void:
 	if body == $CharacterBody2D:
 		if round(wait_2_secs) <= 0:
-			get_tree().change_scene_to_file("res://map.tscn")
+			get_tree().change_scene_to_file("res://Map.tscn")
 		else:
 			pass
