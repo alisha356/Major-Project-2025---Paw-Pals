@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dx7k8aso5y80t"]
+[gd_scene load_steps=26 format=3 uid="uid://dx7k8aso5y80t"]
 
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_7y7fx"]
 [ext_resource type="Script" path="res://Shop.gd" id="1_l4h6c"]
@@ -18,6 +18,11 @@
 [ext_resource type="Texture2D" uid="uid://dke8trwvohlrv" path="res://Assets/Cat Frame.png" id="13_p3ung"]
 [ext_resource type="Texture2D" uid="uid://dgf8whnkgukmr" path="res://Assets/Cat icon.png" id="14_virpj"]
 [ext_resource type="Texture2D" uid="uid://0b3lione34ak" path="res://Assets/Fish icon.png" id="15_nppmf"]
+[ext_resource type="Texture2D" uid="uid://c003vfb81sc3c" path="res://Assets/TT Brown.png" id="19_7mf0u"]
+[ext_resource type="Texture2D" uid="uid://uxkcrnro5mel" path="res://Assets/TT Cat Icon.png" id="19_blgtl"]
+[ext_resource type="Texture2D" uid="uid://xu5ny1fsnn3f" path="res://Assets/TT Orange.png" id="20_c87u8"]
+[ext_resource type="Texture2D" uid="uid://qrron4qu70n8" path="res://Assets/TT Silver.png" id="21_ynrlq"]
+[ext_resource type="Texture2D" uid="uid://bg47drqbkd0d5" path="res://Assets/TT Caramel.png" id="22_51pc6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0sqe3"]
 texture = ExtResource("1_7y7fx")
@@ -158,12 +163,6 @@ separation = Vector2i(1, 1)
 [sub_resource type="TileSet" id="TileSet_7mffh"]
 sources/0 = SubResource("TileSetAtlasSource_0sqe3")
 
-[sub_resource type="GDScript" id="GDScript_lwofi"]
-script/source = "extends Sprite2D
-
-
-"
-
 [node name="Shop" type="Node2D"]
 script = ExtResource("1_l4h6c")
 
@@ -179,7 +178,6 @@ zoom = Vector2(10, 10)
 [node name="Arrow" type="Sprite2D" parent="."]
 position = Vector2(456, 248)
 texture = ExtResource("2_6pjcv")
-script = SubResource("GDScript_lwofi")
 
 [node name="Button" type="Button" parent="Arrow"]
 offset_left = -4.0
@@ -201,7 +199,7 @@ offset_right = 486.0
 offset_bottom = 253.0
 theme_override_fonts/font = ExtResource("4_k7iln")
 theme_override_font_sizes/font_size = 8
-text = "20"
+text = "x"
 
 [node name="Food" type="Sprite2D" parent="."]
 position = Vector2(467, 273)
@@ -377,16 +375,30 @@ theme_override_fonts/font = ExtResource("4_k7iln")
 theme_override_font_sizes/font_size = 8
 text = "3"
 
-[node name="CatIcon" type="Sprite2D" parent="Food"]
+[node name="Cat Icon" type="Sprite2D" parent="Food"]
 position = Vector2(77, -25)
 texture = ExtResource("14_virpj")
 
-[node name="Cat Button" type="Button" parent="Food/CatIcon"]
+[node name="Cat Button" type="Button" parent="Food/Cat Icon"]
 offset_left = -7.0
 offset_top = -5.0
 offset_right = 6.0
 offset_bottom = 6.0
+focus_mode = 0
 action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="TT Cat Icon" type="Sprite2D" parent="Food"]
+position = Vector2(61, -24)
+texture = ExtResource("19_blgtl")
+
+[node name="TT Button" type="Button" parent="Food/TT Cat Icon"]
+offset_left = -7.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 5.0
+focus_mode = 0
 flat = true
 metadata/_edit_use_anchors_ = true
 
@@ -445,20 +457,20 @@ theme_override_fonts/font = ExtResource("4_k7iln")
 theme_override_font_sizes/font_size = 8
 text = "7"
 
-[node name="CatFrame2" type="Sprite2D" parent="Cat Frame"]
+[node name="Cat Frame 2" type="Sprite2D" parent="Cat Frame"]
 position = Vector2(27, 0)
 texture = ExtResource("13_p3ung")
 
-[node name="Plain Orange" type="Sprite2D" parent="Cat Frame/CatFrame2"]
+[node name="Plain Orange" type="Sprite2D" parent="Cat Frame/Cat Frame 2"]
 position = Vector2(-3.05176e-05, 3)
 texture = ExtResource("11_7gp2e")
 
-[node name="Buy Frame 2" type="Sprite2D" parent="Cat Frame/CatFrame2/Plain Orange"]
+[node name="Buy Frame 2" type="Sprite2D" parent="Cat Frame/Cat Frame 2/Plain Orange"]
 position = Vector2(0.0612793, 15.6403)
 scale = Vector2(1.4375, 0.4375)
 texture = ExtResource("7_7edfl")
 
-[node name="Bought Label 2" type="Label" parent="Cat Frame/CatFrame2/Plain Orange/Buy Frame 2"]
+[node name="Bought Label 2" type="Label" parent="Cat Frame/Cat Frame 2/Plain Orange/Buy Frame 2"]
 visible = false
 offset_left = -7.22268
 offset_top = -11.5962
@@ -468,7 +480,7 @@ theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
 theme_override_fonts/font = ExtResource("4_k7iln")
 text = "x"
 
-[node name="Buy Label 2" type="Label" parent="Cat Frame/CatFrame2/Plain Orange"]
+[node name="Buy Label 2" type="Label" parent="Cat Frame/Cat Frame 2/Plain Orange"]
 offset_left = -9.0
 offset_top = 9.0
 offset_right = 10.0
@@ -478,7 +490,7 @@ theme_override_fonts/font = ExtResource("4_k7iln")
 theme_override_font_sizes/font_size = 8
 text = "Buy"
 
-[node name="Button 2" type="Button" parent="Cat Frame/CatFrame2/Plain Orange/Buy Label 2"]
+[node name="Button 2" type="Button" parent="Cat Frame/Cat Frame 2/Plain Orange/Buy Label 2"]
 layout_mode = 0
 offset_left = -2.56128
 offset_top = 2.85968
@@ -488,7 +500,7 @@ focus_mode = 0
 action_mode = 0
 flat = true
 
-[node name="Price2" type="Label" parent="Cat Frame/CatFrame2/Plain Orange"]
+[node name="Price2" type="Label" parent="Cat Frame/Cat Frame 2/Plain Orange"]
 offset_left = -6.0
 offset_top = -19.0
 offset_right = 5.0
@@ -498,20 +510,20 @@ theme_override_fonts/font = ExtResource("4_k7iln")
 theme_override_font_sizes/font_size = 8
 text = "10"
 
-[node name="CatFrame3" type="Sprite2D" parent="Cat Frame"]
+[node name="Cat Frame 3" type="Sprite2D" parent="Cat Frame"]
 position = Vector2(54, 0)
 texture = ExtResource("13_p3ung")
 
-[node name="Plain Silver" type="Sprite2D" parent="Cat Frame/CatFrame3"]
+[node name="Plain Silver" type="Sprite2D" parent="Cat Frame/Cat Frame 3"]
 position = Vector2(1.00006, 3)
 texture = ExtResource("12_oc7g0")
 
-[node name="Buy Frame 3" type="Sprite2D" parent="Cat Frame/CatFrame3/Plain Silver"]
+[node name="Buy Frame 3" type="Sprite2D" parent="Cat Frame/Cat Frame 3/Plain Silver"]
 position = Vector2(-1.13995, 15.7498)
 scale = Vector2(1.4375, 0.4375)
 texture = ExtResource("7_7edfl")
 
-[node name="Bought Label 3" type="Label" parent="Cat Frame/CatFrame3/Plain Silver/Buy Frame 3"]
+[node name="Bought Label 3" type="Label" parent="Cat Frame/Cat Frame 3/Plain Silver/Buy Frame 3"]
 visible = false
 offset_left = -6.89441
 offset_top = -11.5962
@@ -521,7 +533,7 @@ theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
 theme_override_fonts/font = ExtResource("4_k7iln")
 text = "x"
 
-[node name="Buy Label 3" type="Label" parent="Cat Frame/CatFrame3/Plain Silver"]
+[node name="Buy Label 3" type="Label" parent="Cat Frame/Cat Frame 3/Plain Silver"]
 offset_left = -11.0
 offset_top = 9.0
 offset_right = 8.0
@@ -531,7 +543,7 @@ theme_override_fonts/font = ExtResource("4_k7iln")
 theme_override_font_sizes/font_size = 8
 text = "Buy"
 
-[node name="Button 3" type="Button" parent="Cat Frame/CatFrame3/Plain Silver/Buy Label 3"]
+[node name="Button 3" type="Button" parent="Cat Frame/Cat Frame 3/Plain Silver/Buy Label 3"]
 layout_mode = 0
 offset_left = -2.47809
 offset_top = 2.86816
@@ -541,7 +553,7 @@ focus_mode = 0
 action_mode = 0
 flat = true
 
-[node name="Price3" type="Label" parent="Cat Frame/CatFrame3/Plain Silver"]
+[node name="Price3" type="Label" parent="Cat Frame/Cat Frame 3/Plain Silver"]
 offset_left = -7.0
 offset_top = -19.0
 offset_right = 4.0
@@ -551,20 +563,20 @@ theme_override_fonts/font = ExtResource("4_k7iln")
 theme_override_font_sizes/font_size = 8
 text = "15"
 
-[node name="CatFrame4" type="Sprite2D" parent="Cat Frame"]
+[node name="Cat Frame 4" type="Sprite2D" parent="Cat Frame"]
 position = Vector2(81, 0)
 texture = ExtResource("13_p3ung")
 
-[node name="Plain Caramel" type="Sprite2D" parent="Cat Frame/CatFrame4"]
+[node name="Plain Caramel" type="Sprite2D" parent="Cat Frame/Cat Frame 4"]
 position = Vector2(1.00012, 3)
 texture = ExtResource("13_4v82t")
 
-[node name="Buy Frame 4" type="Sprite2D" parent="Cat Frame/CatFrame4/Plain Caramel"]
+[node name="Buy Frame 4" type="Sprite2D" parent="Cat Frame/Cat Frame 4/Plain Caramel"]
 position = Vector2(-0.920227, 15.7191)
 scale = Vector2(1.4375, 0.4375)
 texture = ExtResource("7_7edfl")
 
-[node name="Bought Label 4" type="Label" parent="Cat Frame/CatFrame4/Plain Caramel/Buy Frame 4"]
+[node name="Bought Label 4" type="Label" parent="Cat Frame/Cat Frame 4/Plain Caramel/Buy Frame 4"]
 visible = false
 offset_left = -6.97648
 offset_top = -12.4052
@@ -574,7 +586,7 @@ theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
 theme_override_fonts/font = ExtResource("4_k7iln")
 text = "x"
 
-[node name="Buy Label 4" type="Label" parent="Cat Frame/CatFrame4/Plain Caramel"]
+[node name="Buy Label 4" type="Label" parent="Cat Frame/Cat Frame 4/Plain Caramel"]
 offset_left = -10.0
 offset_top = 9.0
 offset_right = 9.0
@@ -584,7 +596,7 @@ theme_override_fonts/font = ExtResource("4_k7iln")
 theme_override_font_sizes/font_size = 8
 text = "Buy"
 
-[node name="Button 4" type="Button" parent="Cat Frame/CatFrame4/Plain Caramel/Buy Label 4"]
+[node name="Button 4" type="Button" parent="Cat Frame/Cat Frame 4/Plain Caramel/Buy Label 4"]
 layout_mode = 0
 offset_left = -2.57983
 offset_top = 2.78088
@@ -594,7 +606,7 @@ focus_mode = 0
 action_mode = 0
 flat = true
 
-[node name="Label" type="Label" parent="Cat Frame/CatFrame4/Plain Caramel"]
+[node name="Label" type="Label" parent="Cat Frame/Cat Frame 4/Plain Caramel"]
 offset_left = -7.0
 offset_top = -19.0
 offset_right = 4.0
@@ -605,7 +617,7 @@ theme_override_font_sizes/font_size = 8
 text = "10"
 
 [node name="Fish Icon" type="Sprite2D" parent="Cat Frame"]
-position = Vector2(74.9438, -24.472)
+position = Vector2(74.9438, -22.472)
 texture = ExtResource("15_nppmf")
 
 [node name="Fish Button" type="Button" parent="Cat Frame/Fish Icon"]
@@ -614,6 +626,259 @@ offset_top = -5.0
 offset_right = 5.0
 offset_bottom = 4.0
 action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="TT Cat Icon" type="Sprite2D" parent="Cat Frame"]
+position = Vector2(60, -23)
+texture = ExtResource("19_blgtl")
+
+[node name="TT Button" type="Button" parent="Cat Frame/TT Cat Icon"]
+offset_left = -7.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 5.0
+focus_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="TT Cat Frame" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(468, 272)
+texture = ExtResource("13_p3ung")
+
+[node name="TT Brown" type="Sprite2D" parent="TT Cat Frame"]
+position = Vector2(0, 3)
+texture = ExtResource("19_7mf0u")
+
+[node name="Buy Frame" type="Sprite2D" parent="TT Cat Frame/TT Brown"]
+position = Vector2(0.0612793, 15.5179)
+scale = Vector2(1.4375, 0.4375)
+texture = ExtResource("7_7edfl")
+
+[node name="Bought Label" type="Label" parent="TT Cat Frame/TT Brown/Buy Frame"]
+visible = false
+offset_left = -7.05853
+offset_top = -12.4051
+offset_right = 32.9415
+offset_bottom = 10.5949
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+text = "x"
+
+[node name="Buy Label" type="Label" parent="TT Cat Frame/TT Brown"]
+offset_left = -8.99997
+offset_top = 9.0
+offset_right = 10.0
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="TT Cat Frame/TT Brown/Buy Label"]
+layout_mode = 0
+offset_left = -2.56122
+offset_top = 2.98209
+offset_right = 21.4388
+offset_bottom = 10.9821
+focus_mode = 0
+action_mode = 0
+flat = true
+
+[node name="Price" type="Label" parent="TT Cat Frame/TT Brown"]
+offset_left = -5.99997
+offset_top = -19.0
+offset_right = 5.00003
+offset_bottom = -8.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "10"
+
+[node name="Cat Frame 2" type="Sprite2D" parent="TT Cat Frame"]
+position = Vector2(27, 0)
+texture = ExtResource("13_p3ung")
+
+[node name="TT Orange" type="Sprite2D" parent="TT Cat Frame/Cat Frame 2"]
+position = Vector2(0, 3)
+texture = ExtResource("20_c87u8")
+
+[node name="Buy Frame 2" type="Sprite2D" parent="TT Cat Frame/Cat Frame 2/TT Orange"]
+position = Vector2(0.0612488, 15.6403)
+scale = Vector2(1.4375, 0.4375)
+texture = ExtResource("7_7edfl")
+
+[node name="Bought Label 2" type="Label" parent="TT Cat Frame/Cat Frame 2/TT Orange/Buy Frame 2"]
+visible = false
+offset_left = -7.22268
+offset_top = -11.5962
+offset_right = 32.7773
+offset_bottom = 11.4038
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+text = "x"
+
+[node name="Buy Label 2" type="Label" parent="TT Cat Frame/Cat Frame 2/TT Orange"]
+offset_left = -9.00003
+offset_top = 9.0
+offset_right = 9.99997
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+
+[node name="Button 2" type="Button" parent="TT Cat Frame/Cat Frame 2/TT Orange/Buy Label 2"]
+layout_mode = 0
+offset_left = -2.56128
+offset_top = 2.85968
+offset_right = 21.4387
+offset_bottom = 10.8597
+focus_mode = 0
+action_mode = 0
+flat = true
+
+[node name="Price2" type="Label" parent="TT Cat Frame/Cat Frame 2/TT Orange"]
+offset_left = -6.00003
+offset_top = -19.0
+offset_right = 4.99997
+offset_bottom = -8.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "15"
+
+[node name="CatFrame3" type="Sprite2D" parent="TT Cat Frame"]
+position = Vector2(54, 0)
+texture = ExtResource("13_p3ung")
+
+[node name="TT Silver" type="Sprite2D" parent="TT Cat Frame/CatFrame3"]
+position = Vector2(0, 3)
+texture = ExtResource("21_ynrlq")
+
+[node name="Buy Frame 3" type="Sprite2D" parent="TT Cat Frame/CatFrame3/TT Silver"]
+position = Vector2(-0.139893, 15.7498)
+scale = Vector2(1.4375, 0.4375)
+texture = ExtResource("7_7edfl")
+
+[node name="Bought Label 3" type="Label" parent="TT Cat Frame/CatFrame3/TT Silver/Buy Frame 3"]
+visible = false
+offset_left = -6.89441
+offset_top = -11.5962
+offset_right = 33.1056
+offset_bottom = 11.4038
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+text = "x"
+
+[node name="Buy Label 3" type="Label" parent="TT Cat Frame/CatFrame3/TT Silver"]
+offset_left = -9.99994
+offset_top = 9.0
+offset_right = 9.00006
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+
+[node name="Button 3" type="Button" parent="TT Cat Frame/CatFrame3/TT Silver/Buy Label 3"]
+layout_mode = 0
+offset_left = -2.47809
+offset_top = 2.86816
+offset_right = 21.5219
+offset_bottom = 10.8682
+focus_mode = 0
+action_mode = 0
+flat = true
+
+[node name="Price3" type="Label" parent="TT Cat Frame/CatFrame3/TT Silver"]
+offset_left = -5.99994
+offset_top = -19.0
+offset_right = 5.00006
+offset_bottom = -8.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "18"
+
+[node name="CatFrame4" type="Sprite2D" parent="TT Cat Frame"]
+position = Vector2(81, 0)
+texture = ExtResource("13_p3ung")
+
+[node name="TT Caramel" type="Sprite2D" parent="TT Cat Frame/CatFrame4"]
+position = Vector2(0, 3)
+texture = ExtResource("22_51pc6")
+
+[node name="Buy Frame 4" type="Sprite2D" parent="TT Cat Frame/CatFrame4/TT Caramel"]
+position = Vector2(0.079895, 15.7191)
+scale = Vector2(1.4375, 0.4375)
+texture = ExtResource("7_7edfl")
+
+[node name="Bought Label 4" type="Label" parent="TT Cat Frame/CatFrame4/TT Caramel/Buy Frame 4"]
+visible = false
+offset_left = -6.97648
+offset_top = -12.4052
+offset_right = 33.0235
+offset_bottom = 10.5948
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+text = "x"
+
+[node name="Buy Label 4" type="Label" parent="TT Cat Frame/CatFrame4/TT Caramel"]
+offset_left = -8.99988
+offset_top = 9.0
+offset_right = 10.0001
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+
+[node name="Button 4" type="Button" parent="TT Cat Frame/CatFrame4/TT Caramel/Buy Label 4"]
+layout_mode = 0
+offset_left = -2.57983
+offset_top = 2.78088
+offset_right = 21.4202
+offset_bottom = 10.7809
+focus_mode = 0
+action_mode = 0
+flat = true
+
+[node name="Price4" type="Label" parent="TT Cat Frame/CatFrame4/TT Caramel"]
+offset_left = -5.99988
+offset_top = -19.0
+offset_right = 5.00012
+offset_bottom = -8.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "13"
+
+[node name="Fish Icon" type="Sprite2D" parent="TT Cat Frame"]
+position = Vector2(74.9438, -22.472)
+texture = ExtResource("15_nppmf")
+
+[node name="Fish Button" type="Button" parent="TT Cat Frame/Fish Icon"]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 4.0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Cat Icon" type="Sprite2D" parent="TT Cat Frame"]
+position = Vector2(60, -24)
+texture = ExtResource("14_virpj")
+
+[node name="Cat Button" type="Button" parent="TT Cat Frame/Cat Icon"]
+offset_left = -7.0
+offset_top = -5.0
+offset_right = 6.0
+offset_bottom = 6.0
+focus_mode = 0
 flat = true
 metadata/_edit_use_anchors_ = true
 
@@ -626,6 +891,7 @@ offset_left = -4.0
 offset_top = -4.0
 offset_right = 5.0
 offset_bottom = 4.0
+focus_mode = 0
 action_mode = 0
 flat = true
 metadata/_edit_use_anchors_ = true
@@ -635,10 +901,18 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="Food/Frame2/Buy Label/Buy Cherries Button" to="." method="_on_buy_cherries_button_pressed"]
 [connection signal="pressed" from="Food/Frame3/Buy Label/Buy Cheese Button" to="." method="_on_buy_cheese_button_pressed"]
 [connection signal="pressed" from="Food/Frame4/Buy Label/Buy Melon Button" to="." method="_on_buy_melon_button_pressed"]
-[connection signal="pressed" from="Food/CatIcon/Cat Button" to="." method="_on_cat_button_pressed"]
+[connection signal="pressed" from="Food/Cat Icon/Cat Button" to="." method="_on_cat_button_pressed"]
+[connection signal="pressed" from="Food/TT Cat Icon/TT Button" to="." method="_on_tt_button_pressed"]
 [connection signal="pressed" from="Cat Frame/Plain Brown/Buy Label/Button" to="." method="_on_plain_brown_button_pressed"]
-[connection signal="pressed" from="Cat Frame/CatFrame2/Plain Orange/Buy Label 2/Button 2" to="." method="_on_plain_orange_button_pressed"]
-[connection signal="pressed" from="Cat Frame/CatFrame3/Plain Silver/Buy Label 3/Button 3" to="." method="_on_plain_silver_button_pressed"]
-[connection signal="pressed" from="Cat Frame/CatFrame4/Plain Caramel/Buy Label 4/Button 4" to="." method="_on_plain_caramel_button_pressed"]
+[connection signal="pressed" from="Cat Frame/Cat Frame 2/Plain Orange/Buy Label 2/Button 2" to="." method="_on_plain_orange_button_pressed"]
+[connection signal="pressed" from="Cat Frame/Cat Frame 3/Plain Silver/Buy Label 3/Button 3" to="." method="_on_plain_silver_button_pressed"]
+[connection signal="pressed" from="Cat Frame/Cat Frame 4/Plain Caramel/Buy Label 4/Button 4" to="." method="_on_plain_caramel_button_pressed"]
 [connection signal="pressed" from="Cat Frame/Fish Icon/Fish Button" to="." method="_on_fish_button_pressed"]
+[connection signal="pressed" from="Cat Frame/TT Cat Icon/TT Button" to="." method="_on_tt_button_pressed"]
+[connection signal="pressed" from="TT Cat Frame/TT Brown/Buy Label/Button" to="." method="_on_tt_brown_button_pressed"]
+[connection signal="pressed" from="TT Cat Frame/Cat Frame 2/TT Orange/Buy Label 2/Button 2" to="." method="_on_tt_orange_button_pressed"]
+[connection signal="pressed" from="TT Cat Frame/CatFrame3/TT Silver/Buy Label 3/Button 3" to="." method="_on_tt_silver_button_pressed"]
+[connection signal="pressed" from="TT Cat Frame/CatFrame4/TT Caramel/Buy Label 4/Button 4" to="." method="_on_tt_caramel_button_pressed"]
+[connection signal="pressed" from="TT Cat Frame/Fish Icon/Fish Button" to="." method="_on_fish_button_pressed"]
+[connection signal="pressed" from="TT Cat Frame/Cat Icon/Cat Button" to="." method="_on_cat_button_pressed"]
 [connection signal="pressed" from="Chest/Button" to="." method="_on_chest_button_pressed"]

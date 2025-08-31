@@ -10,7 +10,7 @@ func _ready():
 		Global._idle_dgc()
 	if Global.own_plain_brown == true:
 		$"Brown Cat".visible = true
-		$"Brown Cat".position = Vector2(329, 393)
+		$"Brown Cat".position = Vector2(169, 89)
 		if Global.brown_cat_hunger <= 0:
 			Global._dead_bc()
 		else:
@@ -36,7 +36,7 @@ func _ready():
 			Global._dead_cc()
 		else:
 			Global._idle_cc()
-	
+	Global.r1_visited = true
 	
 func _process(delta: float):
 	$Camera2D/Money.text = str(Global.player_coins)
@@ -112,10 +112,15 @@ func _on_cc_area_2d_body_entered(body: CharacterBody2D) -> void:
 	if body == $CharacterBody2D:
 		get_tree().change_scene_to_file("res://Caramel Cat Screen.tscn")
 
-
 func _on_bush_area_2d_body_entered(body: CharacterBody2D) -> void:
 	if body == $CharacterBody2D:
 		if round(wait_2_secs) <= 0:
 			get_tree().change_scene_to_file("res://Map.tscn")
 		else:
 			pass
+
+func _on_market_button_pressed() -> void:
+	Global.start_map = false
+	Global.start_r1 = true
+	Global.start_r2 = false
+	get_tree().change_scene_to_file("res://Shop.tscn")

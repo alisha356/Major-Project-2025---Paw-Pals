@@ -1,6 +1,7 @@
-[gd_scene load_steps=22 format=3 uid="uid://dfis0hcb6mbl"]
+[gd_scene load_steps=23 format=3 uid="uid://dfis0hcb6mbl"]
 
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_oh8v0"]
+[ext_resource type="Script" path="res://Room 2.gd" id="1_yb85s"]
 [ext_resource type="Texture2D" uid="uid://20ivggto2ypg" path="res://Assets/Bush Arch.png" id="2_7ngq6"]
 [ext_resource type="PackedScene" uid="uid://bfw8050gvfr61" path="res://Grey TT Cat.tscn" id="3_vik2w"]
 [ext_resource type="PackedScene" uid="uid://cjbx6nmoj5dn6" path="res://Brown TT Cat.tscn" id="4_ydfgw"]
@@ -588,6 +589,7 @@ radius = 9.0
 height = 20.0
 
 [node name="Room 2" type="Node2D"]
+script = ExtResource("1_yb85s")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_c5jxv")
@@ -597,7 +599,7 @@ layer_0/tile_data = PackedInt32Array(65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 6554
 [node name="Trees" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_8necl")
 format = 2
-layer_0/tile_data = PackedInt32Array(393234, 393216, 1, 524305, 393216, 1, 458770, 393216, 0, 524306, 458752, 1, 589842, 458752, 1, 655378, 458752, 1, 655376, 524288, 0, 655375, 458752, 1, 655374, 458752, 1, 589838, 458752, 1, 589837, 458752, 1, 655373, 458752, 1, 655372, 458752, 1, 655371, 458752, 1, 655370, 458752, 1, 655369, 458752, 1, 655368, 458752, 1, 655364, 458752, 1, 589827, 458752, 1, 589826, 458752, 1, 524290, 458752, 1, 458754, 458752, 1, 458753, 458752, 1, 458752, 458752, 1, 393216, 458752, 1, 131072, 458752, 1, 65536, 458752, 1, 0, 458752, 1, 1, 458752, 1, 2, 458752, 1, 3, 458752, 1, 6, 393216, 2, 65543, 458752, 1, 65544, 458752, 1, 9, 458752, 1, 65545, 458752, 1, 131080, 458752, 1, 131081, 458752, 1, 196617, 458752, 1, 196618, 458752, 1, 131083, 458752, 1, 65548, 458752, 1, 65549, 524288, 2, 65550, 393216, 2, 65551, 458752, 1, 65552, 458752, 1, 65553, 458752, 1, 65554, 458752, 1, 131089, 458752, 1, 131090, 458752, 1, 196626, 458752, 1, 262162, 458752, 1, 131082, 458752, 1, 65546, 458752, 1, 10, 458752, 1, 8, 458752, 1, 7, 458752, 1, 11, 458752, 1, 65547, 458752, 1, 12, 458752, 1, 14, 458752, 1, 15, 458752, 1, 16, 458752, 1, 17, 458752, 1, 18, 458752, 1, 13, 458752, 1, 589841, 393216, 1, 655377, 393216, 0, 589839, 524288, 0, 655365, 524288, 0, 589828, 524288, 0, 524291, 458752, 1, 393217, 524288, 0, 327680, 458752, 1, 589836, 393216, 0, 655367, 393216, 0, 524302, 458752, 0, 524301, 458752, 0, 589835, 458752, 0, 589834, 458752, 0, 589833, 458752, 0, 589832, 458752, 0, 655366, 458752, 0, 393218, 458752, 0, 458755, 524288, 0, 524292, 524288, 1, 262144, 458752, 1, 196608, 458752, 1, 131073, 458752, 1, 65537, 458752, 1, 196619, 524288, 2, 131084, 524288, 2, 131088, 393216, 2, 196625, 393216, 2, 327698, 393216, 2, 65542, 393216, 2, 196616, 393216, 2, 131079, 393216, 2, 65538, 458752, 1, 262153, 458752, 2, 262154, 458752, 2, 262161, 393216, 1, 655363, 458752, 1, 655362, 458752, 1, 655361, 458752, 1, 655360, 458752, 1, 589824, 458752, 1, 524288, 458752, 1, 524289, 458752, 1, 589825, 458752, 1, 4, 524288, 2, 65539, 458752, 1, 131074, 458752, 1, 196609, 458752, 1, 196610, 524288, 2, 262145, 524288, 2, 131075, 524288, 2, 65540, 524288, 2, 327681, 524288, 1, -65530, 458752, 1, -65531, 458752, 1, -65532, 458752, 1, -131067, 458752, 1)
+layer_0/tile_data = PackedInt32Array(393234, 393216, 1, 524305, 393216, 1, 458770, 393216, 0, 524306, 458752, 1, 589842, 458752, 1, 655378, 458752, 1, 655376, 524288, 0, 655375, 458752, 1, 655374, 458752, 1, 589838, 458752, 1, 589837, 458752, 1, 655373, 458752, 1, 655372, 458752, 1, 655371, 458752, 1, 655370, 458752, 1, 655369, 458752, 1, 655368, 458752, 1, 655364, 458752, 1, 589827, 458752, 1, 589826, 458752, 1, 524290, 458752, 1, 458754, 458752, 1, 458753, 458752, 1, 458752, 458752, 1, 393216, 458752, 1, 131072, 458752, 1, 65536, 458752, 1, 0, 458752, 1, 1, 458752, 1, 2, 458752, 1, 3, 458752, 1, 6, 393216, 2, 65543, 458752, 1, 65544, 458752, 1, 9, 458752, 1, 65545, 458752, 1, 131080, 458752, 1, 131081, 458752, 1, 196617, 458752, 1, 196618, 458752, 1, 131083, 458752, 1, 65548, 458752, 1, 65549, 524288, 2, 65550, 393216, 2, 65551, 458752, 1, 65552, 458752, 1, 65553, 458752, 1, 65554, 458752, 1, 131089, 458752, 1, 131090, 458752, 1, 196626, 458752, 1, 262162, 458752, 1, 131082, 458752, 1, 65546, 458752, 1, 10, 458752, 1, 8, 458752, 1, 7, 458752, 1, 11, 458752, 1, 65547, 458752, 1, 12, 458752, 1, 14, 458752, 1, 15, 458752, 1, 16, 458752, 1, 17, 458752, 1, 18, 458752, 1, 13, 458752, 1, 589841, 393216, 1, 655377, 393216, 0, 589839, 524288, 0, 655365, 524288, 0, 589828, 524288, 0, 524291, 458752, 1, 393217, 524288, 0, 327680, 458752, 1, 589836, 393216, 0, 655367, 393216, 0, 524302, 458752, 0, 524301, 458752, 0, 589835, 458752, 0, 589834, 458752, 0, 589833, 458752, 0, 589832, 458752, 0, 655366, 458752, 0, 393218, 458752, 0, 458755, 524288, 0, 524292, 524288, 1, 262144, 458752, 1, 196608, 458752, 1, 131073, 458752, 1, 65537, 458752, 1, 196619, 524288, 2, 131084, 524288, 2, 131088, 393216, 2, 196625, 393216, 2, 327698, 393216, 2, 65542, 393216, 2, 196616, 393216, 2, 131079, 393216, 2, 65538, 458752, 1, 262153, 458752, 2, 262154, 458752, 2, 262161, 393216, 1, 655363, 458752, 1, 655362, 458752, 1, 655361, 458752, 1, 655360, 458752, 1, 589824, 458752, 1, 524288, 458752, 1, 524289, 458752, 1, 589825, 458752, 1, 4, 524288, 2, 65539, 458752, 1, 131074, 458752, 1, 196609, 458752, 1, 196610, 524288, 2, 262145, 524288, 2, 131075, 524288, 2, 65540, 524288, 2, 327681, 524288, 1, -65530, 458752, 1, -65531, 458752, 1, -65532, 458752, 1, -131067, 458752, 1, 131087, 458752, 2)
 
 [node name="BushArch" type="Sprite2D" parent="."]
 position = Vector2(88, 3)
@@ -611,7 +613,7 @@ shape = SubResource("RectangleShape2D_inrf0")
 debug_color = Color(0.854902, 0, 0.890196, 0.34902)
 
 [node name="Grey TT Cat" parent="." instance=ExtResource("3_vik2w")]
-position = Vector2(119, 64)
+position = Vector2(121, 57)
 
 [node name="GTTC Area2D" type="Area2D" parent="Grey TT Cat"]
 
@@ -621,7 +623,8 @@ shape = SubResource("CapsuleShape2D_du8wa")
 debug_color = Color(0.854902, 0, 0.890196, 0.34902)
 
 [node name="Brown TT Cat" parent="." instance=ExtResource("4_ydfgw")]
-position = Vector2(183, 93)
+visible = false
+position = Vector2(163, 29)
 
 [node name="BTTC Area2D" type="Area2D" parent="Brown TT Cat"]
 
@@ -631,7 +634,8 @@ shape = SubResource("CapsuleShape2D_v77pw")
 debug_color = Color(0.854902, 0, 0.890196, 0.34902)
 
 [node name="Orange TT Cat" parent="." instance=ExtResource("5_v25mu")]
-position = Vector2(245, 57)
+visible = false
+position = Vector2(163, 29)
 
 [node name="OTTC Area2D" type="Area2D" parent="Orange TT Cat"]
 
@@ -641,7 +645,8 @@ shape = SubResource("CapsuleShape2D_gdes6")
 debug_color = Color(0.854902, 0, 0.890196, 0.34902)
 
 [node name="Silver TT Cat" parent="." instance=ExtResource("6_mhgk8")]
-position = Vector2(62, 79)
+visible = false
+position = Vector2(163, 29)
 
 [node name="STTC Area2D" type="Area2D" parent="Silver TT Cat"]
 
@@ -651,11 +656,12 @@ shape = SubResource("CapsuleShape2D_avw5a")
 debug_color = Color(0.854902, 0, 0.890196, 0.34902)
 
 [node name="Caramel TT Cat" parent="." instance=ExtResource("7_0hhot")]
-position = Vector2(112, 134)
+visible = false
+position = Vector2(163, 29)
 
-[node name="CTTCArea2D" type="Area2D" parent="Caramel TT Cat"]
+[node name="CTTC Area2D" type="Area2D" parent="Caramel TT Cat"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Caramel TT Cat/CTTCArea2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Caramel TT Cat/CTTC Area2D"]
 position = Vector2(-1, 6)
 shape = SubResource("CapsuleShape2D_t6eg8")
 debug_color = Color(0.854902, 0, 0.890196, 0.34902)
@@ -675,13 +681,13 @@ offset_right = -92.0
 offset_bottom = -64.0
 theme_override_fonts/font = ExtResource("9_bqqqo")
 theme_override_font_sizes/font_size = 8
-text = "20"
+text = "x"
 
 [node name="Market Icon" type="Sprite2D" parent="Camera2D"]
 position = Vector2(-130, -68)
 texture = ExtResource("9_0uqln")
 
-[node name="Button" type="Button" parent="Camera2D/Market Icon"]
+[node name="Market Button" type="Button" parent="Camera2D/Market Icon"]
 offset_left = -6.0
 offset_top = -6.0
 offset_right = 5.0
@@ -691,3 +697,11 @@ flat = true
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("11_2yfxd")]
 position = Vector2(88, 25)
+
+[connection signal="body_entered" from="BushArch/Bush Area2D" to="." method="_on_bush_area_2d_body_entered"]
+[connection signal="body_entered" from="Grey TT Cat/GTTC Area2D" to="." method="_on_gttc_area_2d_body_entered"]
+[connection signal="body_entered" from="Brown TT Cat/BTTC Area2D" to="." method="_on_bttc_area_2d_body_entered"]
+[connection signal="body_entered" from="Orange TT Cat/OTTC Area2D" to="." method="_on_ottc_area_2d_body_entered"]
+[connection signal="body_entered" from="Silver TT Cat/STTC Area2D" to="." method="_on_sttc_area_2d_body_entered"]
+[connection signal="body_entered" from="Caramel TT Cat/CTTC Area2D" to="." method="_on_cttc_area_2d_body_entered"]
+[connection signal="pressed" from="Camera2D/Market Icon/Market Button" to="." method="_on_market_button_pressed"]

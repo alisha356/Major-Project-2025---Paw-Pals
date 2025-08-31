@@ -1,0 +1,423 @@
+[gd_scene load_steps=25 format=3 uid="uid://0oeyb8o5dk7y"]
+
+[ext_resource type="PackedScene" uid="uid://b4qtlrae2bwpa" path="res://Caramel TT Cat.tscn" id="1_57ohb"]
+[ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_jn0ui"]
+[ext_resource type="Script" path="res://CTTC Screen.gd" id="1_k8ah3"]
+[ext_resource type="Texture2D" uid="uid://hmoaj1sdw31a" path="res://Assets/Arrow.png" id="3_uds2k"]
+[ext_resource type="Texture2D" uid="uid://c07fgghbxj15a" path="res://Assets/Frame.png" id="4_hwl3y"]
+[ext_resource type="Texture2D" uid="uid://vefil8wnm0en" path="res://Assets/Fish.png" id="5_ekit1"]
+[ext_resource type="FontFile" uid="uid://bu0ktuo2p2jt" path="res://Assets/Silkscreen-Regular.ttf" id="6_8c5fw"]
+[ext_resource type="Texture2D" uid="uid://dpcw5wmryynte" path="res://Assets/0 hunger.png" id="7_tvja2"]
+[ext_resource type="Texture2D" uid="uid://l2q06of5yexx" path="res://Assets/1 hunger.png" id="8_y3lgm"]
+[ext_resource type="Texture2D" uid="uid://ctmogxwogsi57" path="res://Assets/2 hunger.png" id="9_3bhcm"]
+[ext_resource type="Texture2D" uid="uid://7v77yj61fhcs" path="res://Assets/3 hunger.png" id="10_yvl4s"]
+[ext_resource type="Texture2D" uid="uid://cag2xl36lq3x2" path="res://Assets/4 hunger.png" id="11_gaidn"]
+[ext_resource type="Texture2D" uid="uid://cugfgojim1pmy" path="res://Assets/5 hunger.png" id="12_gsuwl"]
+[ext_resource type="Texture2D" uid="uid://cx04doksljbqc" path="res://Assets/6 hunger.png" id="13_e58re"]
+[ext_resource type="Texture2D" uid="uid://ddu1lfu7udpw4" path="res://Assets/7 hunger.png" id="14_yyehe"]
+[ext_resource type="Texture2D" uid="uid://c7cmcnc4ds0rv" path="res://Assets/8 hunger.png" id="15_xyeds"]
+[ext_resource type="Texture2D" uid="uid://idq8ws6fvo75" path="res://Assets/9 hunger.png" id="16_vgr2g"]
+[ext_resource type="Texture2D" uid="uid://cdppc5vgqia40" path="res://Assets/10 hunger.png" id="17_5mhgp"]
+[ext_resource type="Texture2D" uid="uid://di4u0urldhs15" path="res://Assets/Coin.png" id="18_w6re6"]
+[ext_resource type="PackedScene" uid="uid://cihtrh85vf2q1" path="res://Heart Animation.tscn" id="19_pnqhi"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kjq6s"]
+texture = ExtResource("1_jn0ui")
+separation = Vector2i(1, 1)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+9:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qro48"]
+sources/0 = SubResource("TileSetAtlasSource_kjq6s")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b8tse"]
+texture = ExtResource("1_jn0ui")
+separation = Vector2i(1, 1)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+9:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_uw5h3"]
+sources/0 = SubResource("TileSetAtlasSource_b8tse")
+
+[node name="CTTC Screen" type="Node2D"]
+script = ExtResource("1_k8ah3")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_qro48")
+format = 2
+layer_0/tile_data = PackedInt32Array(131070, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 131069, 131072, 0, 1, 458752, 3, 0, 0, 0, 65535, 0, 0, 65534, 0, 0, 65533, 0, 0, -1, 65536, 0, -65536, 0, 0, -65535, 0, 0, -3, 0, 0, -2, 0, 0, -131071, 65536, 0, -131072, 0, 0, -65537, 0, 0, -65538, 0, 0, -65539, 0, 0)
+
+[node name="Trees" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_uw5h3")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65536, 458752, 2, -65535, 393216, 2, -65537, 393216, 2, -65538, 524288, 2, -3, 524288, 2, -131071, 458752, 1, -131072, 458752, 1, -65539, 458752, 1)
+
+[node name="Caramel TT Cat" parent="." instance=ExtResource("1_57ohb")]
+position = Vector2(-7, -7)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-8, 0)
+zoom = Vector2(15, 15)
+
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(-40, -15)
+texture = ExtResource("3_uds2k")
+
+[node name="Arrow Button" type="Button" parent="Arrow"]
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 4.0
+offset_bottom = 5.0
+focus_mode = 0
+flat = true
+
+[node name="Frame" type="Sprite2D" parent="."]
+position = Vector2(14, -3)
+texture = ExtResource("4_hwl3y")
+
+[node name="Fish" type="Sprite2D" parent="."]
+position = Vector2(15, -1)
+texture = ExtResource("5_ekit1")
+
+[node name="Number" type="Label" parent="Fish"]
+offset_left = -8.0
+offset_top = -12.0
+offset_right = 10.0
+offset_bottom = -1.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("6_8c5fw")
+theme_override_font_sizes/font_size = 8
+text = "x"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Fish"]
+offset_left = -3.0
+offset_top = -4.0
+offset_right = 5.0
+offset_bottom = 4.0
+focus_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Hunger 0" type="Sprite2D" parent="."]
+position = Vector2(-8, 11)
+texture = ExtResource("7_tvja2")
+
+[node name="Hunger 1" type="Sprite2D" parent="."]
+position = Vector2(-8, 12)
+texture = ExtResource("8_y3lgm")
+
+[node name="Hunger 2" type="Sprite2D" parent="."]
+position = Vector2(-8, 12)
+texture = ExtResource("9_3bhcm")
+
+[node name="Hunger 3" type="Sprite2D" parent="."]
+position = Vector2(-8, 12)
+texture = ExtResource("10_yvl4s")
+
+[node name="Hunger 4" type="Sprite2D" parent="."]
+position = Vector2(-8, 12)
+texture = ExtResource("11_gaidn")
+
+[node name="Hunger 5" type="Sprite2D" parent="."]
+position = Vector2(-8, 12)
+texture = ExtResource("12_gsuwl")
+
+[node name="Hunger 6" type="Sprite2D" parent="."]
+position = Vector2(-8, 12)
+texture = ExtResource("13_e58re")
+
+[node name="Hunger 7" type="Sprite2D" parent="."]
+position = Vector2(-8, 12)
+texture = ExtResource("14_yyehe")
+
+[node name="Hunger 8" type="Sprite2D" parent="."]
+position = Vector2(-8, 12)
+texture = ExtResource("15_xyeds")
+
+[node name="Hunger 9" type="Sprite2D" parent="."]
+position = Vector2(-8, 12)
+texture = ExtResource("16_vgr2g")
+
+[node name="Hunger 10" type="Sprite2D" parent="."]
+position = Vector2(-8, 12)
+texture = ExtResource("17_5mhgp")
+
+[node name="Coin" type="Sprite2D" parent="."]
+position = Vector2(-32, -15)
+texture = ExtResource("18_w6re6")
+
+[node name="Money" type="Label" parent="."]
+offset_left = -28.0
+offset_top = -21.0
+offset_right = -1.0
+offset_bottom = -10.0
+theme_override_fonts/font = ExtResource("6_8c5fw")
+theme_override_font_sizes/font_size = 8
+text = "x"
+
+[node name="Heart" parent="." instance=ExtResource("19_pnqhi")]
+position = Vector2(1, -12)
+
+[connection signal="pressed" from="Arrow/Arrow Button" to="." method="_on_arrow_button_pressed"]
+[connection signal="pressed" from="Fish/Button" to="." method="_on_button_pressed"]

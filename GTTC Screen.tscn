@@ -1,0 +1,420 @@
+[gd_scene load_steps=25 format=3 uid="uid://dj45kd0bv0pqo"]
+
+[ext_resource type="Script" path="res://GTTC Screen.gd" id="1_hbh8e"]
+[ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_whoyk"]
+[ext_resource type="PackedScene" uid="uid://bfw8050gvfr61" path="res://Grey TT Cat.tscn" id="2_qeehg"]
+[ext_resource type="Texture2D" uid="uid://hmoaj1sdw31a" path="res://Assets/Arrow.png" id="3_ppky1"]
+[ext_resource type="Texture2D" uid="uid://c07fgghbxj15a" path="res://Assets/Frame.png" id="4_7nn7n"]
+[ext_resource type="Texture2D" uid="uid://cbni5qq0sk6xy" path="res://Assets/Cheese.png" id="5_q2ei8"]
+[ext_resource type="FontFile" uid="uid://bu0ktuo2p2jt" path="res://Assets/Silkscreen-Regular.ttf" id="6_l8j5n"]
+[ext_resource type="Texture2D" uid="uid://dpcw5wmryynte" path="res://Assets/0 hunger.png" id="7_tmv6m"]
+[ext_resource type="Texture2D" uid="uid://l2q06of5yexx" path="res://Assets/1 hunger.png" id="8_dryvc"]
+[ext_resource type="Texture2D" uid="uid://ctmogxwogsi57" path="res://Assets/2 hunger.png" id="9_s1urn"]
+[ext_resource type="Texture2D" uid="uid://7v77yj61fhcs" path="res://Assets/3 hunger.png" id="10_e37k4"]
+[ext_resource type="Texture2D" uid="uid://cag2xl36lq3x2" path="res://Assets/4 hunger.png" id="11_de2c6"]
+[ext_resource type="Texture2D" uid="uid://cugfgojim1pmy" path="res://Assets/5 hunger.png" id="12_ey1au"]
+[ext_resource type="Texture2D" uid="uid://cx04doksljbqc" path="res://Assets/6 hunger.png" id="13_papj4"]
+[ext_resource type="Texture2D" uid="uid://ddu1lfu7udpw4" path="res://Assets/7 hunger.png" id="14_xkcr6"]
+[ext_resource type="Texture2D" uid="uid://c7cmcnc4ds0rv" path="res://Assets/8 hunger.png" id="15_jhmc1"]
+[ext_resource type="Texture2D" uid="uid://idq8ws6fvo75" path="res://Assets/9 hunger.png" id="16_1h3vd"]
+[ext_resource type="Texture2D" uid="uid://cdppc5vgqia40" path="res://Assets/10 hunger.png" id="17_tklyk"]
+[ext_resource type="Texture2D" uid="uid://di4u0urldhs15" path="res://Assets/Coin.png" id="18_vhnh5"]
+[ext_resource type="PackedScene" uid="uid://cihtrh85vf2q1" path="res://Heart Animation.tscn" id="19_pgjis"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y2bvl"]
+texture = ExtResource("1_whoyk")
+separation = Vector2i(1, 1)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+9:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_nlh18"]
+sources/0 = SubResource("TileSetAtlasSource_y2bvl")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4w2cd"]
+texture = ExtResource("1_whoyk")
+separation = Vector2i(1, 1)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+9:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ol65c"]
+sources/0 = SubResource("TileSetAtlasSource_4w2cd")
+
+[node name="GTTC Screen" type="Node2D"]
+script = ExtResource("1_hbh8e")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_nlh18")
+format = 2
+layer_0/tile_data = PackedInt32Array(65535, 0, 0, 65534, 0, 0, 0, 0, 0, -1, 0, 0, -2, 65536, 0, -65536, 0, 0, 65533, 0, 0, -3, 458752, 3, 65536, 65536, 0, 131071, 0, 0, 131070, 0, 0, 131069, 0, 0, -65539, 65536, 0, -65538, 0, 0, -65537, 131072, 0, 1, 65536, 0, -65535, 0, 0, -131071, 0, 0, -131072, 0, 0, 65537, 0, 0)
+
+[node name="Trees" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_ol65c")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65536, 393216, 2, -65537, 393216, 2, 1, 458752, 2, -65535, 458752, 1, -131072, 458752, 1, -131071, 458752, 1)
+
+[node name="Grey TT Cat" parent="." instance=ExtResource("2_qeehg")]
+position = Vector2(-7, -7)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-8, 0)
+zoom = Vector2(15, 15)
+
+[node name="Exit Arrow" type="Sprite2D" parent="."]
+position = Vector2(-40, -15)
+texture = ExtResource("3_ppky1")
+
+[node name="Arrow Button" type="Button" parent="Exit Arrow"]
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 4.0
+offset_bottom = 6.0
+focus_mode = 0
+flat = true
+
+[node name="Frame" type="Sprite2D" parent="."]
+position = Vector2(14, -3)
+texture = ExtResource("4_7nn7n")
+
+[node name="Cheese" type="Sprite2D" parent="."]
+position = Vector2(16, -1)
+texture = ExtResource("5_q2ei8")
+
+[node name="Number" type="Label" parent="Cheese"]
+offset_left = -9.0
+offset_top = -12.0
+offset_bottom = -1.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("6_l8j5n")
+theme_override_font_sizes/font_size = 8
+text = "x"
+
+[node name="Button" type="Button" parent="Cheese"]
+offset_left = -5.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+focus_mode = 0
+flat = true
+
+[node name="Hunger 0" type="Sprite2D" parent="."]
+position = Vector2(-8, 11)
+texture = ExtResource("7_tmv6m")
+
+[node name="Hunger 1" type="Sprite2D" parent="."]
+position = Vector2(-8, 12)
+texture = ExtResource("8_dryvc")
+
+[node name="Hunger 2" type="Sprite2D" parent="."]
+position = Vector2(-8, 12)
+texture = ExtResource("9_s1urn")
+
+[node name="Hunger 3" type="Sprite2D" parent="."]
+position = Vector2(-8, 12)
+texture = ExtResource("10_e37k4")
+
+[node name="Hunger 4" type="Sprite2D" parent="."]
+position = Vector2(-8, 12)
+texture = ExtResource("11_de2c6")
+
+[node name="Hunger 5" type="Sprite2D" parent="."]
+position = Vector2(-8, 12)
+texture = ExtResource("12_ey1au")
+
+[node name="Hunger 6" type="Sprite2D" parent="."]
+position = Vector2(-8, 12)
+texture = ExtResource("13_papj4")
+
+[node name="Hunger 7" type="Sprite2D" parent="."]
+position = Vector2(-8, 12)
+texture = ExtResource("14_xkcr6")
+
+[node name="Hunger 8" type="Sprite2D" parent="."]
+position = Vector2(-8, 12)
+texture = ExtResource("15_jhmc1")
+
+[node name="Hunger 9" type="Sprite2D" parent="."]
+position = Vector2(-8, 12)
+texture = ExtResource("16_1h3vd")
+
+[node name="Hunger 10" type="Sprite2D" parent="."]
+position = Vector2(-8, 12)
+texture = ExtResource("17_tklyk")
+
+[node name="Coin" type="Sprite2D" parent="."]
+position = Vector2(-32, -15)
+texture = ExtResource("18_vhnh5")
+
+[node name="Money" type="Label" parent="."]
+offset_left = -28.0
+offset_top = -21.0
+offset_right = -11.0
+offset_bottom = -10.0
+theme_override_fonts/font = ExtResource("6_l8j5n")
+theme_override_font_sizes/font_size = 8
+text = "x"
+
+[node name="Heart" parent="." instance=ExtResource("19_pgjis")]
+position = Vector2(1, -12)
+
+[connection signal="pressed" from="Exit Arrow/Arrow Button" to="." method="_on_arrow_button_pressed"]
+[connection signal="pressed" from="Cheese/Button" to="." method="_on_button_pressed"]

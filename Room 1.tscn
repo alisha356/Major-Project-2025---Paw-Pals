@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cmtw7crxmbkwt"]
+[gd_scene load_steps=23 format=3 uid="uid://cmtw7crxmbkwt"]
 
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_hy5y7"]
 [ext_resource type="Script" path="res://Room 1.gd" id="1_idt2n"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://qqw62cmw1cx6" path="res://Silver Cat.tscn" id="8_ddqd1"]
 [ext_resource type="PackedScene" uid="uid://bp301n3ht2hvy" path="res://User Character.tscn" id="13_5wnwj"]
 [ext_resource type="Texture2D" uid="uid://bomnj4jslvhoj" path="res://Assets/Market Icon.png" id="15_m0ugm"]
-[ext_resource type="Script" path="res://Market Icon Room 1.gd" id="16_i1tm5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_prc0x"]
 texture = ExtResource("1_hy5y7")
@@ -685,14 +684,13 @@ offset_bottom = -64.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("7_yx2b3")
 theme_override_font_sizes/font_size = 8
-text = "20"
+text = "x"
 
 [node name="Market Icon" type="Sprite2D" parent="Camera2D"]
 position = Vector2(-130, -68)
 texture = ExtResource("15_m0ugm")
-script = ExtResource("16_i1tm5")
 
-[node name="Button" type="Button" parent="Camera2D/Market Icon"]
+[node name="Market Button" type="Button" parent="Camera2D/Market Icon"]
 offset_left = -5.0
 offset_top = -6.0
 offset_right = 4.0
@@ -709,4 +707,4 @@ position = Vector2(368, 312)
 [connection signal="body_entered" from="Orange Cat/OC Area2D" to="." method="_on_oc_area_2d_body_entered"]
 [connection signal="body_entered" from="Silver Cat/SC Area2D" to="." method="_on_sc_area_2d_body_entered"]
 [connection signal="body_entered" from="Caramel Cat/CC Area2D" to="." method="_on_cc_area_2d_body_entered"]
-[connection signal="pressed" from="Camera2D/Market Icon/Button" to="Camera2D/Market Icon" method="_on_button_pressed"]
+[connection signal="pressed" from="Camera2D/Market Icon/Market Button" to="." method="_on_market_button_pressed"]

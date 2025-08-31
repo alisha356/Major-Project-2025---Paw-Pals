@@ -72,3 +72,6 @@ func _on_button_pressed():
 		if Global.silver_cat_hunger == 10:
 			Global._animate_heart()
 			Global.player_coins += 4
+
+func _on_arrow_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Room 1.tscn")

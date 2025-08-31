@@ -1,10 +1,12 @@
 extends Node
 
+var r1_visited = false
+
 var player_fish = 5
 var player_cherries = 0
 var player_cheese = 0
 var player_melon = 0
-var player_coins = 20
+var player_coins = 50
 
 var grey_cat_hunger = 8
 var brown_cat_hunger = 8
@@ -28,7 +30,7 @@ var own_bttc = false
 var own_ottc = false
 var own_sttc = false
 var own_cttc = false
-var num_cats = 1
+var num_cats = 2
 
 var heart_animation: AnimatedSprite2D = null
 
@@ -64,6 +66,9 @@ var cttc_animation: AnimatedSprite2D = null
 var cttc_animation_cooldown = 2
 var cttc_death_animation_played = false
 
+var start_r1 = false
+var start_r2 = false
+var start_map = false
 
 func _process(delta: float):
 	hunger_cooldown -= delta
@@ -109,161 +114,161 @@ func _animate_heart():
 		heart_animation.play("burst")
 
 func _animate_dgc_death():
-	if dgc_animation:
+	if is_instance_valid(dgc_animation):
 		dgc_animation.play("death")
 func _revive_dgc():
-	if dgc_animation:
+	if is_instance_valid(dgc_animation):
 		dgc_animation.play("revive")
 func _dead_dgc():
-	if dgc_animation:
+	if is_instance_valid(dgc_animation):
 		dgc_animation.play("dead")
 func _idle_dgc():
-	if dgc_animation:
+	if is_instance_valid(dgc_animation):
 		dgc_animation.play("idle")
 func _stop_idle_dgc():
-	if dgc_animation:
+	if is_instance_valid(dgc_animation):
 		dgc_animation.stop()
 
 func _animate_bc_death():
-	if bc_animation:
+	if is_instance_valid(bc_animation):
 		bc_animation.play("death")
 func _revive_bc():
-	if bc_animation:
+	if is_instance_valid(bc_animation):
 		bc_animation.play("revive")
 func _dead_bc():
-	if bc_animation:
+	if is_instance_valid(bc_animation):
 		bc_animation.play("dead")
 func _idle_bc():
-	if bc_animation:
+	if is_instance_valid(bc_animation):
 		bc_animation.play("idle")
 func _stop_idle_bc():
-	if bc_animation:
+	if is_instance_valid(bc_animation):
 		bc_animation.stop()
 
 func _animate_oc_death():
-	if oc_animation:
+	if is_instance_valid(oc_animation):
 		oc_animation.play("death")
 func _revive_oc():
-	if oc_animation:
+	if is_instance_valid(oc_animation):
 		oc_animation.play("revive")
 func _dead_oc():
-	if oc_animation:
+	if is_instance_valid(oc_animation):
 		oc_animation.play("dead")
 func _idle_oc():
-	if oc_animation:
+	if is_instance_valid(oc_animation):
 		oc_animation.play("idle")
 func _stop_idle_oc():
-	if oc_animation:
+	if is_instance_valid(oc_animation):
 		oc_animation.stop()
 
 func _animate_sc_death():
-	if sc_animation:
+	if is_instance_valid(sc_animation):
 		sc_animation.play("death")
 func _revive_sc():
-	if sc_animation:
+	if is_instance_valid(sc_animation):
 		sc_animation.play("revive")
 func _dead_sc():
-	if sc_animation:
+	if is_instance_valid(sc_animation):
 		sc_animation.play("dead")
 func _idle_sc():
-	if sc_animation:
+	if is_instance_valid(sc_animation):
 		sc_animation.play("idle")
 func _stop_idle_sc():
-	if sc_animation:
+	if is_instance_valid(sc_animation):
 		sc_animation.stop()
 
 func _animate_cc_death():
-	if cc_animation:
+	if is_instance_valid(cc_animation):
 		cc_animation.play("death")
 func _revive_cc():
-	if cc_animation:
+	if is_instance_valid(cc_animation):
 		cc_animation.play("revive")
 func _dead_cc():
-	if cc_animation:
+	if is_instance_valid(cc_animation):
 		cc_animation.play("dead")
 func _idle_cc():
-	if cc_animation:
+	if is_instance_valid(cc_animation):
 		cc_animation.play("idle")
 func _stop_idle_cc():
-	if cc_animation:
+	if is_instance_valid(cc_animation):
 		cc_animation.stop()
 
 func _animate_gttc_death():
-	if gttc_animation:
+	if is_instance_valid(gttc_animation):
 		gttc_animation.play("death")
 func _revive_gttc():
-	if gttc_animation:
+	if is_instance_valid(gttc_animation):
 		gttc_animation.play("revive")
 func _dead_gttc():
-	if gttc_animation:
+	if is_instance_valid(gttc_animation):
 		gttc_animation.play("dead")
 func _idle_gttc():
-	if gttc_animation:
+	if is_instance_valid(gttc_animation):
 		gttc_animation.play("idle")
 func _stop_idle_gttc():
-	if gttc_animation:
+	if is_instance_valid(gttc_animation):
 		gttc_animation.stop()
 
 func _animate_bttc_death():
-	if bttc_animation:
+	if is_instance_valid(bttc_animation):
 		bttc_animation.play("death")
 func _revive_bttc():
-	if bttc_animation:
+	if is_instance_valid(bttc_animation):
 		bttc_animation.play("revive")
 func _dead_bttc():
-	if bttc_animation:
+	if is_instance_valid(bttc_animation):
 		bttc_animation.play("dead")
 func _idle_bttc():
-	if bttc_animation:
+	if is_instance_valid(bttc_animation):
 		bttc_animation.play("idle")
 func _stop_idle_bttc():
-	if bttc_animation:
+	if is_instance_valid(bttc_animation):
 		bttc_animation.stop()
 
 func _animate_ottc_death():
-	if ottc_animation:
+	if is_instance_valid(ottc_animation):
 		ottc_animation.play("death")
 func _revive_ottc():
-	if ottc_animation:
+	if is_instance_valid(ottc_animation):
 		ottc_animation.play("revive")
 func _dead_ottc():
-	if ottc_animation:
+	if is_instance_valid(ottc_animation):
 		ottc_animation.play("dead")
 func _idle_ottc():
-	if ottc_animation:
+	if is_instance_valid(ottc_animation):
 		ottc_animation.play("idle")
 func _stop_idle_ottc():
-	if ottc_animation:
+	if is_instance_valid(ottc_animation):
 		ottc_animation.stop()
 
 func _animate_sttc_death():
-	if sttc_animation:
+	if is_instance_valid(sttc_animation):
 		sttc_animation.play("death")
 func _revive_sttc():
-	if sttc_animation:
+	if is_instance_valid(sttc_animation):
 		sttc_animation.play("revive")
 func _dead_sttc():
-	if sttc_animation:
+	if is_instance_valid(sttc_animation):
 		sttc_animation.play("dead")
 func _idle_sttc():
-	if sttc_animation:
+	if is_instance_valid(sttc_animation):
 		sttc_animation.play("idle")
 func _stop_idle_sttc():
-	if sttc_animation:
+	if is_instance_valid(sttc_animation):
 		sttc_animation.stop()
 
 func _animate_cttc_death():
-	if cttc_animation:
+	if is_instance_valid(cttc_animation):
 		cttc_animation.play("death")
 func _revive_cttc():
-	if cttc_animation:
+	if is_instance_valid(cttc_animation):
 		cttc_animation.play("revive")
 func _dead_cttc():
-	if cttc_animation:
+	if is_instance_valid(cttc_animation):
 		cttc_animation.play("dead")
 func _idle_cttc():
-	if cttc_animation:
+	if is_instance_valid(cttc_animation):
 		cttc_animation.play("idle")
 func _stop_idle_cttc():
-	if cttc_animation:
+	if is_instance_valid(cttc_animation):
 		cttc_animation.stop()
