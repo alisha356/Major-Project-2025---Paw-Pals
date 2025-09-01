@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bsh1pnammaspg"]
+[gd_scene load_steps=26 format=3 uid="uid://bsh1pnammaspg"]
 
 [ext_resource type="Script" path="res://Silver Cat Screen.gd" id="1_fu823"]
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="2_33gmq"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cugfgojim1pmy" path="res://Assets/5 hunger.png" id="18_hifkt"]
 [ext_resource type="Texture2D" uid="uid://cx04doksljbqc" path="res://Assets/6 hunger.png" id="19_pdrcs"]
 [ext_resource type="Texture2D" uid="uid://ddu1lfu7udpw4" path="res://Assets/7 hunger.png" id="20_pasbg"]
+[ext_resource type="Texture2D" uid="uid://dh3jlsas53a7a" path="res://Assets/Cat Accessories/Crown - Purple.png" id="21_8vsfb"]
 [ext_resource type="Texture2D" uid="uid://c7cmcnc4ds0rv" path="res://Assets/8 hunger.png" id="21_o2qfb"]
 [ext_resource type="Texture2D" uid="uid://idq8ws6fvo75" path="res://Assets/9 hunger.png" id="22_qbiqq"]
 [ext_resource type="Texture2D" uid="uid://cdppc5vgqia40" path="res://Assets/10 hunger.png" id="23_unl03"]
@@ -417,6 +418,11 @@ text = "x"
 
 [node name="Heart" parent="." instance=ExtResource("25_r0e20")]
 position = Vector2(241, 100)
+
+[node name="Crown-Purple" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(231, 103)
+texture = ExtResource("21_8vsfb")
 
 [connection signal="pressed" from="Exit Arrow/Arrow Button" to="." method="_on_arrow_button_pressed"]
 [connection signal="pressed" from="Cherries/Button" to="." method="_on_button_pressed"]

@@ -17,6 +17,7 @@ func _display_hunger_bar():
 	
 	if Global.cttc_hunger == 0:
 		$"Hunger 0".visible = true
+		$"WitchHat-Red".visible = false
 	elif Global.cttc_hunger == 1:
 		$"Hunger 1".visible = true
 		animation_played = false
@@ -46,8 +47,11 @@ func _ready():
 		animation_played = true
 		Global._stop_idle_cttc()
 		Global._dead_cttc()
+		$"WitchHat-Red".visible = false
 	else:
 		Global._idle_cttc()
+		if Global.own_red_hat == true:
+			$"WitchHat-Red".visible = true
 
 func _process(_delta: float):
 	_display_hunger_bar()
@@ -55,7 +59,11 @@ func _process(_delta: float):
 	if Global.cttc_hunger <= 0 and animation_played == false:
 		Global._stop_idle_cttc()
 		Global._animate_cttc_death()
+		$"WitchHat-Red".visible = false
 		animation_played = true
+	if Global.show_red_hat == true:
+		$"WitchHat-Red".visible = true
+		Global.show_red_hat = false
 
 func _on_button_pressed():
 	if Global.player_fish == 0:

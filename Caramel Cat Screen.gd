@@ -17,6 +17,7 @@ func _display_hunger_bar():
 	
 	if Global.caramel_cat_hunger == 0:
 		$"Hunger 0".visible = true
+		$"Crown-Green".visible = false
 	elif Global.caramel_cat_hunger == 1:
 		$"Hunger 1".visible = true
 		animation_played = false
@@ -46,8 +47,11 @@ func _ready():
 		animation_played = true
 		Global._stop_idle_cc()
 		Global._dead_cc()
+		$"Crown-Green".visible = false
 	else:
 		Global._idle_cc()
+		if Global.own_green_crown == true:
+			$"Crown-Green".visible = true
 
 func _process(_delta: float):
 	_display_hunger_bar()
@@ -55,7 +59,11 @@ func _process(_delta: float):
 	if Global.caramel_cat_hunger <= 0 and animation_played == false:
 		Global._stop_idle_cc()
 		Global._animate_cc_death()
+		$"Crown-Green".visible = false
 		animation_played = true
+	if Global.show_green_crown == true:
+		$"Crown-Green".visible = true
+		Global.show_green_crown = false
 
 func _on_button_pressed():
 	if Global.player_melon == 0:

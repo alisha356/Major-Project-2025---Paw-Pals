@@ -17,6 +17,7 @@ func _display_hunger_bar():
 	
 	if Global.sttc_hunger == 0:
 		$"Hunger 0".visible = true
+		$"WitchHat-Green".visible = false
 	elif Global.sttc_hunger == 1:
 		$"Hunger 1".visible = true
 		animation_played = false
@@ -46,8 +47,11 @@ func _ready():
 		animation_played = true
 		Global._stop_idle_sttc()
 		Global._dead_sttc()
+		$"WitchHat-Green".visible = false
 	else:
 		Global._idle_sttc()
+		if Global.own_green_hat == true:
+			$"WitchHat-Green".visible = true
 
 func _process(_delta: float):
 	_display_hunger_bar()
@@ -55,7 +59,11 @@ func _process(_delta: float):
 	if Global.sttc_hunger <= 0 and animation_played == false:
 		Global._stop_idle_sttc()
 		Global._animate_sttc_death()
+		$"WitchHat-Green".visible = false
 		animation_played = true
+	if Global.show_green_hat == true:
+		$"WitchHat-Green".visible = true
+		Global.show_green_hat = false
 
 func _on_button_pressed():
 	if Global.player_cheese == 0:

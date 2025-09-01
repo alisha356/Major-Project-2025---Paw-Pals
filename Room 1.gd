@@ -6,38 +6,53 @@ func _ready():
 	$Camera2D/Money.text = str(Global.player_coins)
 	if Global.grey_cat_hunger <= 0:
 		Global._dead_dgc()
+		$"Dark Grey Cat/Crown-Pink".visible = false
 	else:
 		Global._idle_dgc()
+		if Global.own_pink_crown == true:
+			$"Dark Grey Cat/Crown-Pink".visible = true
 	if Global.own_plain_brown == true:
 		$"Brown Cat".visible = true
 		$"Brown Cat".position = Vector2(169, 89)
 		if Global.brown_cat_hunger <= 0:
 			Global._dead_bc()
+			$"Brown Cat/Crown-Red".visible = false
 		else:
 			Global._idle_bc()
+			if Global.own_red_crown == true:
+				$"Brown Cat/Crown-Red".visible = true
 	if Global.own_plain_orange == true:
 		$"Orange Cat".visible = true
 		$"Orange Cat".position = Vector2(457, 346)
 		if Global.orange_cat_hunger <= 0:
 			Global._dead_oc()
+			$"Orange Cat/Crown-Blue".visible = false
 		else:
 			Global._idle_oc()
+			if Global.own_blue_crown == true:
+				$"Orange Cat/Crown-Blue".visible = true
 	if Global.own_plain_silver == true:
 		$"Silver Cat".visible = true
 		$"Silver Cat".position = Vector2(425, 393)
 		if Global.silver_cat_hunger <= 0:
 			Global._dead_sc()
+			$"Silver Cat/Crown-Purple".visible = false
 		else:
 			Global._idle_sc()
+			if Global.own_purple_crown == true:
+				$"Silver Cat/Crown-Purple".visible = true
 	if Global.own_plain_caramel == true:
 		$"Caramel Cat".visible = true
 		$"Caramel Cat".position = Vector2(313, 329)
 		if Global.caramel_cat_hunger <= 0:
 			Global._dead_cc()
+			$"Caramel Cat/Crown-Green".visible = false
 		else:
 			Global._idle_cc()
+			if Global.own_green_crown == true:
+				$"Caramel Cat/Crown-Green".visible = true
 	Global.r1_visited = true
-	
+
 func _process(delta: float):
 	$Camera2D/Money.text = str(Global.player_coins)
 	wait_2_secs -= delta
@@ -46,51 +61,66 @@ func _process(delta: float):
 		if Global.dgc_death_animation_played == false:
 			Global._animate_dgc_death()
 			Global.dgc_death_animation_played = true
+			$"Dark Grey Cat/Crown-Pink".visible = false
 		elif Global.dgc_death_animation_played == true:
 			Global.dgc_animation_cooldown -= delta
 	elif Global.grey_cat_hunger > 0:
 		Global.dgc_death_animation_played = false
 		Global.dgc_animation_cooldown = 2
+		if Global.own_pink_crown == true:
+			$"Dark Grey Cat/Crown-Pink".visible = true
 	
 	if Global.brown_cat_hunger <= 0:
 		if Global.bc_death_animation_played == false:
 			Global._animate_bc_death()
 			Global.bc_death_animation_played = true
+			$"Brown Cat/Crown-Red".visible = false
 		elif Global.bc_death_animation_played == true:
 			Global.bc_animation_cooldown -= delta
 	elif Global.brown_cat_hunger > 0:
 		Global.bc_death_animation_played = false
 		Global.bc_animation_cooldown = 2
+		if Global.own_red_crown == true:
+			$"Brown Cat/Crown-Red".visible = true
 		
 	if Global.orange_cat_hunger <= 0:
 		if Global.oc_death_animation_played == false:
 			Global._animate_oc_death()
 			Global.oc_death_animation_played = true
+			$"Orange Cat/Crown-Blue".visible = false
 		elif Global.oc_death_animation_played == true:
 			Global.oc_animation_cooldown -= delta
 	elif Global.orange_cat_hunger > 0:
 		Global.oc_death_animation_played = false
 		Global.oc_animation_cooldown = 2
+		if Global.own_blue_crown == true:
+			$"Orange Cat/Crown-Blue".visible = true
 	
 	if Global.silver_cat_hunger <= 0:
 		if Global.sc_death_animation_played == false:
 			Global._animate_sc_death()
 			Global.sc_death_animation_played = true
+			$"Silver Cat/Crown-Purple".visible = false
 		elif Global.sc_death_animation_played == true:
 			Global.sc_animation_cooldown -= delta
 	elif Global.silver_cat_hunger > 0:
 		Global.sc_death_animation_played = false
 		Global.sc_animation_cooldown = 2
+		if Global.own_purple_crown == true:
+			$"Silver Cat/Crown-Purple".visible = true
 	
 	if Global.caramel_cat_hunger <= 0:
 		if Global.cc_death_animation_played == false:
 			Global._animate_cc_death()
 			Global.cc_death_animation_played = true
+			$"Caramel Cat/Crown-Green".visible = false
 		elif Global.cc_death_animation_played == true:
 			Global.cc_animation_cooldown -= delta
 	elif Global.caramel_cat_hunger > 0:
 		Global.cc_death_animation_played = false
 		Global.cc_animation_cooldown = 2
+		if Global.own_green_crown == true:
+			$"Caramel Cat/Crown-Green".visible = true
 
 func _on_dgc_area_2d_body_entered(body: CharacterBody2D) -> void:
 	if body == $CharacterBody2D:

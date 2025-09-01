@@ -17,6 +17,7 @@ func _display_hunger_bar():
 	
 	if Global.grey_cat_hunger == 0:
 		$"Hunger 0".visible = true
+		$"Crown-Pink".visible = false
 	elif Global.grey_cat_hunger == 1:
 		$"Hunger 1".visible = true
 		animation_played = false
@@ -46,8 +47,11 @@ func _ready():
 		animation_played = true
 		Global._stop_idle_dgc()
 		Global._dead_dgc()
+		$"Crown-Pink".visible = false
 	else:
 		Global._idle_dgc()
+		if Global.own_pink_crown == true:
+			$"Crown-Pink".visible = true
 
 func _process(_delta: float):
 	_display_hunger_bar()
@@ -55,7 +59,11 @@ func _process(_delta: float):
 	if Global.grey_cat_hunger <= 0 and animation_played == false:
 		Global._stop_idle_dgc()
 		Global._animate_dgc_death()
+		$"Crown-Pink".visible = false
 		animation_played = true
+	if Global.show_pink_crown == true:
+		$"Crown-Pink".visible = true
+		Global.show_pink_crown = false
 
 func _on_button_pressed():
 	if Global.player_fish == 0:

@@ -6,36 +6,51 @@ func _ready():
 	$Camera2D/Money.text = str(Global.player_coins)
 	if Global.gttc_hunger <= 0:
 		Global._dead_gttc()
+		$"Grey TT Cat/WitchHat-Blue".visible = false
 	else:
 		Global._idle_gttc()
+		if Global.own_blue_hat == true:
+			$"Grey TT Cat/WitchHat-Blue".visible = true
 	if Global.own_bttc == true:
 		$"Brown TT Cat".visible = true
 		$"Brown TT Cat".position = Vector2(169, 89)
 		if Global.bttc_hunger <= 0:
 			Global._dead_bttc()
+			$"Brown TT Cat/WitchHat-Pink".visible = false
 		else:
 			Global._idle_bttc()
+			if Global.own_pink_hat == true:
+				$"Brown TT Cat/WitchHat-Pink".visible = true
 	if Global.own_ottc == true:
 		$"Orange TT Cat".visible = true
 		$"Orange TT Cat".position = Vector2(249, 106)
 		if Global.ottc_hunger <= 0:
 			Global._dead_ottc()
+			$"Orange TT Cat/WitchHat-Purple".visible = false
 		else:
 			Global._idle_ottc()
+			if Global.own_purple_hat == true:
+				$"Orange TT Cat/WitchHat-Purple".visible = true
 	if Global.own_sttc == true:
 		$"Silver TT Cat".visible = true
 		$"Silver TT Cat".position = Vector2(89, 137)
 		if Global.sttc_hunger <= 0:
 			Global._dead_sttc()
+			$"Silver TT Cat/WitchHat-Green".visible = false
 		else:
 			Global._idle_sttc()
+			if Global.own_green_hat == true:
+				$"Silver TT Cat/WitchHat-Green".visible = true
 	if Global.own_cttc == true:
 		$"Caramel TT Cat".visible = true
 		$"Caramel TT Cat".position = Vector2(233, 41)
 		if Global.cttc_hunger <= 0:
 			Global._dead_cttc()
+			$"Caramel TT Cat/WitchHat-Red".visible = false
 		else:
 			Global._idle_cttc()
+			if Global.own_red_hat == true:
+				$"Caramel TT Cat/WitchHat-Red".visible = true
 
 func _process(delta: float):
 	$Camera2D/Money.text = str(Global.player_coins)
@@ -45,51 +60,66 @@ func _process(delta: float):
 		if Global.gttc_death_animation_played == false:
 			Global._animate_gttc_death()
 			Global.gttc_death_animation_played = true
+			$"Grey TT Cat/WitchHat-Blue".visible = false
 		elif Global.gttc_death_animation_played == true:
 			Global.gttc_animation_cooldown -= delta
 	elif Global.gttc_hunger > 0:
 		Global.gttc_death_animation_played = false
 		Global.gttc_animation_cooldown = 2
+		if Global.own_blue_crown == true:
+			$"Grey TT Cat/WitchHat-Blue".visible = true
 	
 	if Global.bttc_hunger <= 0:
 		if Global.bttc_death_animation_played == false:
 			Global._animate_bttc_death()
 			Global.bttc_death_animation_played = true
+			$"Brown TT Cat/WitchHat-Pink".visible = false
 		elif Global.bttc_death_animation_played == true:
 			Global.bttc_animation_cooldown -= delta
 	elif Global.bttc_hunger > 0:
 		Global.bttc_death_animation_played = false
 		Global.bttc_animation_cooldown = 2
+		if Global.own_blue_crown == true:
+			$"Brown TT Cat/WitchHat-Pink".visible = true
 		
 	if Global.ottc_hunger <= 0:
 		if Global.ottc_death_animation_played == false:
 			Global._animate_ottc_death()
 			Global.ottc_death_animation_played = true
+			$"Orange TT Cat/WitchHat-Purple".visible = false
 		elif Global.ottc_death_animation_played == true:
 			Global.ottc_animation_cooldown -= delta
 	elif Global.ottc_hunger > 0:
 		Global.ottc_death_animation_played = false
 		Global.ottc_animation_cooldown = 2
+		if Global.own_purple_crown == true:
+			$"Orange TT Cat/WitchHat-Purple".visible = true
 	
 	if Global.sttc_hunger <= 0:
 		if Global.sttc_death_animation_played == false:
 			Global._animate_sttc_death()
 			Global.sttc_death_animation_played = true
+			$"Silver TT Cat/WitchHat-Green".visible = false
 		elif Global.sttc_death_animation_played == true:
 			Global.sttc_animation_cooldown -= delta
 	elif Global.sttc_hunger > 0:
 		Global.sttc_death_animation_played = false
 		Global.sttc_animation_cooldown = 2
+		if Global.own_green_crown == true:
+			$"Silver TT Cat/WitchHat-Green".visible = true
 	
 	if Global.cttc_hunger <= 0:
 		if Global.cttc_death_animation_played == false:
 			Global._animate_cttc_death()
 			Global.cttc_death_animation_played = true
+			$"Caramel TT Cat/WitchHat-Red".visible = false
 		elif Global.cttc_death_animation_played == true:
 			Global.cttc_animation_cooldown -= delta
 	elif Global.cttc_hunger > 0:
 		Global.cttc_death_animation_played = false
 		Global.cttc_animation_cooldown = 2
+		if Global.own_red_crown == true:
+			$"Caramel TT Cat/WitchHat-Red".visible = true
 
 func _on_gttc_area_2d_body_entered(body: CharacterBody2D) -> void:
 	if body == $CharacterBody2D:

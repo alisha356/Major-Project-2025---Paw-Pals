@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dx7k8aso5y80t"]
+[gd_scene load_steps=36 format=3 uid="uid://dx7k8aso5y80t"]
 
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_7y7fx"]
 [ext_resource type="Script" path="res://Shop.gd" id="1_l4h6c"]
@@ -15,14 +15,24 @@
 [ext_resource type="Texture2D" uid="uid://ji1v7t5c1axu" path="res://Assets/Watermelon.png" id="11_60l6j"]
 [ext_resource type="Texture2D" uid="uid://c10a2k6k2u4ut" path="res://Assets/Plain silver.png" id="12_oc7g0"]
 [ext_resource type="Texture2D" uid="uid://eppsbr151wio" path="res://Assets/Plain caramel.png" id="13_4v82t"]
+[ext_resource type="Texture2D" uid="uid://dux1kgbaxdkl4" path="res://Assets/Cat Accessories/Witch Hat - Pink.png" id="13_nl7lo"]
 [ext_resource type="Texture2D" uid="uid://dke8trwvohlrv" path="res://Assets/Cat Frame.png" id="13_p3ung"]
+[ext_resource type="Texture2D" uid="uid://ca3rtov8gc8uy" path="res://Assets/Cat Accessories/Witch Hat - Purple.png" id="14_pr7qq"]
 [ext_resource type="Texture2D" uid="uid://dgf8whnkgukmr" path="res://Assets/Cat icon.png" id="14_virpj"]
+[ext_resource type="Texture2D" uid="uid://bnnv3aoe0001" path="res://Assets/Cat Accessories/Witch Hat - Blue.png" id="15_hrjs6"]
 [ext_resource type="Texture2D" uid="uid://0b3lione34ak" path="res://Assets/Fish icon.png" id="15_nppmf"]
+[ext_resource type="Texture2D" uid="uid://begad6w6ovvfx" path="res://Assets/Cat Accessories/Witch Hat - Green.png" id="16_tpkht"]
+[ext_resource type="Texture2D" uid="uid://cirvw3nt7xxaa" path="res://Assets/Cat Accessories/Witch Hat - Red.png" id="17_kpom4"]
 [ext_resource type="Texture2D" uid="uid://c003vfb81sc3c" path="res://Assets/TT Brown.png" id="19_7mf0u"]
 [ext_resource type="Texture2D" uid="uid://uxkcrnro5mel" path="res://Assets/TT Cat Icon.png" id="19_blgtl"]
+[ext_resource type="Texture2D" uid="uid://b2yswiarg5geb" path="res://Assets/Cat Accessories/Crown - Pink.png" id="19_v6kwl"]
 [ext_resource type="Texture2D" uid="uid://xu5ny1fsnn3f" path="res://Assets/TT Orange.png" id="20_c87u8"]
+[ext_resource type="Texture2D" uid="uid://m5mmgrlua18s" path="res://Assets/Cat Accessories/Crown - Blue.png" id="21_4hmf1"]
 [ext_resource type="Texture2D" uid="uid://qrron4qu70n8" path="res://Assets/TT Silver.png" id="21_ynrlq"]
 [ext_resource type="Texture2D" uid="uid://bg47drqbkd0d5" path="res://Assets/TT Caramel.png" id="22_51pc6"]
+[ext_resource type="Texture2D" uid="uid://budpegau7xpmh" path="res://Assets/Cat Accessories/Crown - Green.png" id="22_d02n2"]
+[ext_resource type="Texture2D" uid="uid://by8roku5wojgh" path="res://Assets/Cat Accessories/Crown - Red.png" id="23_3yxhx"]
+[ext_resource type="Texture2D" uid="uid://dh3jlsas53a7a" path="res://Assets/Cat Accessories/Crown - Purple.png" id="29_8wley"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0sqe3"]
 texture = ExtResource("1_7y7fx")
@@ -365,7 +375,7 @@ focus_mode = 0
 action_mode = 0
 flat = true
 
-[node name="Label" type="Label" parent="Food/Frame4"]
+[node name="Price4" type="Label" parent="Food/Frame4"]
 offset_left = -7.0
 offset_top = -10.0
 offset_right = -1.0
@@ -398,6 +408,768 @@ offset_left = -7.0
 offset_top = -6.0
 offset_right = 6.0
 offset_bottom = 5.0
+focus_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Witch Icon" type="Sprite2D" parent="Food"]
+position = Vector2(45, -25)
+texture = ExtResource("14_pr7qq")
+
+[node name="Button" type="Button" parent="Food/Witch Icon"]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 5.0
+offset_bottom = 4.0
+focus_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Crown Icon" type="Sprite2D" parent="Food"]
+position = Vector2(31, -25)
+texture = ExtResource("29_8wley")
+
+[node name="Button" type="Button" parent="Food/Crown Icon"]
+offset_left = -5.0
+offset_top = -4.0
+offset_right = 5.0
+offset_bottom = 4.0
+focus_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Witch Hats" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(478, 262)
+texture = ExtResource("7_7edfl")
+
+[node name="Pink" type="Sprite2D" parent="Witch Hats"]
+position = Vector2(1, 2)
+texture = ExtResource("13_nl7lo")
+
+[node name="Buy" type="Sprite2D" parent="Witch Hats"]
+position = Vector2(0.5, 12.5)
+scale = Vector2(1.4375, 0.4375)
+texture = ExtResource("7_7edfl")
+
+[node name="Bought Label" type="Label" parent="Witch Hats/Buy"]
+visible = false
+offset_left = -6.6087
+offset_top = -12.5715
+offset_right = 33.3913
+offset_bottom = 10.4285
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+text = "x"
+
+[node name="Buy Label" type="Label" parent="Witch Hats"]
+offset_left = -9.0
+offset_top = 6.0
+offset_right = 10.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+metadata/_edit_use_anchors_ = true
+
+[node name="Buy Pink Button" type="Button" parent="Witch Hats/Buy Label"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+focus_mode = 0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Price" type="Label" parent="Witch Hats"]
+offset_left = -7.0
+offset_top = -10.0
+offset_right = -2.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "4"
+metadata/_edit_use_anchors_ = true
+
+[node name="Not Available" type="Label" parent="Witch Hats"]
+offset_left = -7.0
+offset_top = -11.0
+offset_right = 7.0
+offset_bottom = 10.0
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 16
+text = "x"
+
+[node name="Frame2" type="Sprite2D" parent="Witch Hats"]
+position = Vector2(27, 0)
+texture = ExtResource("7_7edfl")
+
+[node name="Purple" type="Sprite2D" parent="Witch Hats/Frame2"]
+position = Vector2(1, 2)
+texture = ExtResource("14_pr7qq")
+
+[node name="Buy" type="Sprite2D" parent="Witch Hats/Frame2"]
+position = Vector2(0.5, 12.5)
+scale = Vector2(1.4375, 0.4375)
+texture = ExtResource("7_7edfl")
+
+[node name="Bought Label2" type="Label" parent="Witch Hats/Frame2/Buy"]
+visible = false
+offset_left = -6.60861
+offset_top = -12.5715
+offset_right = 33.3914
+offset_bottom = 10.4285
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+text = "x"
+
+[node name="Buy Label" type="Label" parent="Witch Hats/Frame2"]
+offset_left = -9.0
+offset_top = 6.0
+offset_right = 10.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+metadata/_edit_use_anchors_ = true
+
+[node name="Buy Purple Button" type="Button" parent="Witch Hats/Frame2/Buy Label"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+focus_mode = 0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Price2" type="Label" parent="Witch Hats/Frame2"]
+offset_left = -7.0
+offset_top = -10.0
+offset_right = -1.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "4"
+metadata/_edit_use_anchors_ = true
+
+[node name="Not Available2" type="Label" parent="Witch Hats/Frame2"]
+offset_left = -7.0
+offset_top = -11.0
+offset_right = 7.0
+offset_bottom = 10.0
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 16
+text = "x"
+
+[node name="Frame3" type="Sprite2D" parent="Witch Hats"]
+position = Vector2(54, 0)
+texture = ExtResource("7_7edfl")
+
+[node name="Blue" type="Sprite2D" parent="Witch Hats/Frame3"]
+position = Vector2(1, 2)
+texture = ExtResource("15_hrjs6")
+
+[node name="Buy" type="Sprite2D" parent="Witch Hats/Frame3"]
+position = Vector2(0.5, 12.5)
+scale = Vector2(1.4375, 0.4375)
+texture = ExtResource("7_7edfl")
+
+[node name="Bought Label3" type="Label" parent="Witch Hats/Frame3/Buy"]
+visible = false
+offset_left = -6.60849
+offset_top = -12.5715
+offset_right = 33.3915
+offset_bottom = 10.4285
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+text = "x"
+
+[node name="Buy Label" type="Label" parent="Witch Hats/Frame3"]
+offset_left = -9.0
+offset_top = 6.0
+offset_right = 10.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+metadata/_edit_use_anchors_ = true
+
+[node name="Buy Blue Button" type="Button" parent="Witch Hats/Frame3/Buy Label"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+focus_mode = 0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Price3" type="Label" parent="Witch Hats/Frame3"]
+offset_left = -7.0
+offset_top = -10.0
+offset_right = -1.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "4"
+metadata/_edit_use_anchors_ = true
+
+[node name="Frame4" type="Sprite2D" parent="Witch Hats"]
+position = Vector2(14, 27)
+texture = ExtResource("7_7edfl")
+
+[node name="Green" type="Sprite2D" parent="Witch Hats/Frame4"]
+position = Vector2(1, 2)
+texture = ExtResource("16_tpkht")
+
+[node name="Buy" type="Sprite2D" parent="Witch Hats/Frame4"]
+position = Vector2(0.5, 12.5)
+scale = Vector2(1.4375, 0.4375)
+texture = ExtResource("7_7edfl")
+
+[node name="Bought Label4" type="Label" parent="Witch Hats/Frame4/Buy"]
+visible = false
+offset_left = -6.60849
+offset_top = -12.5715
+offset_right = 33.3915
+offset_bottom = 10.4285
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+text = "x"
+
+[node name="Buy Label" type="Label" parent="Witch Hats/Frame4"]
+offset_left = -9.0
+offset_top = 6.0
+offset_right = 10.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+
+[node name="Buy Green Button" type="Button" parent="Witch Hats/Frame4/Buy Label"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+focus_mode = 0
+action_mode = 0
+flat = true
+
+[node name="Price4" type="Label" parent="Witch Hats/Frame4"]
+offset_left = -7.0
+offset_top = -10.0
+offset_right = -1.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "4"
+
+[node name="Not Available4" type="Label" parent="Witch Hats/Frame4"]
+offset_left = -7.0
+offset_top = -11.0
+offset_right = 7.0
+offset_bottom = 10.0
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 16
+text = "x"
+
+[node name="Frame5" type="Sprite2D" parent="Witch Hats"]
+position = Vector2(40, 27)
+texture = ExtResource("7_7edfl")
+
+[node name="Red" type="Sprite2D" parent="Witch Hats/Frame5"]
+position = Vector2(1, 2)
+texture = ExtResource("17_kpom4")
+
+[node name="Buy" type="Sprite2D" parent="Witch Hats/Frame5"]
+position = Vector2(0.5, 12.5)
+scale = Vector2(1.4375, 0.4375)
+texture = ExtResource("7_7edfl")
+
+[node name="Bought Label5" type="Label" parent="Witch Hats/Frame5/Buy"]
+visible = false
+offset_left = -7.30414
+offset_top = -12.5715
+offset_right = 32.6959
+offset_bottom = 10.4285
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+text = "x"
+
+[node name="Buy Label" type="Label" parent="Witch Hats/Frame5"]
+offset_left = -9.0
+offset_top = 6.0
+offset_right = 10.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+
+[node name="Buy Red Button" type="Button" parent="Witch Hats/Frame5/Buy Label"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+focus_mode = 0
+action_mode = 0
+flat = true
+
+[node name="Price5" type="Label" parent="Witch Hats/Frame5"]
+offset_left = -7.0
+offset_top = -10.0
+offset_right = -1.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "4"
+
+[node name="Not Available5" type="Label" parent="Witch Hats/Frame5"]
+offset_left = -7.0
+offset_top = -11.0
+offset_right = 7.0
+offset_bottom = 10.0
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 16
+text = "x"
+
+[node name="Cat Icon" type="Sprite2D" parent="Witch Hats"]
+position = Vector2(66, -14)
+texture = ExtResource("14_virpj")
+
+[node name="Cat Button" type="Button" parent="Witch Hats/Cat Icon"]
+offset_left = -7.0
+offset_top = -5.0
+offset_right = 6.0
+offset_bottom = 6.0
+focus_mode = 0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="TT Cat Icon" type="Sprite2D" parent="Witch Hats"]
+position = Vector2(50, -13)
+texture = ExtResource("19_blgtl")
+
+[node name="TT Button" type="Button" parent="Witch Hats/TT Cat Icon"]
+offset_left = -7.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 5.0
+focus_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Fish Icon" type="Sprite2D" parent="Witch Hats"]
+position = Vector2(34, -13)
+texture = ExtResource("15_nppmf")
+
+[node name="Fish Button" type="Button" parent="Witch Hats/Fish Icon"]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 4.0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Crown Icon" type="Sprite2D" parent="Witch Hats"]
+position = Vector2(20, -14)
+texture = ExtResource("29_8wley")
+
+[node name="Button" type="Button" parent="Witch Hats/Crown Icon"]
+offset_left = -5.0
+offset_top = -4.0
+offset_right = 5.0
+offset_bottom = 4.0
+focus_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Crown" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(478, 262)
+texture = ExtResource("7_7edfl")
+
+[node name="Pink" type="Sprite2D" parent="Crown"]
+position = Vector2(0, 3)
+texture = ExtResource("19_v6kwl")
+
+[node name="Buy" type="Sprite2D" parent="Crown"]
+position = Vector2(0.5, 12.5)
+scale = Vector2(1.4375, 0.4375)
+texture = ExtResource("7_7edfl")
+
+[node name="Bought Label" type="Label" parent="Crown/Buy"]
+visible = false
+offset_left = -6.6087
+offset_top = -12.5715
+offset_right = 33.3913
+offset_bottom = 10.4285
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+text = "x"
+
+[node name="Buy Label" type="Label" parent="Crown"]
+offset_left = -9.0
+offset_top = 6.0
+offset_right = 10.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+metadata/_edit_use_anchors_ = true
+
+[node name="Buy Pink Button" type="Button" parent="Crown/Buy Label"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+focus_mode = 0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Price" type="Label" parent="Crown"]
+offset_left = -7.0
+offset_top = -10.0
+offset_right = -2.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "3"
+metadata/_edit_use_anchors_ = true
+
+[node name="Frame2" type="Sprite2D" parent="Crown"]
+position = Vector2(27, 0)
+texture = ExtResource("7_7edfl")
+
+[node name="Purple" type="Sprite2D" parent="Crown/Frame2"]
+position = Vector2(0, 3)
+texture = ExtResource("29_8wley")
+
+[node name="Buy" type="Sprite2D" parent="Crown/Frame2"]
+position = Vector2(0.5, 12.5)
+scale = Vector2(1.4375, 0.4375)
+texture = ExtResource("7_7edfl")
+
+[node name="Bought Label2" type="Label" parent="Crown/Frame2/Buy"]
+visible = false
+offset_left = -6.60849
+offset_top = -12.5715
+offset_right = 33.3915
+offset_bottom = 10.4285
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+text = "x"
+
+[node name="Buy Label" type="Label" parent="Crown/Frame2"]
+offset_left = -9.0
+offset_top = 6.0
+offset_right = 10.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+metadata/_edit_use_anchors_ = true
+
+[node name="Buy Purple Button" type="Button" parent="Crown/Frame2/Buy Label"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+focus_mode = 0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Price2" type="Label" parent="Crown/Frame2"]
+offset_left = -7.0
+offset_top = -10.0
+offset_right = -1.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "3"
+metadata/_edit_use_anchors_ = true
+
+[node name="Not Available2" type="Label" parent="Crown/Frame2"]
+offset_left = -7.0
+offset_top = -11.0
+offset_right = 7.0
+offset_bottom = 10.0
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 16
+text = "x"
+
+[node name="Frame3" type="Sprite2D" parent="Crown"]
+position = Vector2(54, 0)
+texture = ExtResource("7_7edfl")
+
+[node name="Blue" type="Sprite2D" parent="Crown/Frame3"]
+position = Vector2(0, 3)
+texture = ExtResource("21_4hmf1")
+
+[node name="Buy" type="Sprite2D" parent="Crown/Frame3"]
+position = Vector2(0.5, 12.5)
+scale = Vector2(1.4375, 0.4375)
+texture = ExtResource("7_7edfl")
+
+[node name="Bought Label3" type="Label" parent="Crown/Frame3/Buy"]
+visible = false
+offset_left = -7.30402
+offset_top = -12.5715
+offset_right = 32.696
+offset_bottom = 10.4285
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+text = "x"
+
+[node name="Buy Label" type="Label" parent="Crown/Frame3"]
+offset_left = -9.0
+offset_top = 6.0
+offset_right = 10.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+metadata/_edit_use_anchors_ = true
+
+[node name="Buy Blue Button" type="Button" parent="Crown/Frame3/Buy Label"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+focus_mode = 0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Price3" type="Label" parent="Crown/Frame3"]
+offset_left = -7.0
+offset_top = -10.0
+offset_right = -1.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "3"
+metadata/_edit_use_anchors_ = true
+
+[node name="Not Available3" type="Label" parent="Crown/Frame3"]
+offset_left = -7.0
+offset_top = -11.0
+offset_right = 7.0
+offset_bottom = 10.0
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 16
+text = "x"
+
+[node name="Frame4" type="Sprite2D" parent="Crown"]
+position = Vector2(14, 27)
+texture = ExtResource("7_7edfl")
+
+[node name="Green" type="Sprite2D" parent="Crown/Frame4"]
+position = Vector2(0, 3)
+texture = ExtResource("22_d02n2")
+
+[node name="Buy" type="Sprite2D" parent="Crown/Frame4"]
+position = Vector2(0.5, 12.5)
+scale = Vector2(1.4375, 0.4375)
+texture = ExtResource("7_7edfl")
+
+[node name="Bought Label4" type="Label" parent="Crown/Frame4/Buy"]
+visible = false
+offset_left = -6.60837
+offset_top = -12.5715
+offset_right = 33.3917
+offset_bottom = 10.4285
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+text = "x"
+
+[node name="Buy Label" type="Label" parent="Crown/Frame4"]
+offset_left = -9.0
+offset_top = 6.0
+offset_right = 10.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+metadata/_edit_use_anchors_ = true
+
+[node name="Buy Green Button" type="Button" parent="Crown/Frame4/Buy Label"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+focus_mode = 0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Price4" type="Label" parent="Crown/Frame4"]
+offset_left = -7.0
+offset_top = -10.0
+offset_right = -1.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "3"
+metadata/_edit_use_anchors_ = true
+
+[node name="Not Available4" type="Label" parent="Crown/Frame4"]
+offset_left = -7.0
+offset_top = -11.0
+offset_right = 7.0
+offset_bottom = 10.0
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 16
+text = "x"
+
+[node name="Frame5" type="Sprite2D" parent="Crown"]
+position = Vector2(40, 27)
+texture = ExtResource("7_7edfl")
+
+[node name="Red" type="Sprite2D" parent="Crown/Frame5"]
+position = Vector2(0, 3)
+texture = ExtResource("23_3yxhx")
+
+[node name="Buy" type="Sprite2D" parent="Crown/Frame5"]
+position = Vector2(0.5, 12.5)
+scale = Vector2(1.4375, 0.4375)
+texture = ExtResource("7_7edfl")
+
+[node name="Bought Label5" type="Label" parent="Crown/Frame5/Buy"]
+visible = false
+offset_left = -7.30399
+offset_top = -12.5715
+offset_right = 32.696
+offset_bottom = 10.4285
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+text = "x"
+
+[node name="Buy Label" type="Label" parent="Crown/Frame5"]
+offset_left = -9.0
+offset_top = 6.0
+offset_right = 10.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+metadata/_edit_use_anchors_ = true
+
+[node name="Buy Red Button" type="Button" parent="Crown/Frame5/Buy Label"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+focus_mode = 0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Price5" type="Label" parent="Crown/Frame5"]
+offset_left = -7.0
+offset_top = -10.0
+offset_right = -1.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 8
+text = "3"
+metadata/_edit_use_anchors_ = true
+
+[node name="Not Available5" type="Label" parent="Crown/Frame5"]
+offset_left = -7.0
+offset_top = -11.0
+offset_right = 7.0
+offset_bottom = 10.0
+theme_override_fonts/font = ExtResource("4_k7iln")
+theme_override_font_sizes/font_size = 16
+text = "x"
+
+[node name="Cat Icon" type="Sprite2D" parent="Crown"]
+position = Vector2(66, -14)
+texture = ExtResource("14_virpj")
+
+[node name="Cat Button" type="Button" parent="Crown/Cat Icon"]
+offset_left = -7.0
+offset_top = -5.0
+offset_right = 6.0
+offset_bottom = 6.0
+focus_mode = 0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="TT Cat Icon" type="Sprite2D" parent="Crown"]
+position = Vector2(50, -13)
+texture = ExtResource("19_blgtl")
+
+[node name="TT Button" type="Button" parent="Crown/TT Cat Icon"]
+offset_left = -7.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 5.0
+focus_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Fish Icon" type="Sprite2D" parent="Crown"]
+position = Vector2(34, -13)
+texture = ExtResource("15_nppmf")
+
+[node name="Fish Button" type="Button" parent="Crown/Fish Icon"]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 4.0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Witch Icon" type="Sprite2D" parent="Crown"]
+position = Vector2(20, -14)
+texture = ExtResource("14_pr7qq")
+
+[node name="Button" type="Button" parent="Crown/Witch Icon"]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 5.0
+offset_bottom = 4.0
 focus_mode = 0
 flat = true
 metadata/_edit_use_anchors_ = true
@@ -606,7 +1378,7 @@ focus_mode = 0
 action_mode = 0
 flat = true
 
-[node name="Label" type="Label" parent="Cat Frame/Cat Frame 4/Plain Caramel"]
+[node name="Price4" type="Label" parent="Cat Frame/Cat Frame 4/Plain Caramel"]
 offset_left = -7.0
 offset_top = -19.0
 offset_right = 4.0
@@ -638,6 +1410,32 @@ offset_left = -7.0
 offset_top = -6.0
 offset_right = 6.0
 offset_bottom = 5.0
+focus_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Witch Icon" type="Sprite2D" parent="Cat Frame"]
+position = Vector2(44, -24)
+texture = ExtResource("14_pr7qq")
+
+[node name="Button" type="Button" parent="Cat Frame/Witch Icon"]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 5.0
+offset_bottom = 4.0
+focus_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Crown Icon" type="Sprite2D" parent="Cat Frame"]
+position = Vector2(30, -24)
+texture = ExtResource("29_8wley")
+
+[node name="Button" type="Button" parent="Cat Frame/Crown Icon"]
+offset_left = -5.0
+offset_top = -4.0
+offset_right = 5.0
+offset_bottom = 4.0
 focus_mode = 0
 flat = true
 metadata/_edit_use_anchors_ = true
@@ -882,6 +1680,32 @@ focus_mode = 0
 flat = true
 metadata/_edit_use_anchors_ = true
 
+[node name="Witch Icon" type="Sprite2D" parent="TT Cat Frame"]
+position = Vector2(44, -24)
+texture = ExtResource("14_pr7qq")
+
+[node name="Button" type="Button" parent="TT Cat Frame/Witch Icon"]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 5.0
+offset_bottom = 4.0
+focus_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Crown Icon" type="Sprite2D" parent="TT Cat Frame"]
+position = Vector2(30, -24)
+texture = ExtResource("29_8wley")
+
+[node name="Button" type="Button" parent="TT Cat Frame/Crown Icon"]
+offset_left = -5.0
+offset_top = -4.0
+offset_right = 5.0
+offset_bottom = 4.0
+focus_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
 [node name="Chest" type="Sprite2D" parent="."]
 position = Vector2(557, 247)
 texture = ExtResource("9_enoq8")
@@ -903,16 +1727,40 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="Food/Frame4/Buy Label/Buy Melon Button" to="." method="_on_buy_melon_button_pressed"]
 [connection signal="pressed" from="Food/Cat Icon/Cat Button" to="." method="_on_cat_button_pressed"]
 [connection signal="pressed" from="Food/TT Cat Icon/TT Button" to="." method="_on_tt_button_pressed"]
+[connection signal="pressed" from="Food/Witch Icon/Button" to="." method="_on_witch_button_pressed"]
+[connection signal="pressed" from="Food/Crown Icon/Button" to="." method="_on_crown_button_pressed"]
+[connection signal="pressed" from="Witch Hats/Buy Label/Buy Pink Button" to="." method="_on_buy_pink_hat_button_pressed"]
+[connection signal="pressed" from="Witch Hats/Frame2/Buy Label/Buy Purple Button" to="." method="_on_buy_purple_hat_button_pressed"]
+[connection signal="pressed" from="Witch Hats/Frame3/Buy Label/Buy Blue Button" to="." method="_on_buy_blue_hat_button_pressed"]
+[connection signal="pressed" from="Witch Hats/Frame4/Buy Label/Buy Green Button" to="." method="_on_buy_green_hat_button_pressed"]
+[connection signal="pressed" from="Witch Hats/Frame5/Buy Label/Buy Red Button" to="." method="_on_buy_red_hat_button_pressed"]
+[connection signal="pressed" from="Witch Hats/Cat Icon/Cat Button" to="." method="_on_cat_button_pressed"]
+[connection signal="pressed" from="Witch Hats/TT Cat Icon/TT Button" to="." method="_on_tt_button_pressed"]
+[connection signal="pressed" from="Witch Hats/Fish Icon/Fish Button" to="." method="_on_fish_button_pressed"]
+[connection signal="pressed" from="Witch Hats/Crown Icon/Button" to="." method="_on_crown_button_pressed"]
+[connection signal="pressed" from="Crown/Buy Label/Buy Pink Button" to="." method="_on_buy_pink_crown_button_pressed"]
+[connection signal="pressed" from="Crown/Frame2/Buy Label/Buy Purple Button" to="." method="_on_buy_purple_crown_button_pressed"]
+[connection signal="pressed" from="Crown/Frame3/Buy Label/Buy Blue Button" to="." method="_on_buy_blue_crown_button_pressed"]
+[connection signal="pressed" from="Crown/Frame4/Buy Label/Buy Green Button" to="." method="_on_buy_green_crown_button_pressed"]
+[connection signal="pressed" from="Crown/Frame5/Buy Label/Buy Red Button" to="." method="_on_buy_red_crown_button_pressed"]
+[connection signal="pressed" from="Crown/Cat Icon/Cat Button" to="." method="_on_cat_button_pressed"]
+[connection signal="pressed" from="Crown/TT Cat Icon/TT Button" to="." method="_on_tt_button_pressed"]
+[connection signal="pressed" from="Crown/Fish Icon/Fish Button" to="." method="_on_fish_button_pressed"]
+[connection signal="pressed" from="Crown/Witch Icon/Button" to="." method="_on_witch_button_pressed"]
 [connection signal="pressed" from="Cat Frame/Plain Brown/Buy Label/Button" to="." method="_on_plain_brown_button_pressed"]
 [connection signal="pressed" from="Cat Frame/Cat Frame 2/Plain Orange/Buy Label 2/Button 2" to="." method="_on_plain_orange_button_pressed"]
 [connection signal="pressed" from="Cat Frame/Cat Frame 3/Plain Silver/Buy Label 3/Button 3" to="." method="_on_plain_silver_button_pressed"]
 [connection signal="pressed" from="Cat Frame/Cat Frame 4/Plain Caramel/Buy Label 4/Button 4" to="." method="_on_plain_caramel_button_pressed"]
 [connection signal="pressed" from="Cat Frame/Fish Icon/Fish Button" to="." method="_on_fish_button_pressed"]
 [connection signal="pressed" from="Cat Frame/TT Cat Icon/TT Button" to="." method="_on_tt_button_pressed"]
+[connection signal="pressed" from="Cat Frame/Witch Icon/Button" to="." method="_on_witch_button_pressed"]
+[connection signal="pressed" from="Cat Frame/Crown Icon/Button" to="." method="_on_crown_button_pressed"]
 [connection signal="pressed" from="TT Cat Frame/TT Brown/Buy Label/Button" to="." method="_on_tt_brown_button_pressed"]
 [connection signal="pressed" from="TT Cat Frame/Cat Frame 2/TT Orange/Buy Label 2/Button 2" to="." method="_on_tt_orange_button_pressed"]
 [connection signal="pressed" from="TT Cat Frame/CatFrame3/TT Silver/Buy Label 3/Button 3" to="." method="_on_tt_silver_button_pressed"]
 [connection signal="pressed" from="TT Cat Frame/CatFrame4/TT Caramel/Buy Label 4/Button 4" to="." method="_on_tt_caramel_button_pressed"]
 [connection signal="pressed" from="TT Cat Frame/Fish Icon/Fish Button" to="." method="_on_fish_button_pressed"]
 [connection signal="pressed" from="TT Cat Frame/Cat Icon/Cat Button" to="." method="_on_cat_button_pressed"]
+[connection signal="pressed" from="TT Cat Frame/Witch Icon/Button" to="." method="_on_witch_button_pressed"]
+[connection signal="pressed" from="TT Cat Frame/Crown Icon/Button" to="." method="_on_crown_button_pressed"]
 [connection signal="pressed" from="Chest/Button" to="." method="_on_chest_button_pressed"]

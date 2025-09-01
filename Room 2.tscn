@@ -1,17 +1,22 @@
-[gd_scene load_steps=23 format=3 uid="uid://dfis0hcb6mbl"]
+[gd_scene load_steps=28 format=3 uid="uid://dfis0hcb6mbl"]
 
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_oh8v0"]
 [ext_resource type="Script" path="res://Room 2.gd" id="1_yb85s"]
 [ext_resource type="Texture2D" uid="uid://20ivggto2ypg" path="res://Assets/Bush Arch.png" id="2_7ngq6"]
 [ext_resource type="PackedScene" uid="uid://bfw8050gvfr61" path="res://Grey TT Cat.tscn" id="3_vik2w"]
 [ext_resource type="PackedScene" uid="uid://cjbx6nmoj5dn6" path="res://Brown TT Cat.tscn" id="4_ydfgw"]
+[ext_resource type="Texture2D" uid="uid://bnnv3aoe0001" path="res://Assets/Cat Accessories/Witch Hat - Blue.png" id="5_gwpfs"]
 [ext_resource type="PackedScene" uid="uid://crdvq60auuj4n" path="res://Orange TT Cat.tscn" id="5_v25mu"]
 [ext_resource type="PackedScene" uid="uid://lbh1pmpq7ta0" path="res://Silver TT Cat.tscn" id="6_mhgk8"]
 [ext_resource type="PackedScene" uid="uid://b4qtlrae2bwpa" path="res://Caramel TT Cat.tscn" id="7_0hhot"]
+[ext_resource type="Texture2D" uid="uid://dux1kgbaxdkl4" path="res://Assets/Cat Accessories/Witch Hat - Pink.png" id="7_famcr"]
 [ext_resource type="Texture2D" uid="uid://di4u0urldhs15" path="res://Assets/Coin.png" id="8_yxp16"]
 [ext_resource type="Texture2D" uid="uid://bomnj4jslvhoj" path="res://Assets/Market Icon.png" id="9_0uqln"]
 [ext_resource type="FontFile" uid="uid://bu0ktuo2p2jt" path="res://Assets/Silkscreen-Regular.ttf" id="9_bqqqo"]
+[ext_resource type="Texture2D" uid="uid://ca3rtov8gc8uy" path="res://Assets/Cat Accessories/Witch Hat - Purple.png" id="9_qput4"]
 [ext_resource type="PackedScene" uid="uid://bp301n3ht2hvy" path="res://User Character.tscn" id="11_2yfxd"]
+[ext_resource type="Texture2D" uid="uid://begad6w6ovvfx" path="res://Assets/Cat Accessories/Witch Hat - Green.png" id="11_6lm8p"]
+[ext_resource type="Texture2D" uid="uid://cirvw3nt7xxaa" path="res://Assets/Cat Accessories/Witch Hat - Red.png" id="13_4vtpd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v0321"]
 texture = ExtResource("1_oh8v0")
@@ -622,6 +627,11 @@ position = Vector2(-1, 6)
 shape = SubResource("CapsuleShape2D_du8wa")
 debug_color = Color(0.854902, 0, 0.890196, 0.34902)
 
+[node name="WitchHat-Blue" type="Sprite2D" parent="Grey TT Cat"]
+visible = false
+position = Vector2(-1, -3)
+texture = ExtResource("5_gwpfs")
+
 [node name="Brown TT Cat" parent="." instance=ExtResource("4_ydfgw")]
 visible = false
 position = Vector2(163, 29)
@@ -632,6 +642,11 @@ position = Vector2(163, 29)
 position = Vector2(-1, 6)
 shape = SubResource("CapsuleShape2D_v77pw")
 debug_color = Color(0.854902, 0, 0.890196, 0.34902)
+
+[node name="WitchHat-Pink" type="Sprite2D" parent="Brown TT Cat"]
+visible = false
+position = Vector2(-1, -3)
+texture = ExtResource("7_famcr")
 
 [node name="Orange TT Cat" parent="." instance=ExtResource("5_v25mu")]
 visible = false
@@ -644,6 +659,11 @@ position = Vector2(-1, 6)
 shape = SubResource("CapsuleShape2D_gdes6")
 debug_color = Color(0.854902, 0, 0.890196, 0.34902)
 
+[node name="WitchHat-Purple" type="Sprite2D" parent="Orange TT Cat"]
+visible = false
+position = Vector2(-1, -3)
+texture = ExtResource("9_qput4")
+
 [node name="Silver TT Cat" parent="." instance=ExtResource("6_mhgk8")]
 visible = false
 position = Vector2(163, 29)
@@ -655,6 +675,11 @@ position = Vector2(-1, 6)
 shape = SubResource("CapsuleShape2D_avw5a")
 debug_color = Color(0.854902, 0, 0.890196, 0.34902)
 
+[node name="WitchHat-Green" type="Sprite2D" parent="Silver TT Cat"]
+visible = false
+position = Vector2(-1, -3)
+texture = ExtResource("11_6lm8p")
+
 [node name="Caramel TT Cat" parent="." instance=ExtResource("7_0hhot")]
 visible = false
 position = Vector2(163, 29)
@@ -665,6 +690,11 @@ position = Vector2(163, 29)
 position = Vector2(-1, 6)
 shape = SubResource("CapsuleShape2D_t6eg8")
 debug_color = Color(0.854902, 0, 0.890196, 0.34902)
+
+[node name="WitchHat-Red" type="Sprite2D" parent="Caramel TT Cat"]
+visible = false
+position = Vector2(-1, -3)
+texture = ExtResource("13_4vtpd")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(158, 91)

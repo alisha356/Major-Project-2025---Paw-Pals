@@ -32,6 +32,28 @@ var own_sttc = false
 var own_cttc = false
 var num_cats = 2
 
+var own_pink_crown = false
+var own_purple_crown = false
+var own_blue_crown = false
+var own_green_crown = false
+var own_red_crown = false
+var own_pink_hat = false
+var own_purple_hat = false
+var own_blue_hat = false
+var own_green_hat = false
+var own_red_hat = false
+
+var show_pink_crown = false
+var show_purple_crown = false
+var show_blue_crown = false
+var show_green_crown = false
+var show_red_crown = false
+var show_pink_hat = false
+var show_purple_hat = false
+var show_blue_hat = false
+var show_green_hat = false
+var show_red_hat = false
+
 var heart_animation: AnimatedSprite2D = null
 
 var dgc_animation: AnimatedSprite2D = null

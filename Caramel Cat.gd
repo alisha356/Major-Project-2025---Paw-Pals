@@ -6,5 +6,6 @@ func _ready():
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if $AnimatedSprite2D.animation == "revive":
 		Global._idle_cc()
+		Global.show_green_crown = true
 	else:
 		pass

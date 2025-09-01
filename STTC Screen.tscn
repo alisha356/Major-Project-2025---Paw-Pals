@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dpjojw0ibq263"]
+[gd_scene load_steps=26 format=3 uid="uid://dpjojw0ibq263"]
 
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_2bq3o"]
 [ext_resource type="Script" path="res://STTC Screen.gd" id="1_gyijo"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://cdppc5vgqia40" path="res://Assets/10 hunger.png" id="17_yc385"]
 [ext_resource type="Texture2D" uid="uid://di4u0urldhs15" path="res://Assets/Coin.png" id="18_plq44"]
 [ext_resource type="PackedScene" uid="uid://cihtrh85vf2q1" path="res://Heart Animation.tscn" id="19_kjom3"]
+[ext_resource type="Texture2D" uid="uid://begad6w6ovvfx" path="res://Assets/Cat Accessories/Witch Hat - Green.png" id="21_7jgjk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0qnl7"]
 texture = ExtResource("1_2bq3o")
@@ -418,6 +419,11 @@ text = "x"
 
 [node name="Heart" parent="." instance=ExtResource("19_kjom3")]
 position = Vector2(1, -12)
+
+[node name="WitchHat-Green" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-8, -10)
+texture = ExtResource("21_7jgjk")
 
 [connection signal="pressed" from="Arrow/Arrow Button" to="." method="_on_arrow_button_pressed"]
 [connection signal="pressed" from="Cheese/Button" to="." method="_on_button_pressed"]

@@ -1,16 +1,21 @@
-[gd_scene load_steps=23 format=3 uid="uid://cmtw7crxmbkwt"]
+[gd_scene load_steps=28 format=3 uid="uid://cmtw7crxmbkwt"]
 
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_hy5y7"]
 [ext_resource type="Script" path="res://Room 1.gd" id="1_idt2n"]
 [ext_resource type="PackedScene" uid="uid://bqk8gdvdeyyl7" path="res://Dark Grey Cat.tscn" id="2_2jlvu"]
 [ext_resource type="Texture2D" uid="uid://20ivggto2ypg" path="res://Assets/Bush Arch.png" id="3_33f03"]
 [ext_resource type="Texture2D" uid="uid://di4u0urldhs15" path="res://Assets/Coin.png" id="4_p37el"]
+[ext_resource type="Texture2D" uid="uid://b2yswiarg5geb" path="res://Assets/Cat Accessories/Crown - Pink.png" id="5_fep2l"]
 [ext_resource type="PackedScene" uid="uid://blgejgtm5iwe2" path="res://Brown Cat.tscn" id="5_sqj34"]
 [ext_resource type="PackedScene" uid="uid://bfochfmvm7ulb" path="res://Orange Cat.tscn" id="6_s5i6i"]
+[ext_resource type="Texture2D" uid="uid://by8roku5wojgh" path="res://Assets/Cat Accessories/Crown - Red.png" id="7_5d1wh"]
 [ext_resource type="PackedScene" uid="uid://dayxe5i8uqgtp" path="res://Caramel Cat.tscn" id="7_mqoel"]
 [ext_resource type="FontFile" uid="uid://bu0ktuo2p2jt" path="res://Assets/Silkscreen-Regular.ttf" id="7_yx2b3"]
 [ext_resource type="PackedScene" uid="uid://qqw62cmw1cx6" path="res://Silver Cat.tscn" id="8_ddqd1"]
+[ext_resource type="Texture2D" uid="uid://m5mmgrlua18s" path="res://Assets/Cat Accessories/Crown - Blue.png" id="9_hey8n"]
+[ext_resource type="Texture2D" uid="uid://dh3jlsas53a7a" path="res://Assets/Cat Accessories/Crown - Purple.png" id="11_vg5lu"]
 [ext_resource type="PackedScene" uid="uid://bp301n3ht2hvy" path="res://User Character.tscn" id="13_5wnwj"]
+[ext_resource type="Texture2D" uid="uid://budpegau7xpmh" path="res://Assets/Cat Accessories/Crown - Green.png" id="13_m14oa"]
 [ext_resource type="Texture2D" uid="uid://bomnj4jslvhoj" path="res://Assets/Market Icon.png" id="15_m0ugm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_prc0x"]
@@ -624,6 +629,11 @@ position = Vector2(6, -60)
 shape = SubResource("CapsuleShape2D_e2r4l")
 debug_color = Color(0.854902, 0, 0.890196, 0.34902)
 
+[node name="Crown-Pink" type="Sprite2D" parent="Dark Grey Cat"]
+visible = false
+position = Vector2(-1.99622, -1.99298)
+texture = ExtResource("5_fep2l")
+
 [node name="Brown Cat" parent="." instance=ExtResource("5_sqj34")]
 visible = false
 position = Vector2(370, 428)
@@ -634,6 +644,11 @@ position = Vector2(370, 428)
 position = Vector2(-1, 6)
 shape = SubResource("CapsuleShape2D_safvt")
 debug_color = Color(0.854902, 0, 0.890196, 0.34902)
+
+[node name="Crown-Red" type="Sprite2D" parent="Brown Cat"]
+visible = false
+position = Vector2(-2.00629, -2.00351)
+texture = ExtResource("7_5d1wh")
 
 [node name="Orange Cat" parent="." instance=ExtResource("6_s5i6i")]
 visible = false
@@ -646,6 +661,11 @@ position = Vector2(-1, 6)
 shape = SubResource("CapsuleShape2D_q0cah")
 debug_color = Color(0.854902, 0, 0.890196, 0.34902)
 
+[node name="Crown-Blue" type="Sprite2D" parent="Orange Cat"]
+visible = false
+position = Vector2(-2, -2)
+texture = ExtResource("9_hey8n")
+
 [node name="Silver Cat" parent="." instance=ExtResource("8_ddqd1")]
 visible = false
 position = Vector2(370, 428)
@@ -657,6 +677,11 @@ position = Vector2(-1, 6)
 shape = SubResource("CapsuleShape2D_4wxyg")
 debug_color = Color(0.854902, 0, 0.890196, 0.34902)
 
+[node name="Crown-Purple" type="Sprite2D" parent="Silver Cat"]
+visible = false
+position = Vector2(-2, -1.99219)
+texture = ExtResource("11_vg5lu")
+
 [node name="Caramel Cat" parent="." instance=ExtResource("7_mqoel")]
 visible = false
 position = Vector2(370, 428)
@@ -667,6 +692,11 @@ position = Vector2(370, 428)
 position = Vector2(-1, 6)
 shape = SubResource("CapsuleShape2D_hyv6l")
 debug_color = Color(0.854902, 0, 0.890196, 0.34902)
+
+[node name="Crown-Green" type="Sprite2D" parent="Caramel Cat"]
+visible = false
+position = Vector2(-2, -1.99219)
+texture = ExtResource("13_m14oa")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(375, 369)

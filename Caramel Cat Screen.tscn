@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://d0mdb802tsfet"]
+[gd_scene load_steps=24 format=3 uid="uid://d0mdb802tsfet"]
 
 [ext_resource type="Script" path="res://Caramel Cat Screen.gd" id="1_hs7gx"]
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="2_fjqdw"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://cdppc5vgqia40" path="res://Assets/10 hunger.png" id="19_dyi1b"]
 [ext_resource type="Texture2D" uid="uid://di4u0urldhs15" path="res://Assets/Coin.png" id="20_dscy4"]
 [ext_resource type="PackedScene" uid="uid://cihtrh85vf2q1" path="res://Heart Animation.tscn" id="21_3c4pb"]
+[ext_resource type="Texture2D" uid="uid://budpegau7xpmh" path="res://Assets/Cat Accessories/Crown - Green.png" id="21_fxm4o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwqo1"]
 texture = ExtResource("2_fjqdw")
@@ -274,6 +275,11 @@ text = "x"
 
 [node name="Heart" parent="." instance=ExtResource("21_3c4pb")]
 position = Vector2(241, 100)
+
+[node name="Crown-Green" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(231, 103)
+texture = ExtResource("21_fxm4o")
 
 [connection signal="pressed" from="Exit Arrow/Arrow Button" to="." method="_on_arrow_button_pressed"]
 [connection signal="pressed" from="Watermelon/Button" to="." method="_on_button_pressed"]

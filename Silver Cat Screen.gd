@@ -17,6 +17,7 @@ func _display_hunger_bar():
 
 	if Global.silver_cat_hunger == 0:
 		$"Hunger 0".visible = true
+		$"Crown-Purple".visible = false
 	elif Global.silver_cat_hunger == 1:
 		$"Hunger 1".visible = true
 		animation_played = false
@@ -46,8 +47,11 @@ func _ready():
 		animation_played = true
 		Global._stop_idle_sc()
 		Global._dead_sc()
+		$"Crown-Purple".visible = false
 	else:
 		Global._idle_sc()
+		if Global.own_purple_crown == true:
+			$"Crown-Purple".visible = true
 
 func _process(_delta: float):
 	_display_hunger_bar()
@@ -55,7 +59,11 @@ func _process(_delta: float):
 	if Global.silver_cat_hunger <= 0 and animation_played == false:
 		Global._stop_idle_sc()
 		Global._animate_sc_death()
+		$"Crown-Purple".visible = false
 		animation_played = true
+	if Global.show_purple_crown == true:
+		$"Crown-Purple".visible = true
+		Global.show_purple_crown = false
 		
 func _on_button_pressed():
 	if Global.player_cherries == 0:

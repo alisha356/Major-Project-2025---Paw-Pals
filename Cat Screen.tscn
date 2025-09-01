@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bd4hnjtc15tia"]
+[gd_scene load_steps=24 format=3 uid="uid://bd4hnjtc15tia"]
 
 [ext_resource type="Script" path="res://Cat Screen.gd" id="1_eeghg"]
 [ext_resource type="Texture2D" uid="uid://day0avbe6c6wq" path="res://Assets/tilemap.png" id="1_fkxn3"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://idq8ws6fvo75" path="res://Assets/9 hunger.png" id="19_xlyjr"]
 [ext_resource type="Texture2D" uid="uid://cdppc5vgqia40" path="res://Assets/10 hunger.png" id="20_cwa6r"]
 [ext_resource type="Texture2D" uid="uid://di4u0urldhs15" path="res://Assets/Coin.png" id="20_igglk"]
+[ext_resource type="Texture2D" uid="uid://b2yswiarg5geb" path="res://Assets/Cat Accessories/Crown - Pink.png" id="21_0vlau"]
 [ext_resource type="PackedScene" uid="uid://cihtrh85vf2q1" path="res://Heart Animation.tscn" id="21_g62n0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwqo1"]
@@ -274,6 +275,11 @@ text = "x"
 
 [node name="Heart" parent="." instance=ExtResource("21_g62n0")]
 position = Vector2(241, 100)
+
+[node name="Crown-Pink" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(231, 103)
+texture = ExtResource("21_0vlau")
 
 [connection signal="pressed" from="Exit Arrow/Arrow Button" to="." method="_on_arrow_button_pressed"]
 [connection signal="pressed" from="Fish/Button" to="." method="_on_button_pressed"]
