@@ -61,7 +61,7 @@ func _process(_delta: float):
 		Global._animate_dgc_death()
 		$"Crown-Pink".visible = false
 		animation_played = true
-	if Global.show_pink_crown == true:
+	if Global.show_pink_crown == true and Global.own_pink_crown == true:
 		$"Crown-Pink".visible = true
 		Global.show_pink_crown = false
 

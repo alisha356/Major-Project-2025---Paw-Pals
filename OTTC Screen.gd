@@ -61,7 +61,7 @@ func _process(_delta: float):
 		Global._animate_ottc_death()
 		$"WitchHat-Purple".visible = false
 		animation_played = true
-	if Global.show_purple_hat == true:
+	if Global.show_purple_hat == true and Global.own_purple_hat == true:
 		$"WitchHat-Purple".visible = true
 		Global.show_purple_hat = false
 

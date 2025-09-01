@@ -452,15 +452,24 @@ position = Vector2(0.5, 12.5)
 scale = Vector2(1.4375, 0.4375)
 texture = ExtResource("7_7edfl")
 
-[node name="Bought Label" type="Label" parent="Witch Hats/Buy"]
+[node name="Sell Label" type="Label" parent="Witch Hats"]
 visible = false
-offset_left = -6.6087
-offset_top = -12.5715
-offset_right = 33.3913
-offset_bottom = 10.4285
+offset_left = -10.0
+offset_top = 6.0
+offset_right = 15.0
+offset_bottom = 17.0
 theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
 theme_override_fonts/font = ExtResource("4_k7iln")
-text = "x"
+theme_override_font_sizes/font_size = 8
+text = "Sell"
+
+[node name="Sell Pink Button" type="Button" parent="Witch Hats/Sell Label"]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+focus_mode = 0
+flat = true
 
 [node name="Buy Label" type="Label" parent="Witch Hats"]
 offset_left = -9.0
@@ -518,15 +527,24 @@ position = Vector2(0.5, 12.5)
 scale = Vector2(1.4375, 0.4375)
 texture = ExtResource("7_7edfl")
 
-[node name="Bought Label2" type="Label" parent="Witch Hats/Frame2/Buy"]
+[node name="Sell Label" type="Label" parent="Witch Hats/Frame2"]
 visible = false
-offset_left = -6.60861
-offset_top = -12.5715
-offset_right = 33.3914
-offset_bottom = 10.4285
+offset_left = -10.0
+offset_top = 6.0
+offset_right = 30.0
+offset_bottom = 29.0
 theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
 theme_override_fonts/font = ExtResource("4_k7iln")
-text = "x"
+theme_override_font_sizes/font_size = 8
+text = "Sell"
+
+[node name="Sell Purple Button" type="Button" parent="Witch Hats/Frame2/Sell Label"]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+focus_mode = 0
+flat = true
 
 [node name="Buy Label" type="Label" parent="Witch Hats/Frame2"]
 offset_left = -9.0
@@ -583,15 +601,24 @@ position = Vector2(0.5, 12.5)
 scale = Vector2(1.4375, 0.4375)
 texture = ExtResource("7_7edfl")
 
-[node name="Bought Label3" type="Label" parent="Witch Hats/Frame3/Buy"]
+[node name="Sell Label" type="Label" parent="Witch Hats/Frame3"]
 visible = false
-offset_left = -6.60849
-offset_top = -12.5715
-offset_right = 33.3915
-offset_bottom = 10.4285
+offset_left = -10.0
+offset_top = 6.0
+offset_right = 30.0
+offset_bottom = 29.0
 theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
 theme_override_fonts/font = ExtResource("4_k7iln")
-text = "x"
+theme_override_font_sizes/font_size = 8
+text = "Sell"
+
+[node name="Sell Blue Button" type="Button" parent="Witch Hats/Frame3/Sell Label"]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+focus_mode = 0
+flat = true
 
 [node name="Buy Label" type="Label" parent="Witch Hats/Frame3"]
 offset_left = -9.0
@@ -639,15 +666,24 @@ position = Vector2(0.5, 12.5)
 scale = Vector2(1.4375, 0.4375)
 texture = ExtResource("7_7edfl")
 
-[node name="Bought Label4" type="Label" parent="Witch Hats/Frame4/Buy"]
+[node name="Sell Label" type="Label" parent="Witch Hats/Frame4"]
 visible = false
-offset_left = -6.60849
-offset_top = -12.5715
-offset_right = 33.3915
-offset_bottom = 10.4285
+offset_left = -10.0
+offset_top = 6.0
+offset_right = 30.0
+offset_bottom = 29.0
 theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
 theme_override_fonts/font = ExtResource("4_k7iln")
-text = "x"
+theme_override_font_sizes/font_size = 8
+text = "Sell"
+
+[node name="Sell Green Button" type="Button" parent="Witch Hats/Frame4/Sell Label"]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+focus_mode = 0
+flat = true
 
 [node name="Buy Label" type="Label" parent="Witch Hats/Frame4"]
 offset_left = -9.0
@@ -701,15 +737,24 @@ position = Vector2(0.5, 12.5)
 scale = Vector2(1.4375, 0.4375)
 texture = ExtResource("7_7edfl")
 
-[node name="Bought Label5" type="Label" parent="Witch Hats/Frame5/Buy"]
+[node name="Sell Label" type="Label" parent="Witch Hats/Frame5"]
 visible = false
-offset_left = -7.30414
-offset_top = -12.5715
-offset_right = 32.6959
-offset_bottom = 10.4285
+offset_left = -10.0
+offset_top = 6.0
+offset_right = 30.0
+offset_bottom = 29.0
 theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
 theme_override_fonts/font = ExtResource("4_k7iln")
-text = "x"
+theme_override_font_sizes/font_size = 8
+text = "Sell"
+
+[node name="Sell Red Button" type="Button" parent="Witch Hats/Frame5/Sell Label"]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+focus_mode = 0
+flat = true
 
 [node name="Buy Label" type="Label" parent="Witch Hats/Frame5"]
 offset_left = -9.0
@@ -817,15 +862,24 @@ position = Vector2(0.5, 12.5)
 scale = Vector2(1.4375, 0.4375)
 texture = ExtResource("7_7edfl")
 
-[node name="Bought Label" type="Label" parent="Crown/Buy"]
+[node name="Sell Label" type="Label" parent="Crown"]
 visible = false
-offset_left = -6.6087
-offset_top = -12.5715
-offset_right = 33.3913
-offset_bottom = 10.4285
+offset_left = -10.0
+offset_top = 6.0
+offset_right = 15.0
+offset_bottom = 17.0
 theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
 theme_override_fonts/font = ExtResource("4_k7iln")
-text = "x"
+theme_override_font_sizes/font_size = 8
+text = "Sell"
+
+[node name="Sell Pink Button" type="Button" parent="Crown/Sell Label"]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+focus_mode = 0
+flat = true
 
 [node name="Buy Label" type="Label" parent="Crown"]
 offset_left = -9.0
@@ -874,15 +928,24 @@ position = Vector2(0.5, 12.5)
 scale = Vector2(1.4375, 0.4375)
 texture = ExtResource("7_7edfl")
 
-[node name="Bought Label2" type="Label" parent="Crown/Frame2/Buy"]
+[node name="Sell Label" type="Label" parent="Crown/Frame2"]
 visible = false
-offset_left = -6.60849
-offset_top = -12.5715
-offset_right = 33.3915
-offset_bottom = 10.4285
+offset_left = -10.0
+offset_top = 6.0
+offset_right = 15.0
+offset_bottom = 17.0
 theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
 theme_override_fonts/font = ExtResource("4_k7iln")
-text = "x"
+theme_override_font_sizes/font_size = 8
+text = "Sell"
+
+[node name="Sell Purple Button" type="Button" parent="Crown/Frame2/Sell Label"]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+focus_mode = 0
+flat = true
 
 [node name="Buy Label" type="Label" parent="Crown/Frame2"]
 offset_left = -9.0
@@ -939,15 +1002,24 @@ position = Vector2(0.5, 12.5)
 scale = Vector2(1.4375, 0.4375)
 texture = ExtResource("7_7edfl")
 
-[node name="Bought Label3" type="Label" parent="Crown/Frame3/Buy"]
+[node name="Sell Label" type="Label" parent="Crown/Frame3"]
 visible = false
-offset_left = -7.30402
-offset_top = -12.5715
-offset_right = 32.696
-offset_bottom = 10.4285
+offset_left = -10.0
+offset_top = 6.0
+offset_right = 15.0
+offset_bottom = 17.0
 theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
 theme_override_fonts/font = ExtResource("4_k7iln")
-text = "x"
+theme_override_font_sizes/font_size = 8
+text = "Sell"
+
+[node name="Sell Blue Button" type="Button" parent="Crown/Frame3/Sell Label"]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+focus_mode = 0
+flat = true
 
 [node name="Buy Label" type="Label" parent="Crown/Frame3"]
 offset_left = -9.0
@@ -1004,15 +1076,24 @@ position = Vector2(0.5, 12.5)
 scale = Vector2(1.4375, 0.4375)
 texture = ExtResource("7_7edfl")
 
-[node name="Bought Label4" type="Label" parent="Crown/Frame4/Buy"]
+[node name="Sell Label" type="Label" parent="Crown/Frame4"]
 visible = false
-offset_left = -6.60837
-offset_top = -12.5715
-offset_right = 33.3917
-offset_bottom = 10.4285
+offset_left = -10.0
+offset_top = 6.0
+offset_right = 15.0
+offset_bottom = 17.0
 theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
 theme_override_fonts/font = ExtResource("4_k7iln")
-text = "x"
+theme_override_font_sizes/font_size = 8
+text = "Sell"
+
+[node name="Sell Green Button" type="Button" parent="Crown/Frame4/Sell Label"]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+focus_mode = 0
+flat = true
 
 [node name="Buy Label" type="Label" parent="Crown/Frame4"]
 offset_left = -9.0
@@ -1069,15 +1150,24 @@ position = Vector2(0.5, 12.5)
 scale = Vector2(1.4375, 0.4375)
 texture = ExtResource("7_7edfl")
 
-[node name="Bought Label5" type="Label" parent="Crown/Frame5/Buy"]
+[node name="Sell Label" type="Label" parent="Crown/Frame5"]
 visible = false
-offset_left = -7.30399
-offset_top = -12.5715
-offset_right = 32.696
-offset_bottom = 10.4285
+offset_left = -10.0
+offset_top = 6.0
+offset_right = 15.0
+offset_bottom = 17.0
 theme_override_colors/font_color = Color(0.501961, 0.380392, 0.286275, 1)
 theme_override_fonts/font = ExtResource("4_k7iln")
-text = "x"
+theme_override_font_sizes/font_size = 8
+text = "Sell"
+
+[node name="Sell Red Button" type="Button" parent="Crown/Frame5/Sell Label"]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 11.0
+focus_mode = 0
+flat = true
 
 [node name="Buy Label" type="Label" parent="Crown/Frame5"]
 offset_left = -9.0
@@ -1729,19 +1819,29 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="Food/TT Cat Icon/TT Button" to="." method="_on_tt_button_pressed"]
 [connection signal="pressed" from="Food/Witch Icon/Button" to="." method="_on_witch_button_pressed"]
 [connection signal="pressed" from="Food/Crown Icon/Button" to="." method="_on_crown_button_pressed"]
+[connection signal="pressed" from="Witch Hats/Sell Label/Sell Pink Button" to="." method="_on_sell_pink_hat_button_pressed"]
 [connection signal="pressed" from="Witch Hats/Buy Label/Buy Pink Button" to="." method="_on_buy_pink_hat_button_pressed"]
+[connection signal="pressed" from="Witch Hats/Frame2/Sell Label/Sell Purple Button" to="." method="_on_sell_purple_hat_button_pressed"]
 [connection signal="pressed" from="Witch Hats/Frame2/Buy Label/Buy Purple Button" to="." method="_on_buy_purple_hat_button_pressed"]
+[connection signal="pressed" from="Witch Hats/Frame3/Sell Label/Sell Blue Button" to="." method="_on_sell_blue_hat_button_pressed"]
 [connection signal="pressed" from="Witch Hats/Frame3/Buy Label/Buy Blue Button" to="." method="_on_buy_blue_hat_button_pressed"]
+[connection signal="pressed" from="Witch Hats/Frame4/Sell Label/Sell Green Button" to="." method="_on_sell_green_hat_button_pressed"]
 [connection signal="pressed" from="Witch Hats/Frame4/Buy Label/Buy Green Button" to="." method="_on_buy_green_hat_button_pressed"]
+[connection signal="pressed" from="Witch Hats/Frame5/Sell Label/Sell Red Button" to="." method="_on_sell_red_hat_button_pressed"]
 [connection signal="pressed" from="Witch Hats/Frame5/Buy Label/Buy Red Button" to="." method="_on_buy_red_hat_button_pressed"]
 [connection signal="pressed" from="Witch Hats/Cat Icon/Cat Button" to="." method="_on_cat_button_pressed"]
 [connection signal="pressed" from="Witch Hats/TT Cat Icon/TT Button" to="." method="_on_tt_button_pressed"]
 [connection signal="pressed" from="Witch Hats/Fish Icon/Fish Button" to="." method="_on_fish_button_pressed"]
 [connection signal="pressed" from="Witch Hats/Crown Icon/Button" to="." method="_on_crown_button_pressed"]
+[connection signal="pressed" from="Crown/Sell Label/Sell Pink Button" to="." method="_on_sell_pink_crown_button_pressed"]
 [connection signal="pressed" from="Crown/Buy Label/Buy Pink Button" to="." method="_on_buy_pink_crown_button_pressed"]
+[connection signal="pressed" from="Crown/Frame2/Sell Label/Sell Purple Button" to="." method="_on_sell_purple_crown_button_pressed"]
 [connection signal="pressed" from="Crown/Frame2/Buy Label/Buy Purple Button" to="." method="_on_buy_purple_crown_button_pressed"]
+[connection signal="pressed" from="Crown/Frame3/Sell Label/Sell Blue Button" to="." method="_on_sell_blue_crown_button_pressed"]
 [connection signal="pressed" from="Crown/Frame3/Buy Label/Buy Blue Button" to="." method="_on_buy_blue_crown_button_pressed"]
+[connection signal="pressed" from="Crown/Frame4/Sell Label/Sell Green Button" to="." method="_on_sell_green_crown_button_pressed"]
 [connection signal="pressed" from="Crown/Frame4/Buy Label/Buy Green Button" to="." method="_on_buy_green_crown_button_pressed"]
+[connection signal="pressed" from="Crown/Frame5/Sell Label/Sell Red Button" to="." method="_on_sell_red_crown_button_pressed"]
 [connection signal="pressed" from="Crown/Frame5/Buy Label/Buy Red Button" to="." method="_on_buy_red_crown_button_pressed"]
 [connection signal="pressed" from="Crown/Cat Icon/Cat Button" to="." method="_on_cat_button_pressed"]
 [connection signal="pressed" from="Crown/TT Cat Icon/TT Button" to="." method="_on_tt_button_pressed"]

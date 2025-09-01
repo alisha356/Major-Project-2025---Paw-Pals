@@ -61,7 +61,7 @@ func _process(_delta: float):
 		Global._animate_bttc_death()
 		$"WitchHat-Pink".visible = false
 		animation_played = true
-	if Global.show_pink_hat == true:
+	if Global.show_pink_hat == true and Global.own_pink_hat == true:
 		$"WitchHat-Pink".visible = true
 		Global.show_pink_hat = false
 

@@ -13,7 +13,7 @@ func _ready():
 			$"Dark Grey Cat/Crown-Pink".visible = true
 	if Global.own_plain_brown == true:
 		$"Brown Cat".visible = true
-		$"Brown Cat".position = Vector2(169, 89)
+		$"Brown Cat".position = Vector2(297, 411)
 		if Global.brown_cat_hunger <= 0:
 			Global._dead_bc()
 			$"Brown Cat/Crown-Red".visible = false

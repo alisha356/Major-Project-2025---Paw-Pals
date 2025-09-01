@@ -61,7 +61,7 @@ func _process(_delta: float):
 		Global._animate_cttc_death()
 		$"WitchHat-Red".visible = false
 		animation_played = true
-	if Global.show_red_hat == true:
+	if Global.show_red_hat == true and Global.own_red_hat == true:
 		$"WitchHat-Red".visible = true
 		Global.show_red_hat = false
 

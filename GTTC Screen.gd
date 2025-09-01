@@ -61,7 +61,7 @@ func _process(_delta: float):
 		Global._animate_gttc_death()
 		$"WitchHat-Blue".visible = false
 		animation_played = true
-	if Global.show_blue_hat == true:
+	if Global.show_blue_hat == true and Global.own_blue_hat == true:
 		$"WitchHat-Blue".visible = true
 		Global.show_blue_hat = false
 

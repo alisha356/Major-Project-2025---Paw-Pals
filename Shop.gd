@@ -43,35 +43,65 @@ func _change_labels():
 		$"TT Cat Frame/CatFrame4/TT Caramel/Buy Label 4".visible = false
 		$"Witch Hats/Frame5/Not Available5".visible = false
 	if Global.own_pink_crown == true:
-		$"Crown/Buy/Bought Label".visible = true
+		$"Crown/Sell Label".visible = true
 		$"Crown/Buy Label".visible = false
+	elif Global.own_pink_crown == false:
+		$"Crown/Sell Label".visible = false
+		$"Crown/Buy Label".visible = true
 	if Global.own_purple_crown == true:
-		$"Crown/Frame2/Buy/Bought Label2".visible = true
+		$"Crown/Frame2/Sell Label".visible = true
 		$"Crown/Frame2/Buy Label".visible = false
+	elif Global.own_purple_crown == false:
+		$"Crown/Frame2/Sell Label".visible = false
+		$"Crown/Frame2/Buy Label".visible = true
 	if Global.own_blue_crown == true:
-		$"Crown/Frame3/Buy/Bought Label3".visible = true
+		$"Crown/Frame3/Sell Label".visible = true
 		$"Crown/Frame3/Buy Label".visible = false
+	elif Global.own_blue_crown == false:
+		$"Crown/Frame3/Sell Label".visible = false
+		$"Crown/Frame3/Buy Label".visible = true
 	if Global.own_green_crown == true:
-		$"Crown/Frame4/Buy/Bought Label4".visible = true
+		$"Crown/Frame4/Sell Label".visible = true
 		$"Crown/Frame4/Buy Label".visible = false
+	elif Global.own_green_crown == false:
+		$"Crown/Frame4/Sell Label".visible = false
+		$"Crown/Frame4/Buy Label".visible = true
 	if Global.own_red_crown == true:
-		$"Crown/Frame5/Buy/Bought Label5".visible = true
+		$"Crown/Frame5/Sell Label".visible = true
 		$"Crown/Frame5/Buy Label".visible = false
+	elif Global.own_red_crown == false:
+		$"Crown/Frame5/Sell Label".visible = false
+		$"Crown/Frame5/Buy Label".visible = true
 	if Global.own_pink_hat == true:
-		$"Witch Hats/Buy/Bought Label".visible = true
+		$"Witch Hats/Sell Label".visible = true
 		$"Witch Hats/Buy Label".visible = false
+	elif Global.own_pink_hat == false:
+		$"Witch Hats/Sell Label".visible = false
+		$"Witch Hats/Buy Label".visible = true
 	if Global.own_purple_hat == true:
-		$"Witch Hats/Frame2/Buy/Bought Label2".visible = true
+		$"Witch Hats/Frame2/Sell Label".visible = true
 		$"Witch Hats/Frame2/Buy Label".visible = false
+	elif Global.own_purple_hat == false:
+		$"Witch Hats/Frame2/Sell Label".visible = false
+		$"Witch Hats/Frame2/Buy Label".visible = true
 	if Global.own_blue_hat == true:
-		$"Witch Hats/Frame3/Buy/Bought Label3".visible = true
+		$"Witch Hats/Frame3/Sell Label".visible = true
 		$"Witch Hats/Frame3/Buy Label".visible = false
+	elif Global.own_blue_hat == false:
+		$"Witch Hats/Frame3/Sell Label".visible = false
+		$"Witch Hats/Frame3/Buy Label".visible = true
 	if Global.own_green_hat == true:
-		$"Witch Hats/Frame4/Buy/Bought Label4".visible = true
+		$"Witch Hats/Frame4/Sell Label".visible = true
 		$"Witch Hats/Frame4/Buy Label".visible = false
+	elif Global.own_green_hat == false:
+		$"Witch Hats/Frame4/Sell Label".visible = false
+		$"Witch Hats/Frame4/Buy Label".visible = true
 	if Global.own_red_hat == true:
-		$"Witch Hats/Frame5/Buy/Bought Label5".visible = true
+		$"Witch Hats/Frame5/Sell Label".visible = true
 		$"Witch Hats/Frame5/Buy Label".visible = false
+	elif Global.own_red_hat == false:
+		$"Witch Hats/Frame5/Sell Label".visible = false
+		$"Witch Hats/Frame5/Buy Label".visible = true
 
 func _on_chest_button_pressed():
 	get_tree().change_scene_to_file("res://Inventory.tscn")
@@ -246,6 +276,38 @@ func _on_buy_red_crown_button_pressed():
 	else:
 		pass
 
+func _on_sell_pink_crown_button_pressed():
+	Global.own_pink_crown = false
+	Global.player_coins += 3
+
+func _on_sell_purple_crown_button_pressed():
+	if Global.own_plain_silver == true:
+		Global.own_purple_crown = false
+		Global.player_coins += 3
+	else:
+		pass
+
+func _on_sell_blue_crown_button_pressed():
+	if Global.own_plain_orange == true:
+		Global.own_blue_crown = false
+		Global.player_coins += 3
+	else:
+		pass
+
+func _on_sell_green_crown_button_pressed():
+	if Global.own_plain_caramel == true:
+		Global.own_green_crown = false
+		Global.player_coins += 3
+	else:
+		pass
+
+func _on_sell_red_crown_button_pressed():
+	if Global.own_plain_brown == true:
+		Global.own_red_crown = false
+		Global.player_coins += 3
+	else:
+		pass
+
 func _on_buy_pink_hat_button_pressed():
 	if Global.player_coins >= 4 and Global.own_bttc == true:
 		Global.own_pink_hat = true
@@ -278,6 +340,38 @@ func _on_buy_red_hat_button_pressed():
 	if Global.player_coins >= 4 and Global.own_cttc == true:
 		Global.own_red_hat = true
 		Global.player_coins -= 4
+	else:
+		pass
+
+func _on_sell_pink_hat_button_pressed():
+	if Global.own_bttc == true:
+		Global.own_pink_hat = false
+		Global.player_coins += 4
+	else:
+		pass
+
+func _on_sell_purple_hat_button_pressed():
+	if Global.own_ottc == true:
+		Global.own_purple_hat = false
+		Global.player_coins += 4
+	else:
+		pass
+
+func _on_sell_blue_hat_button_pressed():
+	Global.own_blue_hat = false
+	Global.player_coins += 4
+
+func _on_sell_green_hat_button_pressed():
+	if Global.own_sttc == true:
+		Global.own_green_hat = false
+		Global.player_coins += 4
+	else:
+		pass
+
+func _on_sell_red_hat_button_pressed():
+	if Global.own_cttc == true:
+		Global.own_red_hat = false
+		Global.player_coins += 4
 	else:
 		pass
 

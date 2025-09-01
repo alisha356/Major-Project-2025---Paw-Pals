@@ -61,7 +61,7 @@ func _process(_delta: float):
 		Global._animate_bc_death()
 		$"Crown-Red".visible = false
 		animation_played = true
-	if Global.show_red_crown == true:
+	if Global.show_red_crown == true and Global.own_red_crown == true:
 		$"Crown-Red".visible = true
 		Global.show_red_crown = false
 
