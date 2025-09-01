@@ -71,7 +71,7 @@ func _on_button_pressed():
 	elif Global.caramel_cat_hunger == 10:
 		pass
 	else:
-		Global.player_melon -=1
+		Global.player_melon -= 1
 		Global.caramel_cat_hunger += 1
 		$Watermelon/Number.text = str(Global.player_melon)
 		_display_hunger_bar()
@@ -79,7 +79,7 @@ func _on_button_pressed():
 			Global._revive_cc()
 		if Global.caramel_cat_hunger == 10:
 			Global._animate_heart()
-			Global.player_coins += 4
+			Global.player_coins += 6
 
 func _on_arrow_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Room 1.tscn")

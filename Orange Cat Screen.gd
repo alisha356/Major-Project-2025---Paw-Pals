@@ -71,7 +71,7 @@ func _on_button_pressed():
 	elif Global.orange_cat_hunger == 10:
 		pass
 	else:
-		Global.player_fish -=1
+		Global.player_fish -= 1
 		Global.orange_cat_hunger += 1
 		$Fish/Number.text = str(Global.player_fish)
 		_display_hunger_bar()

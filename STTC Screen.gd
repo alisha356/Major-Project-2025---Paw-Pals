@@ -71,7 +71,7 @@ func _on_button_pressed():
 	elif Global.sttc_hunger == 10:
 		pass
 	else:
-		Global.player_cheese -=1
+		Global.player_cheese -= 1
 		Global.sttc_hunger += 1
 		$Cheese/Number.text = str(Global.player_cheese)
 		_display_hunger_bar()
@@ -79,7 +79,7 @@ func _on_button_pressed():
 			Global._revive_sttc()
 		if Global.sttc_hunger == 10:
 			Global._animate_heart()
-			Global.player_coins += 2
+			Global.player_coins += 4
 
 func _on_arrow_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Room 2.tscn")
